@@ -68,18 +68,21 @@ public class Main {
         sc.close();
         */
 
-        /*Ejercicio2
+       /*Ejercicio2
         Scanner sc = new Scanner(System.in);
         System.out.print("Ingrese su sueldo: $");
         double sueldo = sc.nextDouble();
         System.out.print("Ingrese su DNI sin \"-\": ");
         int dni = sc.nextInt();
         if (sueldo <= 20000) {
-            System.out.print("Le corresponde un 20% de aumento");
+            double sueldoFinal = sueldo * 1.20;
+            System.out.print("Le corresponde un 20% de aumento, su sueldo final es: $" + sueldoFinal);
         } else if (sueldo > 20000 && sueldo <= 45000) {
-            System.out.print("Le corresponde un 10% de aumento");
+            double sueldoFinal = sueldo * 1.10;
+            System.out.print("Le corresponde un 10% de aumento, su sueldo final es: $" + sueldoFinal);
         } else {
-            System.out.print("Le corresponde un 5% de aumento");
+            double sueldoFinal = sueldo * 1.05;
+            System.out.print("Le corresponde un 5% de aumento, su sueldo final es: $" + sueldoFinal);
         }
         sc.close();
         */
