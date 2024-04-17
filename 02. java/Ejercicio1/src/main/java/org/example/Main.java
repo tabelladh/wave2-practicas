@@ -149,5 +149,32 @@ public class Main {
 
         sc.close();
         */
+
+        /*EJERCICIO INTEGRADOR
+        String[] ciudades = {"Londres", "Madrid", "Nueva York", "Buenos Aires", "Asunción",
+        "San Pablo", "Lima", "Santiago de Chile", "Lisboa", "Tokio"};
+        int[][] minMax = {{-2, 33}, {-3, 32}, {-8, 27}, {4, 37}, {6, 42}, {5, 43}, {0, 39}, {-7, 26}, {-1, 31}, {-10, 35}};
+        int minTemp = minMax[0][0];
+        int maxTemp = minMax[0][1];
+        String ciudadMinTemp = ciudades[0];
+        String ciudadMaxTemp = ciudades[0];
+
+        for (int i = 1; i < minMax.length; i++) {
+            for (int j = 0; j < minMax[i].length; j++) {
+                if (j == 0 && minMax[i][j] < minTemp) {
+                    minTemp = minMax[i][j];
+                    ciudadMinTemp = ciudades[i];
+                }
+                if (j == 1 && minMax[i][j] > maxTemp) {
+                    maxTemp = minMax[i][j];
+                    ciudadMaxTemp = ciudades[i];
+                }
+            }
+        }
+
+        System.out.println("La menor temperatura fue " + minTemp + " °C en " + ciudadMinTemp);
+        System.out.println("La mayor temperatura fue " + maxTemp + " °C en " + ciudadMaxTemp);
+        */
+
     }
 }
