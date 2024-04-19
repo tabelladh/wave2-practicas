@@ -2,7 +2,16 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/01. git/ejercicioConflictos" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/01. git/ejercicioReceta" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/01. git/ejercicioGit/ejercicioConflicto" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/01. git/ejercicioGit/ejercicioConflicto/ejercicioConflictos" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/01. git/ejercicioGit/ejercicioConflictos" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/01. git/ejercicioGit/ejercicioReceta" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/01. git/ejercicioGit/ejercicioViernes/cancionDos" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/01. git/ejercicioGit/ejercicioViernes/cancionDos/EjercicioCancion" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/01. git/ejercicioGit/ejercicioViernes/ejercicioCancion" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/01. git/ejercicioGit/ejercicioViernes/practicas-viernes" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/01. git/ejercicioGit/ejercioDePrueba" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/01. git/ejercicioGit/ejercioDePrueba/ejercicioDePrueba" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/01. git/ejercicioGit/pruebaRepo" vcs="Git" />
   </component>
 </project>
