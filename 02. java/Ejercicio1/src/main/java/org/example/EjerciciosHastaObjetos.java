@@ -1,11 +1,8 @@
 package org.example;
 
-import java.util.Scanner;
-import java.text.DecimalFormat;
-
-public class Main {
+public class EjerciciosHastaObjetos {
     public static void main(String[] args) {
-        /*EJERCICIOS VARIABLES*/
+        //EJERCICIOS VARIABLES
         /*Ejercicio1
         String apellido = "Gomez";
         int edad = 35;
@@ -43,7 +40,7 @@ public class Main {
         sc.close();
         */
 
-        /*EJERCICIOS ESTRUCTURAS*/
+        //EJERCICIOS ESTRUCTURAS
         /*
         Scanner sc = new Scanner(System.in);
         System.out.print("Ingrese el precio de costo del producto: $");
@@ -68,7 +65,7 @@ public class Main {
         sc.close();
         */
 
-       /*Ejercicio2
+        /*Ejercicio2
         Scanner sc = new Scanner(System.in);
         System.out.print("Ingrese su sueldo: $");
         double sueldo = sc.nextDouble();
@@ -150,8 +147,8 @@ public class Main {
         sc.close();
         */
 
-        /*EJERCICIO INTEGRADOR
-        String[] ciudades = {"Londres", "Madrid", "Nueva York", "Buenos Aires", "Asunción",
+        //EJERCICIO INTEGRADOR
+        /*String[] ciudades = {"Londres", "Madrid", "Nueva York", "Buenos Aires", "Asunción",
         "San Pablo", "Lima", "Santiago de Chile", "Lisboa", "Tokio"};
         int[][] minMax = {{-2, 33}, {-3, 32}, {-8, 27}, {4, 37}, {6, 42}, {5, 43}, {0, 39}, {-7, 26}, {-1, 31}, {-10, 35}};
         int minTemp = minMax[0][0];
@@ -176,5 +173,33 @@ public class Main {
         System.out.println("La mayor temperatura fue " + maxTemp + " °C en " + ciudadMaxTemp);
         */
 
+        //EJERCICIO ESTRUCTURAS DINAMICAS
+        /* Ejercicio SaveTheRopa
+        HashMap<Integer, HashMap<String, String>> listaGuardados = new HashMap<>();
+
+        HashMap<String, String> prenda1 = new HashMap<>();
+        prenda1.put("campera Adidas", "negra");
+        listaGuardados.put(1, prenda1);
+
+        HashMap<String, String> prenda2 = new HashMap<>();
+        prenda2.put("pantalon Nike", "verde");
+        listaGuardados.put(2, prenda2);
+
+        HashMap<String, String> prenda3 = new HashMap<>();
+        prenda3.put("campera Puma", "dorada");
+        listaGuardados.put(3, prenda3);
+
+        for (Map.Entry<Integer, HashMap<String, String>> salida : listaGuardados.entrySet()) {
+            Integer numero = salida.getKey();
+            HashMap<String, String> prendas = salida.getValue();
+            System.out.print("El número es " + numero + " y su prenda es ");
+            for (Map.Entry<String, String> prenda : prendas.entrySet()) {
+                String marca = prenda.getKey();
+                String color = prenda.getValue();
+                System.out.print(marca + ", " + color);
+            }
+            System.out.println();
+        }
+        */
     }
 }
