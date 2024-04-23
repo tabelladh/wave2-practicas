@@ -1,5 +1,6 @@
 package org.example;
 
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
@@ -26,49 +27,45 @@ public class Main {
 
         Scanner sc = new Scanner(System.in); // Creo un nuevo objeto scanner
         System.out.println("Introduce el DNI del estudiante: ");
-        boolean bandera = false;
 
+
+        int consultaDNI = 0;
 
         try { //Creo el código que necesito ejecutar para que funcione ok - camino feliz
-
-            int consultaDNI = sc.nextInt();  // El scanner debe estar dentro del try para controlar la excepcion de InputMismatchException
-
-            Estudiante est = new Estudiante(); // Creo un nuevo objeto estudiante para guardar informacion
-                while (!bandera) {
-                   /* for (Estudiante estudiante : listaEstudiantes) { //Recorro toda la lista de estudiantes
-                        if (estudiante.getDni() == consultaDNI) {
-                            //Si existe un dni igual al que solicito por scanner lo guardo en el objeto "est"
-                            est = new Estudiante(estudiante.getNombre(), estudiante.getApellidos(), estudiante.getDni(), estudiante.getMaterias());
-                        }
-                        bandera = true;
-                    }*/
-
-                    //Otra forma de hacer el for
-                    for (int i = 0; i < listaEstudiantes.size(); i++) {
-                        if (consultaDNI == listaEstudiantes.get(i).getDni()) {
-                            est = listaEstudiantes.get(i);
-                        }
-                        bandera = true;
-                    }
-
-                }
-
-                if (est.getDni() == consultaDNI) {
-                    System.out.println(est);
-                }else {
-                    throw new NotFoundException("¡El estudiante no existe!");
-                }
-
-
+            consultaDNI = sc.nextInt();  // El scanner debe estar dentro del try para controlar la excepcion de InputMismatchException
         } catch (InputMismatchException e){ // catch para Tipo de dato distinto a el scanner
             System.out.println("¡Ingresaste un valor que no era un número entero!");
+            //e.printStackTrace();
             sc = new Scanner(System.in); //reseteamos el scanner
-        } catch (NotFoundException ex) { //catch para una excepción personalizada
-            System.out.println(ex.getMessage());
-            sc = new Scanner(System.in);
-        } finally {
+        }
+
+        Estudiante est = new Estudiante(); // Creo un nuevo objeto estudiante para guardar informacion
+
+        try {
+            System.out.println(est.existeEstudiante(listaEstudiantes, consultaDNI));
+        }  catch (NotFoundException e) {
+            System.out.println(e.getMessage());
+           //e.printStackTrace();
+        }
+
+        ////////// otro problema
+        System.out.println("Ingrese un numero para realizar la division");
+
+
+        double numero = sc.nextDouble();
+
+        try{
+            double division = 100/numero;
+            System.out.println("El resultado es: " + division);
+
+        }catch (InputMismatchException e){
+            System.out.println("¡El valor introducido no es un numero!");
+        }catch (ArithmeticException e){
+            System.out.println(e.getMessage());
+        }finally {
             sc.close();
         }
 
+        System.out.println("Fin del programa");
     }
 }

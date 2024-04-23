@@ -1,5 +1,7 @@
 package org.example;
 
+import org.w3c.dom.ls.LSOutput;
+
 import java.util.List;
 
 public class Estudiante {
@@ -56,4 +58,22 @@ public class Estudiante {
     public String toString() {
         return ( nombre +  " " + apellidos +  ", DNI= " + dni );
     }
+
+
+    public String existeEstudiante(List<Estudiante> listaEstudiantes, int dni) throws NotFoundException {
+
+           Estudiante estudiante = new Estudiante();
+
+           for (int i = 0; i < listaEstudiantes.size(); i++) {
+               if (dni == listaEstudiantes.get(i).getDni()) {
+                   estudiante = listaEstudiantes.get(i);
+               }
+           }
+
+           if (dni != estudiante.getDni()) {
+               throw new NotFoundException("No se encuentra ese DNI en ningun estudiante");
+           }
+           return ("Estudiante: " + estudiante);
+    }
 }
+
