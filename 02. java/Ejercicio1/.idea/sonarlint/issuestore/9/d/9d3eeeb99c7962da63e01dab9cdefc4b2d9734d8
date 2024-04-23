@@ -1,0 +1,15 @@
+
+ 	java:S135."YReduce the total number of break and continue statements in this loop to use at most one.(˜ïˆÿÿÿÿÿ8ÁÓñ²ğ1J$69e6bfce-12d6-4a25-bcca-15d3ecdc5953
+•
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(Çµí‘8¾Ôñ²ğ1J$7d4e816d-d34b-43a3-84e5-9138b043faad
+r	java:S106"+Replace this use of System.out by a logger.(Ç·ù“ıÿÿÿÿ8ÂÔñ²ğ1J$fefe3874-19a3-423f-81df-1edde1e04839
+m	java:S106%"+Replace this use of System.out by a logger.(Ÿ³šÇ8ÃÔñ²ğ1J$2feebd33-9173-4712-9bc2-2da683aac235
+m	java:S106("+Replace this use of System.out by a logger.(½ã‚¾8ÃÔñ²ğ1J$308b76c0-87e7-4eb7-a992-3efa9c5a5235
+r	java:S106*"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8ÃÔñ²ğ1J$bab746c6-973a-4813-ae0e-c6150af78323
+m	java:S1060"+Replace this use of System.out by a logger.(¡§û¦8ÄÔñ²ğ1J$d3579e5c-4867-4e1f-ae33-b1fe4a7b95b7
+r	java:S1069"+Replace this use of System.out by a logger.(¾·ß„ùÿÿÿÿ8ÅÔñ²ğ1J$db7ffb7f-cf01-43bf-91ac-649fe02612c7
+r	java:S106?"+Replace this use of System.out by a logger.(ü ¦Ñûÿÿÿÿ8ÅÔñ²ğ1J$e9bc2a14-1e04-425c-92e4-d444d6e35bf0
+r	java:S106G"+Replace this use of System.out by a logger.(¥ãİíÿÿÿÿÿ8ÆÔñ²ğ1J$a398ca7b-e7dd-47a4-ba29-48cec2121205
+r	java:S106L"+Replace this use of System.out by a logger.(öá±ûÿÿÿÿ8ÆÔñ²ğ1J$028eedba-bf0c-4394-b26e-d29edce5b921
+m	java:S106O"+Replace this use of System.out by a logger.(‡ğì‹8ÆÔñ²ğ1J$10a19e96-cb7e-4af2-8d0f-a2f295625e2c
+r	java:S106Q"+Replace this use of System.out by a logger.(¼àøŸøÿÿÿÿ8ÆÔñ²ğ1J$fb6c4c28-b24d-4406-b61f-381712f63ced

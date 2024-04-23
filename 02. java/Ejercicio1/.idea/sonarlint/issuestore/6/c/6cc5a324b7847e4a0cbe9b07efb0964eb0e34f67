@@ -1,0 +1,7 @@
+
+Ž
+java:S1192"FDefine a constant instead of duplicating this literal "perro" 7 times.(“ÂÅÐüÿÿÿÿ8ñÿâ°ð1J$4b093907-c680-4884-ad75-880269e412c5
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(èð‘Ö8–âÂ³ð1J$d6dd54e7-2acb-41dc-a31c-c72d2ac608ae
+m	java:S106!"+Replace this use of System.out by a logger.(Äàùâ8øÿâ°ð1J$8db4770d-5fdd-4205-af21-27d98d7f35ca
+m	java:S106""+Replace this use of System.out by a logger.(Þº€¾8øÿâ°ð1J$46c8c1bb-e1b2-4df3-97e9-4289b99e834c
+m	java:S106#"+Replace this use of System.out by a logger.(·…ŒŽ8øÿâ°ð1J$cb36e8a6-ef7d-43c5-9168-1d3f229cf7ec

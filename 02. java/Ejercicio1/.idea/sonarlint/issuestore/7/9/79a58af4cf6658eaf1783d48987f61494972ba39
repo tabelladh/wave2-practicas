@@ -1,0 +1,19 @@
+
+s	java:S127*"XRefactor the code in order to not assign to this loop counter from within the loop body.(¨…ÄK8æ¬¡äğ1
+r	java:S106"+Replace this use of System.out by a logger.(‘¿ªØÿÿÿÿÿ8·™çãğ1J$42b9d446-c30d-49ed-98c6-9be6a7f31100
+r	java:S106"+Replace this use of System.out by a logger.( Ø™ƒüÿÿÿÿ8¹™çãğ1J$836785a7-fb18-4acd-8c1a-31c02bdc0430
+r	java:S106"+Replace this use of System.out by a logger.(éİÌâüÿÿÿÿ8º™çãğ1J$e286d6c6-84e1-4eee-831b-e4b18f3573fa
+r	java:S106"+Replace this use of System.out by a logger.(Èä¡‰ÿÿÿÿÿ8¼™çãğ1J$487c2b3a-9672-430b-a75b-9482100c3e70
+m	java:S106"+Replace this use of System.out by a logger.(È¯Éï8½™çãğ1J$074b7114-4508-4b47-bbf7-930332bd1359
+m	java:S106"+Replace this use of System.out by a logger.(Ê®ØÛ8½™çãğ1J$d711a23b-2b0f-429d-92bf-be7067c23591
+r	java:S106"+Replace this use of System.out by a logger.(´¦şşÿÿÿÿ8¾™çãğ1J$59109f3d-e088-4f40-9688-e08db6399c1c
+m	java:S106"+Replace this use of System.out by a logger.(Ò’¼ÿ8¾™çãğ1J$0c024c06-6278-4a04-9cd5-701d1f3cf829
+r	java:S106 "+Replace this use of System.out by a logger.(‚ñüÊúÿÿÿÿ8¿™çãğ1J$eecfe054-5e6a-4b73-8146-1edb8118a333
+m	java:S106""+Replace this use of System.out by a logger.(¸©£×8¿™çãğ1J$4d11acf7-e87b-42eb-bc7b-77a7f609fd41
+r	java:S106$"+Replace this use of System.out by a logger.(Œ‡îÿøÿÿÿÿ8¿™çãğ1J$60891a7f-e3bd-4b87-9384-0f1c2446d798
+m	java:S106("+Replace this use of System.out by a logger.(ó—ë—8À™çãğ1J$1ee736f8-8644-48b4-bd21-5a2f6392033b
+r	java:S1065"+Replace this use of System.out by a logger.(È®şìÿÿÿÿÿ8À™çãğ1J$662c1ec8-0fe0-4b4c-8507-631b9da32465
+m	java:S1069"+Replace this use of System.out by a logger.(Û•³»8Á™çãğ1J$5b9c12cf-e6f6-403b-b670-7d22a7c34c22
+m	java:S106;"+Replace this use of System.out by a logger.(ÏÑÛ°8Á™çãğ1J$37062b9c-588f-4811-ae76-ba9eaba954d1
+m	java:S106@"+Replace this use of System.out by a logger.(±—Ãœ8Â™çãğ1J$048f8b3a-b27c-474b-a209-eabb7590f115
+m	java:S106C"+Replace this use of System.out by a logger.(Ñ©Ôò8Äƒäğ1J$cbb632b5-3412-4a27-ac14-a835a4fb464e

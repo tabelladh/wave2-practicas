@@ -1,10 +1,7 @@
 package org.example.practicaAlumnos;
-
 public class App {
-
     public static void main(String[] args) {
         Alumno[] alumnos = new Alumno[10];
-
         alumnos[0] = new Alumno("Juan", "Perez", 7.5);
         alumnos[1] = new Alumno("María", "Gonzalez", 8.2);
         alumnos[2] = new Alumno("Pedro", "Perez", 6.9);
@@ -15,7 +12,6 @@ public class App {
         alumnos[7] = new Alumno("Marta", "Lopez", 9.9);
         alumnos[8] = new Alumno("Javier", "Gonzalez", 6.5);
         alumnos[9] = new Alumno("Sara", "Bermudez", 8.8);
-
         App app = new App();
         app.calcularMejorPromedio(alumnos);
     }

@@ -17,20 +17,4 @@ public class Persona {
 
     public Persona() {
     }
-
-    public String getDni() {
-        return dni;
-    }
-    public String getNombre() {
-        return nombre;
-    }
-    public int getEdad() {
-        return edad;
-    }
-    public int getPeso() {
-        return peso;
-    }
-    public int getAltura() {
-        return altura;
-    }
 }

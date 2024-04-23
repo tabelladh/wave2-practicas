@@ -1,5 +1,4 @@
 package org.example.practicaMascotas;
-
 public class App {
     public static void main(String[] args) {
         Mascota[] mascotasGanadoras = {
