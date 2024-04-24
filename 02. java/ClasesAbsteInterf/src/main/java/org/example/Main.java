@@ -6,7 +6,10 @@ public class Main {
 
         Cuadrado cuadrado = new Cuadrado(4, 5.0);
 
+        Circulo circulo = new Circulo(1, 5.0);
+
         System.out.println(cuadrado.calcularArea());
+        System.out.println(circulo.calcularArea());
 
         ProfesorPractica profesorPractica = new ProfesorPractica("Jorge");
         ProfesorTeoria profesorTeoria = new ProfesorTeoria("Juan");
