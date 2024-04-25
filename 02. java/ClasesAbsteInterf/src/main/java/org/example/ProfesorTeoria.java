@@ -1,29 +1,21 @@
 package org.example;
 
-public class ProfesorTeoria implements IProfesor{
+public class ProfesorTeoria extends Profesor  {
 
-    private String nombre;
+    private String asignatura;
+    private String linkMeet;
 
-    public ProfesorTeoria(String nombre) {
-        this.nombre = nombre;
+    public ProfesorTeoria() {
     }
 
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    @Override
-    public String tomarAsistencia() {
-        return "Tomando asistencia desde la clase teoria";
+    public ProfesorTeoria(Integer dni, String nombre, String apellido, int edad, String asignatura, String linkMeet) {
+        super(dni,nombre, apellido, edad);
+        this.asignatura = asignatura;
+        this.linkMeet = linkMeet;
     }
 
     @Override
     public String darClase() {
-        return "Dando clase desde la clase teoria";
+        return "El profesor de Teoría da clases virtuales";
     }
-
 }

@@ -4,22 +4,21 @@ public class Main {
     public static void main(String[] args) {
 
 
-        Cuadrado cuadrado = new Cuadrado(4, 5.0);
+        /*********************/
+        Profesor profesor = new ProfesorTeoria( 33000111, "Andres", "Gutierrez", 30, "Programacion", "https://meet.google.com/lookup/ff3xqjxk5c");
+        ProfesorPractica profesor2 = new ProfesorPractica(33000110,"Jose", "Perez", 30, "Libro Joyanes");
 
-        Circulo circulo = new Circulo(1, 5.0);
+        System.out.println(profesor.getEdad().compareTo(profesor2.getEdad()));
 
-        System.out.println(cuadrado.calcularArea());
-        System.out.println(circulo.calcularArea());
+        System.out.println(profesor.getEdad().equals(profesor2.getEdad()));
 
-        ProfesorPractica profesorPractica = new ProfesorPractica("Jorge");
-        ProfesorTeoria profesorTeoria = new ProfesorTeoria("Juan");
+        String edadProfe = String.valueOf(profesor.getEdad());
 
-        System.out.println(profesorPractica.darClase());
-        System.out.println(profesorTeoria.darClase());
+        System.out.println(profesor2.findId(33000110));
 
-        System.out.println(profesorTeoria.tomarAsistencia());
-        System.out.println(profesorPractica.tomarAsistencia());
-        
+        System.out.println(edadProfe);
+
+
 
     }
 }

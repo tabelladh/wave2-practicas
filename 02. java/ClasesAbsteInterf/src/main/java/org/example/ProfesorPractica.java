@@ -1,35 +1,39 @@
 package org.example;
 
-public class ProfesorPractica implements IProfesor{
+public class ProfesorPractica extends Profesor implements IEducar{
 
-    private String nombre;
+    private String materialDidactico;
 
-    public ProfesorPractica(String nombre) {
-        this.nombre = nombre;
+    public ProfesorPractica() {
+    }
+    public ProfesorPractica(Integer dni, String nombre, String apellido, int edad, String materialDidactico) {
+        super(dni, nombre, apellido, edad);
+        this.materialDidactico = materialDidactico;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getMaterialDidactico() {
+        return materialDidactico;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setMaterialDidactico(String materialDidactico) {
+        this.materialDidactico = materialDidactico;
     }
 
     @Override
-    public String tomarAsistencia() {
-        return "Tomando asistencia desde la clase practica";
+    public Integer findId(Integer dni) {
+        return getEdad() ;
+    }
+
+
+    @Override
+    public String ayudarAlumno() {
+        return "El profesor de practica ayuda al alumno";
     }
 
     @Override
     public String darClase() {
-        return "Dando clase desde la clase practica";
+        return "El profesor de practica da clase presencial";
     }
 
-    @Override
-    public String toString() {
-        return "ProfesorPractica{" +
-                "nombre='" + nombre + '\'' +
-                '}';
-    }
+
 }
