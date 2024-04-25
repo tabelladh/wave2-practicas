@@ -1,0 +1,116 @@
+Usted
+OK, creo haber entendido.
+Te paso otro ejercicio.
+Resuelvelo con clases distintas (archivos distintos).(los otros te quedaron dentro de la misma clase-archivo todas las clases ).
+
+Ejercicio 3 - Interfaces + Clases Abstractas
+Se solicita la creación de una clase abstracta denominada Animal, de la cual deriven 3 animales: Perro, Gato y Vaca. 
+
+Los 3 animales son capaces de “emitir sonidos”, para ello será necesario implementar un método que permita mostrar por pantalla el sonido que emite cada animal. Por ejemplo, en el caso del perro “guau”, el gato “miau” y la vaca “muuu”.
+
+A partir de esto, teniendo en cuenta los gustos alimenticios de cada animal (gato y perro son considerados carnívoros y la vaca un herbívoro), incluir las interfaces necesarias para contemplar los métodos comerCarne o comerHierba.
+
+
+Una vez realizado lo mencionado, llevar a cabo en el Main la creación de diferentes animales y la invocación de sus respectivas implementaciones de métodos.
+
+Pista técnica: Para implementar los métodos comerCarne y comerHierba se puede mostrar un mensaje por pantalla. Por ejemplo: System.out.println(“Soy un perro y como carne”).
+Extra: Como propuesta extra se sugiere implementar a un método comerAnimal donde a partir del pasaje de un objeto de cualquier tipo de animal como parámetro (un perro, un gato o una vaca), invoque al método para comer según corresponda a dicho animal.
+
+Copilot
+Claro, aquí tienes un ejemplo de cómo podrías implementar esto en Java, con cada clase en un archivo separado:
+
+Archivo Animal.java:
+
+Java
+
+public abstract class Animal {
+    public abstract void emitirSonido();
+}
+Código generado por IA. Revisar y usar cuidadosamente. Más información sobre preguntas frecuentes.
+Archivo Carnivoro.java:
+
+Java
+
+public interface Carnivoro {
+    void comerCarne();
+}
+Código generado por IA. Revisar y usar cuidadosamente. Más información sobre preguntas frecuentes.
+Archivo Herbivoro.java:
+
+Java
+
+public interface Herbivoro {
+    void comerHierba();
+}
+Código generado por IA. Revisar y usar cuidadosamente. Más información sobre preguntas frecuentes.
+Archivo Perro.java:
+
+Java
+
+public class Perro extends Animal implements Carnivoro {
+    @Override
+    public void emitirSonido() {
+        System.out.println("Guau");
+    }
+
+    @Override
+    public void comerCarne() {
+        System.out.println("Soy un perro y como carne");
+    }
+}
+Código generado por IA. Revisar y usar cuidadosamente. Más información sobre preguntas frecuentes.
+Archivo Gato.java:
+
+Java
+
+public class Gato extends Animal implements Carnivoro {
+    @Override
+    public void emitirSonido() {
+        System.out.println("Miau");
+    }
+
+    @Override
+    public void comerCarne() {
+        System.out.println("Soy un gato y como carne");
+    }
+}
+Código generado por IA. Revisar y usar cuidadosamente. Más información sobre preguntas frecuentes.
+Archivo Vaca.java:
+
+Java
+
+public class Vaca extends Animal implements Herbivoro {
+    @Override
+    public void emitirSonido() {
+        System.out.println("Muuu");
+    }
+
+    @Override
+    public void comerHierba() {
+        System.out.println("Soy una vaca y como hierba");
+    }
+}
+Código generado por IA. Revisar y usar cuidadosamente. Más información sobre preguntas frecuentes.
+Archivo Main.java:
+
+Java
+
+public class Main {
+    public static void main(String[] args) {
+        Perro perro = new Perro();
+        perro.emitirSonido();
+        perro.comerCarne();
+
+        Gato gato = new Gato();
+        gato.emitirSonido();
+        gato.comerCarne();
+
+        Vaca vaca = new Vaca();
+        vaca.emitirSonido();
+        vaca.comerHierba();
+    }
+}
+
+
+Código generado por IA. Revisar y usar cuidadosamente. Más información sobre preguntas frecuentes.
+Este código define una clase abstracta Animal con un método abstracto emitirSonido(). Luego, define las interfaces Carnivoro y Herbivoro con los métodos comerCarne() y comerHierba(), respectivamente. Las clases Perro, Gato y Vaca extienden Animal e implementan la interfaz que corresponde a cada uno. Finalmente, en la clase Main, se crean objetos de cada una de las clases y se llaman a los métodos correspondientes.
