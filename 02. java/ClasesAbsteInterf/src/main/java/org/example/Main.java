@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
 
 
-        /*********************/
+        /******* MANEJO DE DATOS CON WRAPPERS **************/
         Profesor profesor = new ProfesorTeoria( 33000111, "Andres", "Gutierrez", 30, "Programacion", "https://meet.google.com/lookup/ff3xqjxk5c");
         ProfesorPractica profesor2 = new ProfesorPractica(33000110,"Jose", "Perez", 30, "Libro Joyanes");
 
