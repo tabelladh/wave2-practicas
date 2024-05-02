@@ -3,7 +3,7 @@ package com.example.demo.Service;
 import org.springframework.stereotype.Service;
 
 @Service
-public class Morse implements ITraduceMorse {
+public class MorseImpl implements ITraduceMorse {
 
 
     public String traducirMorse(String morse)
