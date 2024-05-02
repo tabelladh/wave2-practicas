@@ -1,0 +1,13 @@
+
+g	java:S112)"FDefine and throw a dedicated exception instead of using a generic one.(ÃöÔÂøÿÿÿÿ8Ï­ğŞò1
+m	java:S106"+Replace this use of System.out by a logger.(Ù¨îĞ8ÊÉŞò1J$7798ca15-5c6b-4b2d-b219-81bc06b1feea
+r	java:S106"+Replace this use of System.out by a logger.(…¥îÀúÿÿÿÿ8ÊÉŞò1J$d9e1dbbb-79d4-4b3f-9936-fb54d260ea03
+m	java:S106"+Replace this use of System.out by a logger.(Ãåå8ÊÉŞò1J$b709f23f-2a1b-4d3a-8781-f9dfe0838591
+m	java:S106"+Replace this use of System.out by a logger.(††–8ÊÉŞò1J$2638d186-0f91-4a19-8a62-8fdc634e86c7
+r	java:S106"+Replace this use of System.out by a logger.(…¥îÀúÿÿÿÿ8ÊÉŞò1J$fd9bc53b-a111-41fc-9729-45bca7041426
+l	java:S106"+Replace this use of System.out by a logger.(¯ºŒh8ÊÉŞò1J$14550582-aaed-49b4-871f-59bda0d3ffaa
+L	java:S106$"+Replace this use of System.out by a logger.(¥şĞÒøÿÿÿÿ8à­ğŞò1
+L	java:S106'"+Replace this use of System.out by a logger.(¹¦…‡úÿÿÿÿ8à­ğŞò1
+L	java:S106,"+Replace this use of System.out by a logger.(ø¤”úÿÿÿÿ8á­ğŞò1
+Q
+java:S1128"/Remove this unused import 'java.util.Optional'.(¨˜ëİüÿÿÿÿ8ä­ğŞò1
