@@ -1,11 +1,0 @@
-
-l
-java:S2140")Use "java.util.Random.nextInt()" instead.(‡’ü§8ğ­ä±ğ1J$4187aad2-3281-40e3-8884-edabe25c90ce
-r	java:S106"+Replace this use of System.out by a logger.(¦¡ı’üÿÿÿÿ8Èñé±ğ1J$20b8f9b4-6f23-46bb-b912-dd0231778244
-r	java:S106"+Replace this use of System.out by a logger.(ÿÆ›ıÿÿÿÿ8Éñé±ğ1J$003968aa-6449-4558-a448-3b16d43aa67c
-m	java:S106#"+Replace this use of System.out by a logger.(ßì£‡8Éñé±ğ1J$03cfdcf2-4310-4574-9369-73a3b53233d3
-m	java:S106-"+Replace this use of System.out by a logger.(˜¡¦8Êñé±ğ1J$605781d2-dad5-489f-8b2a-08fcaf56dd6c
-m	java:S1060"+Replace this use of System.out by a logger.(û½½²8Êñé±ğ1J$c7196669-7ca9-4d0b-b436-6a31d18508bb
-r	java:S1062"+Replace this use of System.out by a logger.(ÿı¤Šıÿÿÿÿ8Ëñé±ğ1J$e2ad2617-e60a-45f1-9d3e-3e1dae4cbd03
-r	java:S1065"+Replace this use of System.out by a logger.(£ÄÉÂıÿÿÿÿ8Ëñé±ğ1J$1a61fd38-1b2f-41b1-be75-0a34871e40e7
-m	java:S1068"+Replace this use of System.out by a logger.(äìÎÆ8‚ßàğ1J$24c06ece-1841-42a0-856b-d77047e4d6ae

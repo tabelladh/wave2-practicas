@@ -1,13 +1,0 @@
-
-ˆ	java:S107"AConstructor has 8 parameters, which is greater than 7 authorized.(Ô¸³Äÿÿÿÿÿ8éÒŸ½ï1J$ca0f6bf1-0e68-44d1-b8ba-8d50882f00f9
-r
-java:S1068"*Remove this unused "numero" private field.(·’¹úÿÿÿÿ8ù†¾ï1J$8c9436b1-9e2f-4c1e-b937-9150bd61ca74
-o
-java:S1068"'Remove this unused "dni" private field.(ªÍËÅüÿÿÿÿ8Å°‡¾ï1J$960c3df2-40bc-4086-aad9-92866605a6dc
-n
-java:S1068	"+Remove this unused "celular" private field.(Ÿ”•©8äœˆ¾ï1J$4fb57def-5122-44d4-9d2b-00d06ad0b7e9
-|
-java:S1068
-"4Remove this unused "numeroEmergencia" private field.(î¾õ¸øÿÿÿÿ8×Ãˆ¾ï1J$d9992a6b-a163-4573-a6f6-450568e59f40
-u
-java:S1068"2Remove this unused "grupoSanguineo" private field.(Ò¬´Š8Óìˆ¾ï1J$17820001-42c4-4317-a0cf-da1fbbd5a7c5
