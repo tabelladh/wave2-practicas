@@ -16,8 +16,8 @@ public class AlumnoController {
         this.alumnoPromedio = alumnoPromedio;
     }
 
-    @GetMapping("/alumnoPromedio")
-    public ResponseEntity <RespuestaDTO> alumnoPromedio(@RequestBody  Alumno alumno) {
+    @PostMapping ("/alumnoPromedio")
+    public ResponseEntity<RespuestaDTO> alumnoPromedio(@RequestBody  Alumno alumno) {
         return new ResponseEntity<>(alumnoPromedio.calcularPromedio(alumno), HttpStatus.OK);
     }
 }

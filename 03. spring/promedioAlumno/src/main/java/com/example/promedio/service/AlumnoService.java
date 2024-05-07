@@ -10,20 +10,36 @@ import java.util.List;
 @Service
 public class AlumnoService implements IAlumno {
 
-    // Se solicita que se calcule el promedio de las calificaciones recibidas
-
     @Override
     public RespuestaDTO calcularPromedio(Alumno alumno) {
+
         List<Double> calificaciones = new ArrayList<>();
-        calificaciones.stream().mapToDouble(x -> calificaciones.getFirst()).average();
+        calificaciones.addAll(alumno.getCalificaciones());
 
-        Double promedio = 0.0;
-        for (Double calificacion : calificaciones) {
-            promedio += calificacion;
+
+        double promedio = calificaciones.stream()
+                .mapToDouble(Double::doubleValue)
+                .average()
+                .orElseThrow(() -> new RuntimeException("No se puede realizar el promedio"));
+
+        RespuestaDTO respuesta = new RespuestaDTO();
+
+        if (promedio >= 6.0) {
+            respuesta.setMensaje("Nombre : " + alumno.getNombre() + " "
+                    + alumno.getApellido()
+                    + ", Promedio : " + String.format("%.2f", promedio) + " Aprobado");
+            if (promedio > 9.0) {
+                respuesta.setMensaje("Nombre : " + alumno.getNombre() + " "
+                        + alumno.getApellido()
+                        + ", Promedio : " + String.format("%.2f", promedio) + " Aprobado"
+                        + " ¡Felicitaciones por destacarse en su clase!");
+            }
+        } else {
+            respuesta.setMensaje("Nombre : " + alumno.getNombre() + " "
+                    + alumno.getApellido() + " "
+                    + ". Promedio : " + String.format("%.2f", promedio) + " Reprobado");
         }
-        promedio = promedio / calificaciones.size();
-        alumno.setPromedio(promedio);
-        return alumno;
-
+        return respuesta;
     }
+
 }
