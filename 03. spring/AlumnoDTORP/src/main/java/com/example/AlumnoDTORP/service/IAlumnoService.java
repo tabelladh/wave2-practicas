@@ -7,8 +7,15 @@ import java.util.List;
 
 public interface IAlumnoService {
 
-   RespuestaDTO agregarAlumno(AlumnoDTO alumnoDTO);
+    List<AlumnoDTO> listarAlumnos();
 
-   List<AlumnoDTO> listarAlumnos();
+    AlumnoDTO buscarPorId(Integer id);
 
+    RespuestaDTO agregarAlumno(AlumnoDTO alumnoDTO);
+
+    RespuestaDTO borrarAlumno(Integer id);
+
+    AlumnoDTO actualizarAlumno(AlumnoDTO alumnoDTO);
+
+    Boolean existeAlumno(Integer id);
 }

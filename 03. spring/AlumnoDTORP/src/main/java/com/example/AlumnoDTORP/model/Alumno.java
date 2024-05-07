@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -16,7 +17,7 @@ public class Alumno {
     private String apellidos;
     private LocalDate fechaNacimiento;
     private Integer dni;
-    private String domicilio;
-    private Curso curso;
+    private String direccion;
+    private List<Curso> cursosList;
 
 }
