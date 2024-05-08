@@ -32,7 +32,7 @@ public class AlumnoRepositoryImpl implements IAlumnoRepository {
         Alumno alumno = alumnosList.stream()
                 .filter(a -> a.getId().equals(id))
                 .findFirst()
-                .orElseThrow(() -> new RuntimeException("Alumno no encontrado"));
+                .orElse(null);
 
         return alumno;
     }

@@ -26,4 +26,6 @@ public class AlumnoDTO {
     @JsonProperty("cursos_list")
     private List<CursoDTO> cursosList;
 
+
+
 }

@@ -9,6 +9,7 @@ public interface ICursoService {
 
     List<CursoDTO> traerTodos();
 
+    CursoDTO traerPorId(Integer codigo);
     CursoDuracionDTO traerMasHoras();
 }
 

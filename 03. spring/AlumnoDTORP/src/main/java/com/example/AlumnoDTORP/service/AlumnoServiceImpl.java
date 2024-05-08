@@ -1,8 +1,10 @@
 package com.example.AlumnoDTORP.service;
 
+import com.example.AlumnoDTORP.config.MiMapper;
 import com.example.AlumnoDTORP.dto.AlumnoDTO;
 import com.example.AlumnoDTORP.dto.CursoDTO;
 import com.example.AlumnoDTORP.dto.RespuestaDTO;
+import com.example.AlumnoDTORP.exceptions.registroInexistenteException;
 import com.example.AlumnoDTORP.model.Alumno;
 import com.example.AlumnoDTORP.model.Curso;
 import com.example.AlumnoDTORP.repository.IAlumnoRepository;
@@ -11,6 +13,8 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static com.example.AlumnoDTORP.config.MiMapper.mapAlumnoToAlumnoDTO;
 
 @Service
 public class AlumnoServiceImpl implements IAlumnoService {
@@ -46,21 +50,11 @@ public class AlumnoServiceImpl implements IAlumnoService {
     public AlumnoDTO buscarPorId(Integer id) {
         Alumno alumno = alumnoRepository.findById(id);
 
-        return new AlumnoDTO(
-                alumno.getId(),
-                alumno.getNombre(),
-                alumno.getApellidos(),
-                alumno.getFechaNacimiento(),
-                alumno.getDni(),
-                alumno.getDireccion(),
-                alumno.getCursosList().stream(
-                        ).map(c -> new CursoDTO(
-                                c.getCodigo(),
-                                c.getNombre(),
-                                c.getGrado(),
-                                c.getCertificado(),
-                                c.getDuracion()
-                        )).toList());
+        if (!alumnoRepository.existsById(id)) {
+            throw new registroInexistenteException();
+        }
+
+        return mapAlumnoToAlumnoDTO(alumno);
     }
 
     @Override

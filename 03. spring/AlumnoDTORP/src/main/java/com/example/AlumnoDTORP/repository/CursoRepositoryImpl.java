@@ -24,6 +24,15 @@ public class CursoRepositoryImpl implements ICursoRepository {
         return cursosList;
     }
 
+    @Override
+    public Curso findById(Integer codigo) {
+        return cursosList.stream()
+                .filter(c -> c.getCodigo().equals(codigo))
+                .findFirst()
+                .orElse(null);
+
+    }
+
 
     private List<Curso> loadData() {
         List<Curso> loadedData = null;
