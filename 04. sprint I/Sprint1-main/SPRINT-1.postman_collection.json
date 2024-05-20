@@ -1,0 +1,1126 @@
+{
+	"info": {
+		"_postman_id": "3a017f8c-944e-4bcb-abef-ea6d70c12e8b",
+		"name": "SPRINT-1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14105648",
+		"_collection_link": "https://adpsancorsalud.postman.co/workspace/Capacitacion~4e21afef-b554-4a50-a068-600549a9a6cd/collection/14105648-3a017f8c-944e-4bcb-abef-ea6d70c12e8b?action=share&source=collection_link&creator=14105648"
+	},
+	"item": [
+		{
+			"name": "US0001 - LISTAR TODOS LOS HOTELES",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/hotels",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"hotels"
+					],
+					"query": [
+						{
+							"key": "date_from",
+							"value": "10-02-2025",
+							"disabled": true
+						},
+						{
+							"key": "date_to",
+							"value": "20-03-2025",
+							"disabled": true
+						},
+						{
+							"key": "destination",
+							"value": "Puerto Iguazú",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "US0002 - LISTAR HOTELES DISPONIBLES POR DESTINO Y FECHA",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/hotels?date_from=10-02-2025&date_to=20-03-2025&destination=Puerto Iguazú",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"hotels"
+					],
+					"query": [
+						{
+							"key": "date_from",
+							"value": "10-02-2025"
+						},
+						{
+							"key": "date_to",
+							"value": "20-03-2025"
+						},
+						{
+							"key": "destination",
+							"value": "Puerto Iguazú"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Positivo",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/hotels?date_from=10-02-2025&date_to=20-03-2025&destination=Puerto Iguazú",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"hotels"
+							],
+							"query": [
+								{
+									"key": "date_from",
+									"value": "10-02-2025"
+								},
+								{
+									"key": "date_to",
+									"value": "20-03-2025"
+								},
+								{
+									"key": "destination",
+									"value": "Puerto Iguazú"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 20 May 2024 16:52:48 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"destination\": \"Puerto Iguazú\",\n        \"reserved\": \"NO\",\n        \"hotel_name\": \"Cataratas Hotel\",\n        \"room_type\": \"Doble\",\n        \"date_from\": \"10-02-2025\",\n        \"date_to\": \"20-03-2025\"\n    },\n    {\n        \"destination\": \"Puerto Iguazú\",\n        \"reserved\": \"NO\",\n        \"hotel_name\": \"Cataratas Hotel 2\",\n        \"room_type\": \"Triple\",\n        \"date_from\": \"10-02-2025\",\n        \"date_to\": \"23-03-2025\"\n    }\n]"
+				},
+				{
+					"name": "Negativo",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/hotels?date_from=10-01-2025&date_to=20-03-2025&destination=Puerto Iguazú",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"hotels"
+							],
+							"query": [
+								{
+									"key": "date_from",
+									"value": "10-01-2025"
+								},
+								{
+									"key": "date_to",
+									"value": "20-03-2025"
+								},
+								{
+									"key": "destination",
+									"value": "Puerto Iguazú"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 20 May 2024 16:52:48 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"destination\": \"Puerto Iguazú\",\n        \"reserved\": \"NO\",\n        \"hotel_name\": \"Cataratas Hotel\",\n        \"room_type\": \"Doble\",\n        \"date_from\": \"10-02-2025\",\n        \"date_to\": \"20-03-2025\"\n    },\n    {\n        \"destination\": \"Puerto Iguazú\",\n        \"reserved\": \"NO\",\n        \"hotel_name\": \"Cataratas Hotel 2\",\n        \"room_type\": \"Triple\",\n        \"date_from\": \"10-02-2025\",\n        \"date_to\": \"23-03-2025\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "US0003 - REALIZAR RESERVA HOTEL",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_name\" : \"juanperez@gmail.com\",\r\n    \"booking\" : {\r\n        \"date_from\": \"10-02-2025\",\r\n        \"date_to\": \"20-03-2025\",\r\n        \"destination\" : \"Cataratas Hotel\",\r\n        \"hotel_code\": \"CH-0002\",\r\n        \"people_amount\": 2,\r\n        \"room_type\": \"DOBLE\",\r\n        \"people\" :[\r\n            {\r\n                \"dni\": \"12345678\",\r\n                \"name\": \"Juan\",\r\n                \"last_name\": \"Perez\",\r\n                \"birth_date\": \"10-11-1982\",\r\n                \"email\": \"juanperez@gmail.com\"\r\n            },\r\n            {\r\n                \"dni\": \"87654321\",\r\n                \"name\": \"Maria\",\r\n                \"last_name\": \"Lopez\",\r\n                \"birth_date\": \"01-05-1985\",\r\n                \"email\": \"marialopez@gmail.com\"\r\n            }\r\n        ],\r\n        \"payment_method\":  //only cards\r\n        {\r\n            \"type\": \"CREDIT\",\r\n            \"number_card\": \"1234-1234-1234-1234\",\r\n            \"dues\": 6\r\n        }\r\n    }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/booking",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"booking"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "NEGATIVO",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_name\" : \"juanperez@gmail.com\",\r\n    \"booking\" : {\r\n        \"date_from\": \"10-11-2025\",\r\n        \"date_to\": \"20-11-2025\",\r\n        \"destination\" : \"Puerto Iguazu\",\r\n        \"hotel_code\": \"CC-00002\",\r\n        \"people_amount\": 2,\r\n        \"room_type\": \"DOUBLE\",\r\n        \"people\" :[\r\n            {\r\n                \"dni\": \"12345678\",\r\n                \"name\": \"Juan\",\r\n                \"last_name\": \"Perez\",\r\n                \"birth_date\": \"10-11-1982\",\r\n                \"email\": \"juanperez@gmail.com\"\r\n            },\r\n            {\r\n                \"dni\": \"87654321\",\r\n                \"name\": \"Maria\",\r\n                \"last_name\": \"Lopez\",\r\n                \"birth_date\": \"01-05-1985\",\r\n                \"email\": \"marialopez@gmail.com\"\r\n            }\r\n        ],\r\n        \"payment_method\":  //only cards\r\n        {\r\n            \"type\": \"CREDIT\",\r\n            \"number_card\": \"1234-1234-1234-1234\",\r\n            \"dues\": 6\r\n        }\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/booking",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"booking"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 20 May 2024 17:07:25 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"description\": \"Los datos de la reserva no coinciden\",\n    \"status\": 404\n}"
+				},
+				{
+					"name": "POSITIVO",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_name\" : \"juanperez@gmail.com\",\r\n    \"booking\" : {\r\n        \"date_from\": \"10-02-2025\",\r\n        \"date_to\": \"20-03-2025\",\r\n        \"destination\" : \"Cataratas Hotel\",\r\n        \"hotel_code\": \"CH-0002\",\r\n        \"people_amount\": 2,\r\n        \"room_type\": \"DOBLE\",\r\n        \"people\" :[\r\n            {\r\n                \"dni\": \"12345678\",\r\n                \"name\": \"Juan\",\r\n                \"last_name\": \"Perez\",\r\n                \"birth_date\": \"10-11-1982\",\r\n                \"email\": \"juanperez@gmail.com\"\r\n            },\r\n            {\r\n                \"dni\": \"87654321\",\r\n                \"name\": \"Maria\",\r\n                \"last_name\": \"Lopez\",\r\n                \"birth_date\": \"01-05-1985\",\r\n                \"email\": \"marialopez@gmail.com\"\r\n            }\r\n        ],\r\n        \"payment_method\":  //only cards\r\n        {\r\n            \"type\": \"CREDIT\",\r\n            \"number_card\": \"1234-1234-1234-1234\",\r\n            \"dues\": 6\r\n        }\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/booking",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"booking"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 20 May 2024 17:08:53 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user_name\": \"juanperez@gmail.com\",\n    \"amount\": 478800,\n    \"interest\": 5.5,\n    \"total\": 505134,\n    \"booking\": {\n        \"destination\": \"Cataratas Hotel\",\n        \"people_amount\": 2,\n        \"date_from\": \"10-02-2025\",\n        \"date_to\": \"20-03-2025\",\n        \"hotel_code\": \"CH-0002\",\n        \"room_type\": \"DOBLE\",\n        \"people\": [\n            {\n                \"dni\": 12345678,\n                \"name\": \"Juan\",\n                \"email\": \"juanperez@gmail.com\",\n                \"last_name\": \"Perez\",\n                \"birth_date\": \"10-11-1982\"\n            },\n            {\n                \"dni\": 87654321,\n                \"name\": \"Maria\",\n                \"email\": \"marialopez@gmail.com\",\n                \"last_name\": \"Lopez\",\n                \"birth_date\": \"01-05-1985\"\n            }\n        ],\n        \"payment_method\": {\n            \"type\": \"CREDIT\",\n            \"dues\": 6,\n            \"number_card\": \"1234-1234-1234-1234\"\n        }\n    },\n    \"status\": {\n        \"message\": \"El proceso termino satisfactoriamente\",\n        \"code\": 201\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "CRUD- ALTA DE HOTEL",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \r\n        \"date_from\": \"10-02-2025\",\r\n        \"date_to\": \"20-03-2025\",\r\n        \"destination\" : \"Cataratas Hotel\",\r\n        \"hotel_name\": \"HOTEL NAME\",\r\n        \"hotel_code\": \"POTEL1\",\r\n        \"amount\": 2,\r\n        \"room_type\": \"DOBLE\",\r\n        \"reserved\": \"NO\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/createHotel",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"createHotel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CRUD-HOTEL - BUSCAR HOTEL",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/searchHotelCode?hotel_code=CH-0003",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"searchHotelCode"
+					],
+					"query": [
+						{
+							"key": "hotel_code",
+							"value": "CH-0003"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "POSITIVO",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/searchHotelCode?hotel_code=CH-0003",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"searchHotelCode"
+							],
+							"query": [
+								{
+									"key": "hotel_code",
+									"value": "CH-0003"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 20 May 2024 17:19:27 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"destination\": \"Puerto Iguazú\",\n    \"reserved\": \"NO\",\n    \"hotel_name\": \"Cataratas Hotel 2\",\n    \"room_type\": \"Triple\",\n    \"date_from\": \"10-02-2025\",\n    \"date_to\": \"23-03-2025\"\n}"
+				},
+				{
+					"name": "NEGATIVO",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/searchHotelCode?hotel_code=CH-00033",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"searchHotelCode"
+							],
+							"query": [
+								{
+									"key": "hotel_code",
+									"value": "CH-00033"
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 20 May 2024 17:31:17 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"description\": \"No existen hoteles con el codigo administrado\",\n    \"status\": 400\n}"
+				}
+			]
+		},
+		{
+			"name": "CRUD-HOTEL - BORRAR HOTEL",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/deleteHotel?hotel_code=CH-0003",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"deleteHotel"
+					],
+					"query": [
+						{
+							"key": "hotel_code",
+							"value": "CH-0003"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "POSITIVO",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/searchHotelCode?hotel_code=CH-0003",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"searchHotelCode"
+							],
+							"query": [
+								{
+									"key": "hotel_code",
+									"value": "CH-0003"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 20 May 2024 17:19:27 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"destination\": \"Puerto Iguazú\",\n    \"reserved\": \"NO\",\n    \"hotel_name\": \"Cataratas Hotel 2\",\n    \"room_type\": \"Triple\",\n    \"date_from\": \"10-02-2025\",\n    \"date_to\": \"23-03-2025\"\n}"
+				},
+				{
+					"name": "NEGATIVO",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/searchHotelCode?hotel_code=CH-00033",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"searchHotelCode"
+							],
+							"query": [
+								{
+									"key": "hotel_code",
+									"value": "CH-00033"
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 20 May 2024 17:31:17 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"description\": \"No existen hoteles con el codigo administrado\",\n    \"status\": 400\n}"
+				}
+			]
+		},
+		{
+			"name": "CRUD-HOTEL - ACTUALIZAR HOTEL",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \r\n        \"date_from\": \"10-02-2025\",\r\n        \"date_to\": \"20-03-2025\",\r\n        \"destination\" : \"Cataratas Hotel\",\r\n        \"hotel_name\": \"HOTEL NAME CAMBIADO\",\r\n        \"hotel_code\": \"POTEL1\",\r\n        \"amount\": 2,\r\n        \"room_type\": \"DOBLE\",\r\n        \"reserved\": \"NO\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/updateHotel",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"updateHotel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "US0004 - LISTAR TODOS LOS VUELOS REGISTRADOS",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/flights",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"flights"
+					],
+					"query": [
+						{
+							"key": "date_from",
+							"value": "10-02-2025",
+							"disabled": true
+						},
+						{
+							"key": "date_to",
+							"value": "17-02-2025",
+							"disabled": true
+						},
+						{
+							"key": "origin",
+							"value": "Buenos Aires",
+							"disabled": true
+						},
+						{
+							"key": "destination",
+							"value": "Tucumán",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "US0005 - LISTAR VUELOS POR FECHA + ORIGEN + DESTINO",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/flights?date_from=10-02-2025&date_to=17-02-2025&origin=Buenos Aires&destination=Tucumán",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"flights"
+					],
+					"query": [
+						{
+							"key": "date_from",
+							"value": "10-02-2025"
+						},
+						{
+							"key": "date_to",
+							"value": "17-02-2025"
+						},
+						{
+							"key": "origin",
+							"value": "Buenos Aires"
+						},
+						{
+							"key": "destination",
+							"value": "Tucumán"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "POSITIVO",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/flights?date_from=10-02-2025&date_to=17-02-2025&origin=Buenos Aires&destination=Tucumán",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"flights"
+							],
+							"query": [
+								{
+									"key": "date_from",
+									"value": "10-02-2025"
+								},
+								{
+									"key": "date_to",
+									"value": "17-02-2025"
+								},
+								{
+									"key": "origin",
+									"value": "Buenos Aires"
+								},
+								{
+									"key": "destination",
+									"value": "Tucumán"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 20 May 2024 16:56:41 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"origin\": \"Buenos Aires\",\n        \"destination\": \"Tucumán\",\n        \"amount\": 7320,\n        \"flight_number\": \"BATU-5536\",\n        \"seat_type\": \"Economy\",\n        \"date_from\": \"10-02-2025\",\n        \"date_to\": \"17-02-2025\"\n    }\n]"
+				},
+				{
+					"name": "NEGATIVO - VER -",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/flights?date_from=11-02-2025&date_to=17-02-2025&origin=Buenos AiresSSSS&destination=Tucumán",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"flights"
+							],
+							"query": [
+								{
+									"key": "date_from",
+									"value": "11-02-2025"
+								},
+								{
+									"key": "date_to",
+									"value": "17-02-2025"
+								},
+								{
+									"key": "origin",
+									"value": "Buenos AiresSSSS"
+								},
+								{
+									"key": "destination",
+									"value": "Tucumán"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 20 May 2024 16:56:41 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"origin\": \"Buenos Aires\",\n        \"destination\": \"Tucumán\",\n        \"amount\": 7320,\n        \"flight_number\": \"BATU-5536\",\n        \"seat_type\": \"Economy\",\n        \"date_from\": \"10-02-2025\",\n        \"date_to\": \"17-02-2025\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "US0006 - REALIZAR RESERVA VUELO",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_name\" : \"juanperez@gmail.com\",\r\n    \"flight_reservation\" : {\r\n        \"date_from\": \"10-02-2025\",\r\n        \"date_to\": \"20-02-2025\",\r\n        \"origin\" : \"Puerto Iguazú\",\r\n        \"destination\" : \"Bogotá\",\r\n        \"flight_number\" : \"PIBA-1420\",\r\n        \"seats\" : 2,\r\n        \"seat_type\": \"Business\",\r\n        \"people\" :[\r\n            {\r\n                \"dni\": \"12345678\",\r\n                \"name\": \"Juan\",\r\n                \"last_name\": \"Perez\",\r\n                \"birth_date\": \"10-11-1982\",\r\n                \"email\": \"juanperez@gmail.com\"\r\n            },\r\n            {\r\n                \"dni\": \"87654321\",\r\n                \"name\": \"Maria\",\r\n                \"last_name\": \"Lopez\",\r\n                \"birth_date\": \"01-05-1985\",\r\n                \"email\": \"marialopez@gmail.com\"\r\n            }\r\n        ],\r\n        \"payment_method\":  //only cards\r\n        {\r\n            \"type\": \"CREDIT\",\r\n            \"number_card\": \"1234-1234-1234-1234\",\r\n            \"dues\": 6\r\n        }\r\n    }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/flight-reservation",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"flight-reservation"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "NEGATIVO",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_name\" : \"juanperez@gmail.com\",\r\n    \"flight_reservation\" : {\r\n        \"date_from\": \"10-11-2025\",\r\n        \"date_to\": \"20-11-2025\",\r\n        \"origin\" : \"Buenos Aires\",\r\n        \"destination\" : \"Puerto Iguazu\",\r\n        \"flight_number\" : \"FFFF-0002\",\r\n        \"seats\" : 2,\r\n        \"seat_type\": \"ECONOMY\",\r\n        \"people\" :[\r\n            {\r\n                \"dni\": \"12345678\",\r\n                \"name\": \"Juan\",\r\n                \"last_name\": \"Perez\",\r\n                \"birth_date\": \"10-11-1982\",\r\n                \"email\": \"juanperez@gmail.com\"\r\n            },\r\n            {\r\n                \"dni\": \"87654321\",\r\n                \"name\": \"Maria\",\r\n                \"last_name\": \"Lopez\",\r\n                \"birth_date\": \"01-05-1985\",\r\n                \"email\": \"marialopez@gmail.com\"\r\n            }\r\n        ],\r\n        \"payment_method\":  //only cards\r\n        {\r\n            \"type\": \"CREDIT\",\r\n            \"number_card\": \"1234-1234-1234-1234\",\r\n            \"dues\": 6\r\n        }\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/flight-reservation",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"flight-reservation"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 20 May 2024 17:11:49 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"description\": \"Los datos de la reserva no coinciden\",\n    \"status\": 404\n}"
+				},
+				{
+					"name": "POSITIVO",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_name\" : \"juanperez@gmail.com\",\r\n    \"flight_reservation\" : {\r\n        \"date_from\": \"10-02-2025\",\r\n        \"date_to\": \"20-02-2025\",\r\n        \"origin\" : \"Puerto Iguazú\",\r\n        \"destination\" : \"Bogotá\",\r\n        \"flight_number\" : \"PIBA-1420\",\r\n        \"seats\" : 2,\r\n        \"seat_type\": \"Business\",\r\n        \"people\" :[\r\n            {\r\n                \"dni\": \"12345678\",\r\n                \"name\": \"Juan\",\r\n                \"last_name\": \"Perez\",\r\n                \"birth_date\": \"10-11-1982\",\r\n                \"email\": \"juanperez@gmail.com\"\r\n            },\r\n            {\r\n                \"dni\": \"87654321\",\r\n                \"name\": \"Maria\",\r\n                \"last_name\": \"Lopez\",\r\n                \"birth_date\": \"01-05-1985\",\r\n                \"email\": \"marialopez@gmail.com\"\r\n            }\r\n        ],\r\n        \"payment_method\":  //only cards\r\n        {\r\n            \"type\": \"CREDIT\",\r\n            \"number_card\": \"1234-1234-1234-1234\",\r\n            \"dues\": 6\r\n        }\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/flight-reservation",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"flight-reservation"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 20 May 2024 17:15:23 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user_name\": \"juanperez@gmail.com\",\n    \"amount\": 86400,\n    \"interest\": 23328,\n    \"total\": 109728,\n    \"status_code\": {\n        \"message\": \"La reserva finalizó satisfactoriamente\",\n        \"code\": 201\n    },\n    \"flight_reservation\": {\n        \"origin\": \"Puerto Iguazú\",\n        \"destination\": \"Bogotá\",\n        \"seats\": 2,\n        \"people\": [\n            {\n                \"dni\": 12345678,\n                \"name\": \"Juan\",\n                \"email\": \"juanperez@gmail.com\",\n                \"last_name\": \"Perez\",\n                \"birth_date\": \"10-11-1982\"\n            },\n            {\n                \"dni\": 87654321,\n                \"name\": \"Maria\",\n                \"email\": \"marialopez@gmail.com\",\n                \"last_name\": \"Lopez\",\n                \"birth_date\": \"01-05-1985\"\n            }\n        ],\n        \"date_from\": \"10-02-2025\",\n        \"date_to\": \"20-02-2025\",\n        \"flight_number\": \"PIBA-1420\",\n        \"seat_type\": \"Business\",\n        \"payment_method\": {\n            \"type\": \"CREDIT\",\n            \"dues\": 6,\n            \"number_card\": \"1234-1234-1234-1234\"\n        }\n    }\n}"
+				}
+			]
+		}
+	]
+}

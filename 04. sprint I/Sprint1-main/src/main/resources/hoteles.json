@@ -1,0 +1,123 @@
+[
+   {
+      "hotel_code":"CH-0002",
+      "hotel_name":"Cataratas Hotel",
+      "destination":"Puerto Iguazú",
+      "room_type":"Doble",
+      "amount":6300,
+      "date_from":"10-02-2025",
+      "date_to":"20-03-2025",
+      "reserved":"NO"
+   },
+
+   {
+      "hotel_code":"CH-0003",
+      "hotel_name":"Cataratas Hotel 2",
+      "destination":"Puerto Iguazú",
+      "room_type":"Triple",
+      "amount":8200,
+      "date_from":"10-02-2025",
+      "date_to":"23-03-2025",
+      "reserved":"NO"
+   },
+   {
+      "hotel_code":"HB-0001",
+      "hotel_name":"Hotel Bristol",
+      "destination":"Buenos Aires",
+      "room_type":"Single",
+      "amount":5435,
+      "date_from":"10-02-2025",
+      "date_to":"19-03-2025",
+      "reserved":"NO"
+   },
+   {
+      "hotel_code":"BH-0002",
+      "hotel_name":"Hotel Bristol 2",
+      "destination":"Buenos Aires",
+      "room_type":"Doble",
+      "amount":7200,
+      "date_from":"12-02-2025",
+      "date_to":"17-04-2025",
+      "reserved":"NO"
+   },
+   {
+      "hotel_code":"SH-0002",
+      "hotel_name":"Sheraton",
+      "destination":"Tucumán",
+      "room_type":"Doble",
+      "amount":5790,
+      "date_from":"17-04-2025",
+      "date_to":"23-05-2025",
+      "reserved":"NO"
+   },
+   {
+      "hotel_code":"SH-0001",
+      "hotel_name":"Sheraton 2",
+      "destination":"Tucumán",
+      "room_type":"Single",
+      "amount":4150,
+      "date_from":"02-01-2025",
+      "date_to":"19-02-2025",
+      "reserved":"NO"
+   },
+   {
+      "hotel_code":"SE-0001",
+      "hotel_name":"Selina",
+      "destination":"Bogotá",
+      "room_type":"Single",
+      "amount":3900,
+      "date_from":"23-01-2025",
+      "date_to":"23-11-2025",
+      "reserved":"NO"
+   },
+   {
+      "hotel_code":"SE-0002",
+      "hotel_name":"Selina 2",
+      "destination":"Bogotá",
+      "room_type":"Doble",
+      "amount":5840,
+      "date_from":"23-01-2025",
+      "date_to":"15-10-2025",
+      "reserved":"NO"
+   },
+   {
+      "hotel_code":"EC-0003",
+      "hotel_name":"El Campín",
+      "destination":"Bogotá",
+      "room_type":"Triple",
+      "amount":7020,
+      "date_from":"15-02-2025",
+      "date_to":"27-03-2025",
+      "reserved":"NO"
+   },
+   {
+      "hotel_code":"CP-0004",
+      "hotel_name":"Central Plaza",
+      "destination":"Medellín",
+      "room_type":"Múltiple",
+      "amount":8600,
+      "date_from":"01-03-2025",
+      "date_to":"17-04-2025",
+      "reserved":"NO"
+   },
+   {
+      "hotel_code":"CP-0002",
+      "hotel_name":"Central Plaza 2",
+      "destination":"Medellín",
+      "room_type":"Doble",
+      "amount":6400,
+      "date_from":"10-02-2025",
+      "date_to":"20-03-2025",
+      "reserved":"NO"
+   },
+   {
+      "hotel_code":"BG-0004",
+      "hotel_name":"Bocagrande",
+      "destination":"Cartagena",
+      "room_type":"Múltiple",
+      "amount":9370,
+      "date_from":"17-04-2025",
+      "date_to":"12-06-2025",
+      "reserved":"NO"
+   }
+]
