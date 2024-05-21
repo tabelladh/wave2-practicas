@@ -25,9 +25,6 @@ public class ExceptionHandlerController {
         return new ResponseEntity<>(excepcion, HttpStatus.NOT_FOUND);
     }
 
-    ///////////////////////////////////////////////
-    /// MANEJADOR DE VALIDACIONES ////////////////
-
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<ErrorDTO> validationException(MethodArgumentNotValidException e){
         return ResponseEntity.badRequest().body(
