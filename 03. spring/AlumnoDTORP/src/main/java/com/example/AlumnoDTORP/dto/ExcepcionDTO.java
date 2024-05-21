@@ -7,9 +7,10 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class CursoDuracionDTO {
+public class ExcepcionDTO {
 
-    private String nombre;
-    private Double duracion;
 
+    private String description;
+
+    private Integer status;
 }

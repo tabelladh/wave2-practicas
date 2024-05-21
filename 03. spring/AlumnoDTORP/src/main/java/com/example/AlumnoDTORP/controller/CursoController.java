@@ -1,7 +1,7 @@
 package com.example.AlumnoDTORP.controller;
 
 import com.example.AlumnoDTORP.dto.CursoDTO;
-import com.example.AlumnoDTORP.dto.CursoDuracionDTO;
+import com.example.AlumnoDTORP.dto.response.CursoDuracionDTO;
 import com.example.AlumnoDTORP.service.ICursoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
