@@ -1,0 +1,6 @@
+
+‰	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÀÆ¿·J$21900b41-f690-4d40-844a-15104b3cf0e3
+b
+java:S1452"&Remove usage of generic wildcard type.(ÀÆ¿·J$95d028bb-edb4-41f0-b108-1ae34d54af79
+»
+java:S6204"zReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()' and ensure that the list is unmodified.(ªçŸŠøÿÿÿÿJ$c07581fc-0b99-4776-8a32-dea27da4ed51
