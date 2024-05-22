@@ -20,7 +20,7 @@ public class CursoDTO {
     @NotBlank(message="El grado no debe estár nulo o vacío")
     private String grado;
 
-    @AssertTrue
+    @NotNull(message="Este campo debe estar completo")
     private Boolean certificado;
 
     @NotNull(message="La duracion no debe estár nula")
