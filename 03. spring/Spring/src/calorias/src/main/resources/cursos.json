@@ -1,0 +1,29 @@
+[
+        {
+          "codigo": 101,
+          "nombre": "Matemáticas",
+          "grado": "Bachillerato",
+          "certificado": true,
+         "duracion": 180.0 },
+        {
+          "codigo": 102,
+          "nombre": "Historia",
+          "grado": "Bachillerato",
+          "certificado": true,
+          "duracion": 150.0
+        },
+        {
+          "codigo": 103,
+          "nombre": "Inglés",
+          "grado": "Bachillerato",
+          "certificado": true,
+          "duracion": 200.0
+        },
+        {
+        "codigo": 104,
+        "nombre": "Programacion",
+        "grado": "Bachillerato",
+        "certificado": false,
+        "duracion": 450.0
+        }
+]
