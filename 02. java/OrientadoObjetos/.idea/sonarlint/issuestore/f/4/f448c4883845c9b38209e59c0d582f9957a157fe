@@ -1,7 +1,0 @@
-
-‡
-java:S1192"FDefine a constant instead of duplicating this literal "perro" 7 times.(“ÂÅÐüÿÿÿÿJ$b8e007b5-dcfb-4fee-accb-cf5356435f9f
-•	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¨¸ÊÚJ$e4b5fa51-fbf6-47e3-b0ae-15fe0eba5db9
-f	java:S106-"+Replace this use of System.out by a logger.(ÄàùâJ$c7229b1e-88f6-49b6-9cf4-3cd082aed843
-f	java:S106."+Replace this use of System.out by a logger.(Þº€¾J$cb245773-8a7a-4d3d-8ada-5310c1db03de
-f	java:S106/"+Replace this use of System.out by a logger.(·…ŒŽJ$42a7016a-2b26-4697-bbc6-eb1f515a0e81

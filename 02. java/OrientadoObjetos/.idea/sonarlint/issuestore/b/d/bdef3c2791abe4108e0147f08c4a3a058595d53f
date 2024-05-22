@@ -1,6 +1,0 @@
-
-•	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ïø¼‹J$32546c6c-72a7-42a5-9286-6cb2059d9db8
-¢
-java:S4165"aRemove this useless assignment; "dni" already holds the assigned value along all execution paths.(¾ïþßÿÿÿÿÿJ$49c32394-455c-4374-a576-636df3fcca53
-p
-java:S1656"/Remove or correct this useless self-assignment.(¾ïþßÿÿÿÿÿJ$7aa6b8a2-b2a6-4cca-8e1d-9b91e560450a
