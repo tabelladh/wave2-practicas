@@ -1,0 +1,110 @@
+[
+  {
+    "Flight Number": "BAPI-1235",
+    "Origin": "Buenos Aires",
+    "Destination": "Puerto Iguazú",
+    "Seat Type": "Economy",
+    "Price per Person": "$6,500",
+    "Departure Date": "10/02/2025",
+    "Return Date": "15/02/2025"
+  },
+  {
+    "Flight Number": "PIBA-1420",
+    "Origin": "Puerto Iguazú",
+    "Destination": "Bogotá",
+    "Seat Type": "Business",
+    "Price per Person": "$43,200",
+    "Departure Date": "10/02/2025",
+    "Return Date": "20/02/2025"
+  },
+  {
+    "Flight Number": "PIBA-1420",
+    "Origin": "Puerto Iguazú",
+    "Destination": "Bogotá",
+    "Seat Type": "Economy",
+    "Price per Person": "$25,735",
+    "Departure Date": "10/02/2025",
+    "Return Date": "21/02/2025"
+  },
+  {
+    "Flight Number": "BATU-5536",
+    "Origin": "Buenos Aires",
+    "Destination": "Tucumán",
+    "Seat Type": "Economy",
+    "Price per Person": "$7,320",
+    "Departure Date": "10/02/2025",
+    "Return Date": "17/02/2025"
+  },
+  {
+    "Flight Number": "TUPI-3369",
+    "Origin": "Tucumán",
+    "Destination": "Puerto Iguazú",
+    "Seat Type": "Business",
+    "Price per Person": "$12,530",
+    "Departure Date": "12/02/2025",
+    "Return Date": "23/02/2025"
+  },
+  {
+    "Flight Number": "TUPI-3369",
+    "Origin": "Tucumán",
+    "Destination": "Puerto Iguazú",
+    "Seat Type": "Economy",
+    "Price per Person": "$5,400",
+    "Departure Date": "02/01/2025",
+    "Return Date": "16/01/2025"
+  },
+  {
+    "Flight Number": "BOCA-4213",
+    "Origin": "Bogotá",
+    "Destination": "Cartagena",
+    "Seat Type": "Economy",
+    "Price per Person": "$8,000",
+    "Departure Date": "23/01/2025",
+    "Return Date": "5/2/2025"
+  },
+  {
+    "Flight Number": "CAME-0321",
+    "Origin": "Cartagena",
+    "Destination": "Medellín",
+    "Seat Type": "Economy",
+    "Price per Person": "$7,800",
+    "Departure Date": "23/01/2025",
+    "Return Date": "31/1/2025"
+  },
+  {
+    "Flight Number": "BOBA-6567",
+    "Origin": "Bogotá",
+    "Destination": "Buenos Aires",
+    "Seat Type": "Business",
+    "Price per Person": "$57,000",
+    "Departure Date": "15/02/2025",
+    "Return Date": "28/02/2025"
+  },
+  {
+    "Flight Number": "BOBA-6567",
+    "Origin": "Bogotá",
+    "Destination": "Buenos Aires",
+    "Seat Type": "Economy",
+    "Price per Person": "$39,860",
+    "Departure Date": "01/03/2025",
+    "Return Date": "14/03/2025"
+  },
+  {
+    "Flight Number": "BOME-4442",
+    "Origin": "Bogotá",
+    "Destination": "Medellín",
+    "Seat Type": "Economy",
+    "Price per Person": "$11,000",
+    "Departure Date": "10/02/2025",
+    "Return Date": "24/02/2025"
+  },
+  {
+    "Flight Number": "MEPI-9986",
+    "Origin": "Medellín",
+    "Destination": "Puerto Iguazú",
+    "Seat Type": "Business",
+    "Price per Person": "$41,640",
+    "Departure Date": "17/04/2025",
+    "Return Date": "02/05/2025"
+  }
+]
