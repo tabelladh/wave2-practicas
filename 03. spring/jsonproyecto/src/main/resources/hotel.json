@@ -1,0 +1,122 @@
+[
+  {
+    "Código Hotel": "CH-0002",
+    "Nombre": "Cataratas Hotel",
+    "Lugar/Ciudad": "Puerto Iguazú",
+    "Tipo de Habitación": "Doble",
+    "Precio por noche": "$6300",
+    "Disponible Desde": "10/02/2025",
+    "Disponible hasta": "20/03/2025",
+    "Reservado": "NO"
+  },
+  {
+    "Código Hotel": "CH-0003",
+    "Nombre": "Cataratas Hotel 2",
+    "Lugar/Ciudad": "Puerto Iguazú",
+    "Tipo de Habitación": "Triple",
+    "Precio por noche": "$8200",
+    "Disponible Desde": "10/02/2025",
+    "Disponible hasta": "23/03/2025",
+    "Reservado": "NO"
+  },
+  {
+    "Código Hotel": "HB-0001",
+    "Nombre": "Hotel Bristol",
+    "Lugar/Ciudad": "Buenos Aires",
+    "Tipo de Habitación": "Single",
+    "Precio por noche": "$5435",
+    "Disponible Desde": "10/02/2025",
+    "Disponible hasta": "19/03/2025",
+    "Reservado": "NO"
+  },
+  {
+    "Código Hotel": "BH-0002",
+    "Nombre": "Hotel Bristol 2",
+    "Lugar/Ciudad": "Buenos Aires",
+    "Tipo de Habitación": "Doble",
+    "Precio por noche": "$7200",
+    "Disponible Desde": "12/02/2025",
+    "Disponible hasta": "17/04/2025",
+    "Reservado": "NO"
+  },
+  {
+    "Código Hotel": "SH-0002",
+    "Nombre": "Sheraton",
+    "Lugar/Ciudad": "Tucumán",
+    "Tipo de Habitación": "Doble",
+    "Precio por noche": "$5790",
+    "Disponible Desde": "17/04/2025",
+    "Disponible hasta": "23/05/2025",
+    "Reservado": "NO"
+  },
+  {
+    "Código Hotel": "SH-0001",
+    "Nombre": "Sheraton 2",
+    "Lugar/Ciudad": "Tucumán",
+    "Tipo de Habitación": "Single",
+    "Precio por noche": "$4150",
+    "Disponible Desde": "02/01/2025",
+    "Disponible hasta": "19/02/2025",
+    "Reservado": "NO"
+  },
+  {
+    "Código Hotel": "SE-0001",
+    "Nombre": "Selina",
+    "Lugar/Ciudad": "Bogotá",
+    "Tipo de Habitación": "Single",
+    "Precio por noche": "$3900",
+    "Disponible Desde": "23/01/2025",
+    "Disponible hasta": "23/11/2025",
+    "Reservado": "NO"
+  },
+  {
+    "Código Hotel": "SE-0002",
+    "Nombre": "Selina 2",
+    "Lugar/Ciudad": "Bogotá",
+    "Tipo de Habitación": "Doble",
+    "Precio por noche": "$5840",
+    "Disponible Desde": "23/01/2025",
+    "Disponible hasta": "15/10/2025",
+    "Reservado": "NO"
+  },
+  {
+    "Código Hotel": "EC-0003",
+    "Nombre": "El Campín",
+    "Lugar/Ciudad": "Bogotá",
+    "Tipo de Habitación": "Triple",
+    "Precio por noche": "$7020",
+    "Disponible Desde": "15/02/2025",
+    "Disponible hasta": "27/03/2025",
+    "Reservado": "NO"
+  },
+  {
+    "Código Hotel": "CP-0004",
+    "Nombre": "Central Plaza",
+    "Lugar/Ciudad": "Medellín",
+    "Tipo de Habitación": "Múltiple",
+    "Precio por noche": "$8600",
+    "Disponible Desde": "01/03/2025",
+    "Disponible hasta": "17/04/2025",
+    "Reservado": "NO"
+  },
+  {
+    "Código Hotel": "CP-0002",
+    "Nombre": "Central Plaza 2",
+    "Lugar/Ciudad": "Medellín",
+    "Tipo de Habitación": "Doble",
+    "Precio por noche": "$6400",
+    "Disponible Desde": "10/02/2025",
+    "Disponible hasta": "20/03/2025",
+    "Reservado": "NO"
+  },
+  {
+    "Código Hotel": "BG-0004",
+    "Nombre": "Bocagrande",
+    "Lugar/Ciudad": "Cartagena",
+    "Tipo de Habitación": "Múltiple",
+    "Precio por noche": "$9370",
+    "Disponible Desde": "17/04/2025",
+    "Disponible hasta": "12/06/2025",
+    "Reservado": "NO"
+  }
+]
