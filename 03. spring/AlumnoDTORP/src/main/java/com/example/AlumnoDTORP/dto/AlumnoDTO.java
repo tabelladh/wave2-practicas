@@ -24,7 +24,7 @@ public class AlumnoDTO {
     private Integer dni;
     private String direccion;
     @JsonProperty("cursos_list")
-    private List<CursoDTO> cursosList;
+    private List<@Valid CursoDTO> cursosList;
 
 
 

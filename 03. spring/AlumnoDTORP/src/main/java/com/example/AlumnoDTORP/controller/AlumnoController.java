@@ -34,7 +34,9 @@ public class AlumnoController {
     }
 
     @DeleteMapping("/borrarAlumno/{id}")
-    public ResponseEntity<RespuestaDTO> borrarAlumno(@PathVariable Integer id){
+    public ResponseEntity<RespuestaDTO> borrarAlumno(@PathVariable
+                                                         @Positive(message = "El id debe ser positivo y distinto a 0")
+                                                         @NotNull(message = "El id no puede ser nulo") Integer id) {
         return new ResponseEntity<>(alumnoService.borrarAlumno(id), HttpStatus.OK);
     }
 
@@ -44,7 +46,9 @@ public class AlumnoController {
     }
 
     @GetMapping("/existeAlumno/{id}")
-    public ResponseEntity<Boolean> existeAlumno(@PathVariable Integer id){
+    public ResponseEntity<Boolean> existeAlumno(@PathVariable
+                                                    @Positive(message = "El id debe ser positivo y distinto a 0")
+                                                    @NotNull(message = "El id no puede ser nulo") Integer id){
         return new ResponseEntity<>(alumnoService.existeAlumno(id), HttpStatus.OK);
     }
 }
