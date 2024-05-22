@@ -1,0 +1,59 @@
+[
+    {
+      "id": 1,
+      "nombre": "Juan",
+      "apellidos": "Martinez",
+      "fecha_nacimiento": "2000-02-15",
+      "dni": "12345678",
+      "direccion": "Calle Principal 123",
+      "cursos_list": [
+        {
+        "codigo": 101,
+        "nombre": "Matemáticas",
+        "grado": "Bachillerato",
+        "certificado": true,
+        "duracion": 180.0 },
+        {
+          "codigo": 102,
+          "nombre": "Historia",
+          "grado": "Bachillerato",
+          "certificado": true,
+          "duracion": 150.0
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "María",
+      "apellidos": "González",
+      "fecha_nacimiento": "2001-05-20",
+      "dni": "87654321",
+      "direccion": "Avenida Central 456",
+      "cursos_list":[
+        {
+        "codigo": 102,
+        "nombre": "Historia",
+        "grado": "Bachillerato",
+        "certificado": true,
+        "duracion": 150.0
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "nombre": "Carlos",
+      "apellidos": "López",
+      "fecha_nacimiento": "1999-10-10",
+      "dni": "56789012",
+      "direccion": "Plaza Mayor 789",
+      "cursos_list": [
+        {
+        "codigo": 103,
+        "nombre": "Inglés",
+        "grado": "Bachillerato",
+        "certificado": true,
+        "duracion": 200.0
+        }
+      ]
+    }
+]
