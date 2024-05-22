@@ -1,0 +1,9 @@
+
+k	java:S117	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ôñùÞÿÿÿÿÿ
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(û Ð™úÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ë±ô©ùÿÿÿÿ
+k	java:S116"WRename this field "id_documento" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(È·ÂE
+O
+java:S5993"9Change the visibility of this constructor to "protected".(ý÷²™
+T
+java:S5993	"9Change the visibility of this constructor to "protected".(ôñùÞÿÿÿÿÿ

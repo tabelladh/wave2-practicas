@@ -1,0 +1,13 @@
+
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ð¼ãË
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ð¼ãË
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ð¼ãË
+f	java:S117 "QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(š°ÅÝ
+k	java:S1170"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨ŽÞ ûÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ë±ô©ùÿÿÿÿ
+h	java:S116"NRename this field "DNI" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(èüöšýÿÿÿÿ
+p	java:S116"[Rename this field "aÃ±osExperiencia" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Îè¾Ó
+@	java:S1066"+Replace this use of System.out by a logger.(¨¨Ý×
+@	java:S1067"+Replace this use of System.out by a logger.(ËüÓû
+E	java:S1068"+Replace this use of System.out by a logger.(Ê¾€†ûÿÿÿÿ
+E	java:S1069"+Replace this use of System.out by a logger.(çé£Ðüÿÿÿÿ

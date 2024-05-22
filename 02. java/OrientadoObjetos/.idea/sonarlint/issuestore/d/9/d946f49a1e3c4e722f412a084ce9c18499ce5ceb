@@ -1,0 +1,11 @@
+
+¨
+java:S1192="`Define a constant instead of duplicating this literal "-------------------------------" 6 times.(ç‘ë®üÿÿÿÿ8Á¸ñ1J$12a1e0f4-e55d-4581-a3ff-59925cf8eed8
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(·ğóÓüÿÿÿÿ8ÂÒåÓñ1J$fa1cf689-a6ce-40f3-987f-4351357ac178
+m	java:S106<"+Replace this use of System.out by a logger.(Ğ¿—8õ„ñ1J$23df9d82-f0d2-4fe5-966b-3544a5b2113c
+r	java:S106="+Replace this use of System.out by a logger.(ç‘ë®üÿÿÿÿ8ö„ñ1J$857c3c30-57df-4b5b-851a-debc5b8998ec
+r	java:S106?"+Replace this use of System.out by a logger.(ç‘ë®üÿÿÿÿ8—Á¸ñ1J$c7cf99e0-d82d-43f4-94b5-382dfd32bf03
+r	java:S106A"+Replace this use of System.out by a logger.(ç‘ë®üÿÿÿÿ8˜Á¸ñ1J$031b4ce2-7a6c-43d2-bd63-4b84d2fae5f8
+r	java:S106C"+Replace this use of System.out by a logger.(ç‘ë®üÿÿÿÿ8˜Á¸ñ1J$97044345-f171-4b33-8224-4fd33b11e3a4
+r	java:S106G"+Replace this use of System.out by a logger.(ç‘ë®üÿÿÿÿ8¯è¸ñ1J$5168b248-4de4-4c5c-895a-5b63a8f72f17
+r	java:S106J"+Replace this use of System.out by a logger.(ç‘ë®üÿÿÿÿ8¯è¸ñ1J$6bf79a09-8cc4-4ede-a045-4f4d11e045c1
