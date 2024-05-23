@@ -1,0 +1,52 @@
+[
+    {
+      "id": 1,
+      "nombre": "Juan",
+      "apellidos": "Martinez",
+      "cursos_list": [
+        {
+        "codigo": 101,
+        "nombre": "Matemáticas",
+        "promedio_curso":  10.0},
+        {
+          "codigo": 102,
+          "nombre": "Historia",
+          "promedio_curso": 10.0
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "María",
+      "apellidos": "González",
+      "cursos_list":[
+        {
+        "codigo": 102,
+        "nombre": "Historia",
+        "promedio_curso": 1.0
+        },
+        {
+          "codigo": 105,
+          "nombre": "Ciencias Naturales",
+          "promedio_curso": 1.0
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "nombre": "Carlos",
+      "apellidos": "López",
+      "cursos_list": [
+        {
+        "codigo": 103,
+        "nombre": "Inglés",
+        "promedio_curso": 10.0
+        },
+        {
+          "codigo": 104,
+          "nombre": "Italiano",
+          "promedio_curso": 6.0
+        }
+      ]
+    }
+]
