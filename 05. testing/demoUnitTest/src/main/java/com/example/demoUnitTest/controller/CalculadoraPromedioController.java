@@ -29,7 +29,8 @@ public class CalculadoraPromedioController {
 
     @GetMapping("/promedioDeAlumno/{id}")
     public ResponseEntity<Double> promedioDeAlumno(@PathVariable Integer id){
-        return new ResponseEntity<>(calculadoraPromedioService.promedioDeAlumno(id), HttpStatus.OK);
+        Double promedio = calculadoraPromedioService.promedioDeAlumno(id);
+        return new ResponseEntity<>(promedio, HttpStatus.OK);
     }
 
 

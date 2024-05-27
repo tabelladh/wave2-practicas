@@ -23,10 +23,15 @@ public class CalculadoraPromedioServiceTest {
                     new Curso(102, "Historia", 10.0)
             ));
 
-    @Mock
+    private static final Alumno alumnoDeEntrada2 = new Alumno( 2, "María" , "González",
+            List.of(new Curso(102, "Historia", 1.0),
+                    new Curso(105, "Ciencias Naturales", 1.0)
+            ));
+
+    @Mock //Puede ser la clase o la Interface, es lo mismo lo que importa es q los metodos esten declarados.
     AlumnoRepositoryImpl AlumnoRepositoryImpl;
 
-    @InjectMocks
+    @InjectMocks //Siempre es la clase ya que tiene el constructor
     CalculadoraPromedioServiceImpl calculadoraPromedioService;
 
 
@@ -35,15 +40,18 @@ public class CalculadoraPromedioServiceTest {
     @DisplayName("01 - Test Service : promedio de Alumno OK")
     public void promedioDeAlumnoTestOK(){
         //ARRANGE
-        Integer idDeEntrada = 1;
+        Integer idDeEntrada = 3;
         Double promedioEsperado = 10.0;
 
         //ACT
-        Mockito.when(AlumnoRepositoryImpl.findById(idDeEntrada)).thenReturn(alumnoDeEntrada);
-        Double promedioObtenido = calculadoraPromedioService.promedioDeAlumno(idDeEntrada);
+        //Mockito.when(AlumnoRepositoryImpl.findById(idDeEntrada)).thenReturn(alumnoDeEntrada);
+        Mockito.when(AlumnoRepositoryImpl.findById(15)).thenReturn(alumnoDeEntrada2);
+
+        Double promedioObtenido = calculadoraPromedioService.promedioDeAlumno(15);
+
 
         //ASSERT
-        Assertions.assertEquals(promedioEsperado, promedioObtenido);
+        Assertions.assertEquals(promedioEsperado, promedioObtenido, "El promedio no es el esperado");
     }
 
 

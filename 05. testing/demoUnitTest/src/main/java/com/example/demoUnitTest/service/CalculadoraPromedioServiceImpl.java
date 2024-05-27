@@ -11,6 +11,7 @@ public class CalculadoraPromedioServiceImpl implements ICalculadoraPromedioServi
     @Autowired
     private IAlumnoRepository AlumnoRepository;
 
+
     /// SUMAR
     public Double sumar(Double n1, Double n2){
         return n1 + n2;
