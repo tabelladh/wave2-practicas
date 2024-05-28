@@ -118,7 +118,8 @@ public class StudentServiceTest {
         Set<StudentDTO> studentsDTO = studentService.getAll();
 
 
-        Assertions.assertEquals(2, studentsDTO.size(), "Cantidad de students 2");
+        Assertions.assertEquals(2, studentsDTO.size(), "Cantidad de students esperados deberia ser 2");
+
 
     }
 

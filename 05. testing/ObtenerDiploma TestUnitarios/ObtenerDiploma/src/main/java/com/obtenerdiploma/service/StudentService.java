@@ -81,3 +81,17 @@ public class StudentService implements IStudentService {
                         ).collect(Collectors.toSet());
     }
 }
+//@ExtendWith(MockitoExtension.class)
+//SERVICE_TEST
+//@Mock (va lo que tenes en el @Autowired de la clase a testear (en este caso REPOSITORY))
+//@InjectMock (va la clase a testear (SERVICE))
+
+//Mockito.when(Repository.metodo(parametro).thenReturn(tipo de respuesta esperado por el metodo))
+
+
+//@ExtendWith(MockitoExtension.class)
+//CONTROLLER_TEST
+//@Mock (va lo que tenes en el @Autowired de la clase a testear (en este caso SERVICE))
+//@InjectMock (va la clase a testear (CONTROLLER))
+
+//Mockito.when(Service.metodo(parametro).thenReturn(tipo de respuesta esperado por el metodo));

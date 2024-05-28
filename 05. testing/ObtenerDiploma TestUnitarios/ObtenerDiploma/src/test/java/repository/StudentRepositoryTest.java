@@ -68,15 +68,15 @@ public class StudentRepositoryTest {
 
     }
     // public boolean save(Student stu)
-//    @Test
-//    @DisplayName("Test save ok")
-//    public void testSaveTestOK() {
-//        // Act
-//        boolean saved = studentRepository.save(student3);
-//
-//        // Assert
-//        Assertions.assertTrue(saved, "Se esperaba que el estudiante se guardara correctamente");
-//    }
+    @Test
+    @DisplayName("Test save ok")
+    public void testSaveTestOK() {
+        // Act
+        boolean saved = studentRepository.save(student3);
+
+        // Assert
+        Assertions.assertTrue(saved, "Se esperaba que el estudiante se guardara correctamente");
+    }
 
     //public boolean delete(Long id)
     @Test

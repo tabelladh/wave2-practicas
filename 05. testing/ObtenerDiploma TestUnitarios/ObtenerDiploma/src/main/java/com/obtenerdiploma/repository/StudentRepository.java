@@ -31,9 +31,10 @@ public class StudentRepository implements IStudentRepository {
     @Override
     public boolean save(Student stu) {
 
-        if (!exists(stu)) stu.setId((this.students.size() + 1L));
+        students.add(stu);
 
-        return students.add(stu);
+        return true;
+
     }
 
     @Override
