@@ -4,6 +4,7 @@ import com.obtenerdiploma.dto.StudentDTO;
 import com.obtenerdiploma.dto.SubjectDTO;
 import com.obtenerdiploma.entity.Student;
 import com.obtenerdiploma.entity.Subject;
+import com.obtenerdiploma.exception.StudentNotFoundException;
 import com.obtenerdiploma.repository.StudentRepository;
 import com.obtenerdiploma.service.StudentService;
 import org.junit.jupiter.api.Assertions;
@@ -15,7 +16,10 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+import java.util.Optional;
 import java.util.Set;
+
+import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
 public class StudentServiceTest {
@@ -54,11 +58,44 @@ public class StudentServiceTest {
         boolean esperado = true;
 
         //ACT
-        Mockito.when(studentRepository.save(student1)).thenReturn(esperado);
+        when(studentRepository.save(student1)).thenReturn(esperado);
         boolean obtenido = studentService.create(studentDTO1);
 
         //ASS
         Assertions.assertEquals(esperado,obtenido,"no es el mismo estudiante");
 
+    }
+
+    @Test
+    @DisplayName("test02: usuario ok")
+    public void testReadOk(){
+
+        //ARR
+        Long idEntrada = 1L;
+        StudentDTO esperado = studentDTO1;
+        Optional<Student> estudianteObtenido = Optional.of( student1);
+
+        //ACT
+        when(studentRepository.findById(idEntrada)).thenReturn(estudianteObtenido);
+        StudentDTO obtenido = studentService.read(idEntrada);
+
+        //ASS
+        Assertions.assertEquals(esperado,obtenido);
+
+    }
+
+    @Test
+    @DisplayName("test03: usuario fail")
+    public void testCaminoTriste(){
+
+        //ARR
+        Long idEntrada = 3L;
+        Optional<Student> estudianteObtenido = Optional.empty();
+
+        //ACT
+        when(studentRepository.findById(idEntrada)).thenReturn(estudianteObtenido);
+
+        Assertions.assertThrows(StudentNotFoundException.class,
+                ()-> studentService.read(idEntrada));
     }
 }

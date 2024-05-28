@@ -42,7 +42,7 @@ public class StudentService implements IStudentService {
                 student.getSubjects().stream().map(
                         subject -> new SubjectDTO(
                                 subject.getName(),
-                                0D
+                                subject.getScore()
                         )).collect(Collectors.toSet())
         );
     }
