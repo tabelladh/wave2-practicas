@@ -44,6 +44,12 @@ private static final StudentDTO studentDTO1 = new StudentDTO(1L, "Juan", Set.of(
             new SubjectDTO("Química", 6D))
 );
 
+private static final StudentDTO studentDTO2 = new StudentDTO(2L, "Pedro", Set.of(
+            new SubjectDTO("Lengua", 8D),
+            new SubjectDTO("Física", 6D),
+            new SubjectDTO("Química", 7D))
+    );
+
     @Test
     @DisplayName("Get Student/id : OK")
     public void getStudentIdTestOK() {
@@ -60,18 +66,121 @@ private static final StudentDTO studentDTO1 = new StudentDTO(1L, "Juan", Set.of(
 
     }
 
-    /*@PostMapping("/registerStudent")
-    public ResponseEntity<?> registerStudent(@RequestBody @Valid StudentDTO stu) {
 
-        return this.studentService.create(stu) ? ResponseEntity.noContent().build() : ResponseEntity.badRequest().build();
-    }
 
-     */
     @Test
     @DisplayName("Get regiserStudent : OK")
     public void registerStudentTestOK() {
 
-        
+        HttpStatusCode statusEsperado = HttpStatus.OK;
+        boolean rtaService = true;
+        StudentDTO studEntrada = studentDTO1;
+        ResponseEntity<?> responseEsperado = ResponseEntity.noContent().build();
+
+        Mockito.when(studentService.create(studEntrada)).thenReturn(rtaService);
+        ResponseEntity<?> rtaObtenida = studentController.registerStudent(studEntrada);
+
+        Assertions.assertEquals( responseEsperado, rtaObtenida);
+
+    }
+
+    @Test
+    @DisplayName("Get regiserStudent : NOK")
+    public void registerStudentTestNOK() {
+
+        HttpStatusCode statusEsperado = HttpStatus.BAD_REQUEST;
+        boolean rtaService = false;
+        StudentDTO studEntrada = studentDTO1;
+        ResponseEntity<?> responseEsperado = ResponseEntity.badRequest().build();
+
+        Mockito.when(studentService.create(studEntrada)).thenReturn(rtaService);
+        ResponseEntity<?> rtaObtenida = studentController.registerStudent(studEntrada);
+
+        Assertions.assertEquals( responseEsperado, rtaObtenida);
+
+    }
+
+
+
+
+    @Test
+    @DisplayName("Get modifyStudent : OK")
+    public void modifyStudentTestOK() {
+
+        HttpStatusCode statusEsperado = HttpStatus.NO_CONTENT;
+        boolean rtaService = true;
+        StudentDTO studEntrada = studentDTO1;
+        ResponseEntity<?> responseEsperado = ResponseEntity.noContent().build();
+
+        Mockito.when(studentService.update(studEntrada)).thenReturn(rtaService);
+        ResponseEntity<?> rtaObtenida = studentController.modifyStudent(studEntrada);
+
+        Assertions.assertEquals( responseEsperado, rtaObtenida);
+
+    }
+
+    @Test
+    @DisplayName("Get modifyStudent : NOK")
+    public void modifyStudentTestNOK() {
+
+        HttpStatusCode statusEsperado = HttpStatus.BAD_REQUEST;
+        boolean rtaService = false;
+        StudentDTO studEntrada = studentDTO1;
+        ResponseEntity<?> responseEsperado = ResponseEntity.badRequest().build();
+
+        Mockito.when(studentService.update(studEntrada)).thenReturn(rtaService);
+        ResponseEntity<?> rtaObtenida = studentController.modifyStudent(studEntrada);
+
+        Assertions.assertEquals( responseEsperado, rtaObtenida);
+
+    }
+
+
+    @Test
+    @DisplayName("Get removeStudent : OK")
+    public void removeStudentTestOK() {
+
+        Long idEntrada =1L;
+        boolean rtaService = true;
+        ResponseEntity<?> responseEsperado = ResponseEntity.noContent().build();
+
+        Mockito.when(studentService.delete(idEntrada)).thenReturn(rtaService);
+        ResponseEntity<?> rtaObtenida = studentController.removeStudent(idEntrada);
+
+        Assertions.assertEquals( responseEsperado, rtaObtenida);
+
+    }
+
+    @Test
+    @DisplayName("Get removeStudent : NOK")
+    public void removeStudentTestNOK() {
+
+        Long idEntrada = 9L;
+        boolean rtaService = false;
+        ResponseEntity<?> responseEsperado = ResponseEntity.badRequest().build();
+
+        Mockito.when(studentService.delete(idEntrada)).thenReturn(rtaService);
+        ResponseEntity<?> rtaObtenida = studentController.removeStudent(idEntrada);
+
+        Assertions.assertEquals( responseEsperado, rtaObtenida);
+
+    }
+    /*
+    @GetMapping("/listStudents")
+    public Set<StudentDTO> listStudents() {
+        return this.studentService.getAll();
+    }
+    */
+    @Test
+    @DisplayName("Get listStudents : OK")
+    public void listStudentsTestOK() {
+
+        Set<StudentDTO> responseEsperado = Set.of(studentDTO1, studentDTO2);
+
+        Mockito.when(studentService.getAll()).thenReturn(responseEsperado);
+        Set<StudentDTO> rtaObtenida = studentController.listStudents();
+
+        Assertions.assertEquals(responseEsperado, rtaObtenida);
 
     }
 }

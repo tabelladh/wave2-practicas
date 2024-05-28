@@ -81,7 +81,7 @@ public void readTestOK() {
 
     //ASSERT
     Assertions.assertEquals(studentDTOEsperado, studentDTOObtenido, "El StudentDTO es distinto");
-
+    
 }
 
     @Test
@@ -98,28 +98,14 @@ public void readTestOK() {
 
 }
 
- /*
-    public boolean update(StudentDTO stu) {
-        Student studentEntity = new Student(
-                stu.id(),
-                stu.studentName(),
-                stu.subjects().stream().map(
-                        s -> new Subject(s.name(), s.score())
-                ).collect(Collectors.toSet())
-        );
-
-        return studentRepository.save(studentEntity);
-    }*/
-
     @Test
     @DisplayName("Update Student OK")
         public void updateTestOK() {
         StudentDTO entrada = studentDTO1;
         Student entrada2 = student1;
-        Optional<Student> studentEsperado = Optional.empty();
         boolean esperado = true;
 
-        Mockito.when(studentRepository.save(entrada2)).thenReturn(null);
+        Mockito.when(studentRepository.save(entrada2)).thenReturn(true);
         boolean obtenido = studentService.update(entrada);
 
         Assertions.assertEquals(esperado, obtenido, "UPDATE: No coincide esperado y obtenido ");
