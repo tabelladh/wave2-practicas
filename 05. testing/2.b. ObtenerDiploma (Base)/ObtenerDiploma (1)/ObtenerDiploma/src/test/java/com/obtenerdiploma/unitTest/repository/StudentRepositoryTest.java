@@ -70,7 +70,7 @@ public class StudentRepositoryTest {
                 new Subject("Física", 6D),
                 new Subject("Química", 5D)
         ));
-//        IStudentRepository studentRepository = new StudentRepository(Set.of(newStudent));
+
         // Act
         studentRepository.save(newStudent);
         // Assert
@@ -107,10 +107,11 @@ public class StudentRepositoryTest {
         //Elimina correctamente el estudiante con el ID especificado (1L).
         //Reduce el tamaño del conjunto de estudiantes en 1.
         //Asegura que el estudiante eliminado ya no está presente en el repositorio, lanzando una excepción cuando se intenta acceder a él.
-
         // Act
-        studentRepository.delete(1L);
+        boolean resultadoObtenido = studentRepository.delete(1L);
+
         // Assert
+        Assertions.assertTrue(resultadoObtenido);
         Assertions.assertEquals(1, studentRepository.findAll().size(), "El tamaño de las listas de coinciden");
         //Assertions.assertThrows(IllegalArgumentException.class, () -> studentRepository.findById(1L).orElseThrow());
     }
