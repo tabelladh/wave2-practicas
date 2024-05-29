@@ -18,7 +18,6 @@ import java.util.List;
 public class AlumnoDTO {
 
     @Positive(message = "El id debe ser positivo y distinto a 0")
-    @NotNull(message = "El id no puede ser nulo")
     private Integer id;
 
     @Size(min = 3, max = 20, message = "El nombre debe tener entre 3 y 20 caracteres")
@@ -35,10 +34,8 @@ public class AlumnoDTO {
     private LocalDate fechaNacimiento;
 
     @NotNull(message = "El dni no puede ser nulo")
-    @Min(value = 1000000, message = "El DNI debe tener al menos 8 dígitos")
+    @Min(value = 100000, message = "El DNI debe tener al menos 8 dígitos")
     @Max(value = 99999999, message = "El DNI no puede tener más de 8 dígitos")
-    //@Pattern(regexp = "\\d{8}", message = "El DNI debe tener 8 dígitos")
-    //@Pattern(regexp = "^[0-9]*$", message = "El DNI deben ser solo numeros")
     private Integer dni;
 
     @NotEmpty(message = "La direccion no puede ser vacia")
