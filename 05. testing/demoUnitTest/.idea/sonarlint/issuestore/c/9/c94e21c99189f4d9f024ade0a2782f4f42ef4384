@@ -1,0 +1,8 @@
+
+¡
+java:S1488"^Immediately return this expression instead of assigning it to the temporary variable "alumno".(×úùğ8ıó£µú1J$80cc73d2-2636-4e92-9ad2-95590d96fe97
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(™ºË¼8Ú¢µú1J$1b79d506-81cc-4165-bf22-56fb3e799046
+z
+java:S1874%"2Remove this use of "SNAKE_CASE"; it is deprecated.(ëù°æıÿÿÿÿ8¥Ú¢µú1J$c0a99703-e925-4309-b15f-9ac05c18e7af
+r	java:S106/"+Replace this use of System.out by a logger.(ªâ¨»ùÿÿÿÿ8¬Ú¢µú1J$9ba6ab1a-cb1f-44ba-874c-913a08b13657
+r	java:S1062"+Replace this use of System.out by a logger.(½ŒŒãùÿÿÿÿ8®Ú¢µú1J$6f73f8a2-903c-4eb0-9a2b-54aab1a28d81
