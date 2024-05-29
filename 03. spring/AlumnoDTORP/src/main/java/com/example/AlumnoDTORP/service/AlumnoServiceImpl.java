@@ -8,6 +8,7 @@ import com.example.AlumnoDTORP.exceptions.registroInexistenteException;
 import com.example.AlumnoDTORP.model.Alumno;
 import com.example.AlumnoDTORP.model.Curso;
 import com.example.AlumnoDTORP.repository.IAlumnoRepository;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,28 +23,14 @@ public class AlumnoServiceImpl implements IAlumnoService {
     //Inyectemos la dependencia
     @Autowired
     private IAlumnoRepository alumnoRepository;
-
+    ModelMapper modelMapper = new ModelMapper();
 
     @Override
     public List<AlumnoDTO> listarAlumnos() {
-        return alumnoRepository.findAll().stream()
-                .map(a -> new AlumnoDTO(
-                        a.getId(),
-                        a.getNombre(),
-                        a.getApellidos(),
-                        a.getFechaNacimiento(),
-                        a.getDni(),
-                        a.getDireccion(),
-                        a.getCursosList().stream()
-                                .map(c -> new CursoDTO(
-                                        c.getCodigo(),
-                                        c.getNombre(),
-                                        c.getGrado(),
-                                        c.getCertificado(),
-                                        c.getDuracion()))
-                                .toList()))
+        List<Alumno> alumnosList = alumnoRepository.findAll();
+        return alumnosList.stream()
+                .map(MiMapper::mapAlumnoToAlumnoDTO)
                 .toList();
-
     }
 
     @Override
@@ -60,22 +47,8 @@ public class AlumnoServiceImpl implements IAlumnoService {
     @Override
     public RespuestaDTO agregarAlumno(AlumnoDTO alumnoDTO) {
         Alumno alumno = new Alumno();
-        alumno.setNombre(alumnoDTO.getNombre());
-        alumno.setApellidos(alumnoDTO.getApellidos());
-        alumno.setFechaNacimiento(alumnoDTO.getFechaNacimiento());
-        alumno.setDni(alumnoDTO.getDni());
-        alumno.setDireccion(alumnoDTO.getDireccion());
 
-        List<Curso> cursosList = new ArrayList<>();
-        for (CursoDTO cursoDTO : alumnoDTO.getCursosList()) {
-            cursosList.add(new Curso(
-                    cursoDTO.getCodigo(),
-                    cursoDTO.getNombre(),
-                    cursoDTO.getGrado(),
-                    cursoDTO.getCertificado(),
-                    cursoDTO.getDuracion()));
-        }
-        alumno.setCursosList(cursosList);
+        modelMapper.map(alumnoDTO,alumno);
 
         alumnoRepository.save(alumno);
 
@@ -90,24 +63,9 @@ public class AlumnoServiceImpl implements IAlumnoService {
 
     @Override
     public AlumnoDTO actualizarAlumno(AlumnoDTO alumnoDTO) {
-        Alumno alumno = new Alumno();
-        alumno.setId(alumnoDTO.getId());
-        alumno.setNombre(alumnoDTO.getNombre());
-        alumno.setApellidos(alumnoDTO.getApellidos());
-        alumno.setFechaNacimiento(alumnoDTO.getFechaNacimiento());
-        alumno.setDni(alumnoDTO.getDni());
-        alumno.setDireccion(alumnoDTO.getDireccion());
 
-        List<Curso> cursosList = new ArrayList<>();
-        for (CursoDTO cursoDTO : alumnoDTO.getCursosList()) {
-            cursosList.add(new Curso(
-                    cursoDTO.getCodigo(),
-                    cursoDTO.getNombre(),
-                    cursoDTO.getGrado(),
-                    cursoDTO.getCertificado(),
-                    cursoDTO.getDuracion()));
-        }
-        alumno.setCursosList(cursosList);
+        Alumno alumno = new Alumno();
+        modelMapper.map(alumnoDTO,alumno);
 
         alumnoRepository.update(alumno);
 

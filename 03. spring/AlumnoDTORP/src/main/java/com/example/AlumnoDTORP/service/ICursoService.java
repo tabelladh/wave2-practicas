@@ -1,7 +1,7 @@
 package com.example.AlumnoDTORP.service;
 
 import com.example.AlumnoDTORP.dto.CursoDTO;
-import com.example.AlumnoDTORP.dto.CursoDuracionDTO;
+import com.example.AlumnoDTORP.dto.response.CursoDuracionDTO;
 
 import java.util.List;
 

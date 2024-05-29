@@ -1,7 +1,7 @@
 package com.example.AlumnoDTORP.service;
 
 import com.example.AlumnoDTORP.dto.CursoDTO;
-import com.example.AlumnoDTORP.dto.CursoDuracionDTO;
+import com.example.AlumnoDTORP.dto.response.CursoDuracionDTO;
 import com.example.AlumnoDTORP.model.Curso;
 import com.example.AlumnoDTORP.repository.ICursoRepository;
 import org.modelmapper.ModelMapper;
@@ -36,13 +36,15 @@ public class CursoServiceImpl implements ICursoService {
 
     @Override
     public CursoDuracionDTO traerMasHoras() {
-        CursoDuracionDTO cursoDto = new CursoDuracionDTO();
+        CursoDuracionDTO cursoDto;
+
         cursoDto = cursoRepository.findAll().stream()
                 .map(c -> new CursoDuracionDTO(
                         c.getNombre(),
                         c.getDuracion()))
                 .max(Comparator.comparingDouble(CursoDuracionDTO::getDuracion))
                 .orElseThrow(() -> new RuntimeException("No hay cursos"));
+
         return cursoDto;
     }
 
