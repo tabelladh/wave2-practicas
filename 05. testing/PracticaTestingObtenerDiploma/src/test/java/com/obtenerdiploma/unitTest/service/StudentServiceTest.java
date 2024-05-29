@@ -98,6 +98,28 @@ public class StudentServiceTest {
         Assertions.assertThrows(StudentNotFoundException.class, () -> studentService.read(idEntrada));
 
     }
+    @Test
+    @DisplayName("Update student OK")
+    //public boolean save(Student stu)
+    // boolean update(StudentDTO stu)
+    public void updateTestOK() {
+
+        Mockito.when(studentRepository.save(student1)).thenReturn(true); //public boolean save(Student stu)
+        boolean studentObtenido = studentService.update(studentDTO1); // boolean update(StudentDTO stu)
+
+        Assertions.assertEquals(true, studentObtenido);
+    }
+
+    @Test
+    @DisplayName("Update student NOK")
+    // public boolean exists(Student stu)
+    // public boolean save(Student stu)
+    // public boolean update(StudentDTO stu)
+    public void updateTestNOK() {
+
+        Mockito.when(studentRepository.save(student1)).thenReturn(false);
+        Assertions.assertThrows(StudentNotFoundException.class, () -> studentService.update(studentDTO1));
+    }
 
 
 

@@ -91,7 +91,7 @@ public class StudentRepositoryTest {
     }
 
     @Test
-    @DisplayName("03 - Test Exist OK ")
+    @DisplayName("03 - Test Exist NOK ")
     //public boolean exists(Student stu)
     public void testExistTestFail() {
 
