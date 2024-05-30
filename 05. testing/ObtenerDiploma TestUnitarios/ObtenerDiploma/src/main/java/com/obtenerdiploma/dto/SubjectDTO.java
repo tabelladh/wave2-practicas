@@ -2,6 +2,8 @@ package com.obtenerdiploma.dto;
 
 import javax.validation.constraints.*;
 
+
+
 public record SubjectDTO(
     @NotBlank(message = "El nombre de la materia no puede estar vacío.")
     @Pattern(regexp="([A-Z]|[0-9])[\\s|[0-9]|A-Z|a-z|ñ|ó|í|á|é|ú|Á|Ó|É|Í|Ú]*$", message = "El nombre de la materia debe comenzar con mayúscula.")

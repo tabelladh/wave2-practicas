@@ -12,5 +12,5 @@ public class Subject {
     String name;
 
     Double score;
-
+    
 }

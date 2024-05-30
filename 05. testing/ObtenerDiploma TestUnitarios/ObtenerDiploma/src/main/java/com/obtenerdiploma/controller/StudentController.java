@@ -4,6 +4,7 @@ import com.obtenerdiploma.dto.StudentDTO;
 import com.obtenerdiploma.service.IStudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;

@@ -24,6 +24,8 @@ public class StudentService implements IStudentService {
         Student studentEntity = new Student(
                 stu.id(),
                 stu.studentName(),
+                stu.email(),
+                stu.url(),
                 stu.subjects().stream().map(
                         s -> new Subject(s.name(), s.score())
                 ).collect(Collectors.toSet())
@@ -39,6 +41,8 @@ public class StudentService implements IStudentService {
         return new StudentDTO(
                 student.getId(),
                 student.getStudentName(),
+                student.getEmail(),
+                student.getUrl(),
                 student.getSubjects().stream().map(
                         subject -> new SubjectDTO(
                                 subject.getName(),
@@ -52,6 +56,8 @@ public class StudentService implements IStudentService {
         Student studentEntity = new Student(
                 stu.id(),
                 stu.studentName(),
+                stu.email(),
+                stu.url(),
                 stu.subjects().stream().map(
                         s -> new Subject(s.name(), s.score())
                 ).collect(Collectors.toSet())
@@ -72,6 +78,8 @@ public class StudentService implements IStudentService {
                         s -> new StudentDTO(
                                 s.getId(),
                                 s.getStudentName(),
+                                s.getEmail(),
+                                s.getUrl(),
                                 s.getSubjects().stream().map(
                                         subject -> new SubjectDTO(
                                                 subject.getName(),

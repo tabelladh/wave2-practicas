@@ -2,6 +2,8 @@
   {
     "id": 1,
     "studentName": "Juan",
+    "email": "juan@gmail.com",
+    "url": "http://juan",
     "subjects": [
       {
         "name": "Matemática",
@@ -20,6 +22,8 @@
   {
     "id": 2,
     "studentName": "Pedro",
+    "email": "pedro@gmail.com",
+    "url": "http://Pedro",
     "subjects": [
       {
         "name": "Matemática",

@@ -17,10 +17,10 @@ import static org.mockito.Mockito.mock;
 
 public class StudentRepositoryTest {
 
-    private static final Student student1 = new Student (1L, "Juan", Set.of(
-            new Subject("Matemática", 9D),
+    private static final Student student1 = new Student (1L, "Juan", Set.of(new Subject("Matemática", 9D),
             new Subject("Física", 7D),
             new Subject("Química", 6D))
+
     );
 
     private static final Student student2 = new Student (2L, "Pedro", Set.of(
