@@ -35,16 +35,22 @@ public class StudentServiceTest {
             new Subject("Química", 6D)
     ));
 
+    private static final Student student2 = new Student (1L, "Marcos", Set.of(
+            new Subject("Matemática", 9D),
+            new Subject("Física", 7D),
+            new Subject("Química", 6D)
+    ));
+
     private static final StudentDTO studentDTO1 = new StudentDTO (1L, "Juan", Set.of(
             new SubjectDTO("Matemática", 9D),
             new SubjectDTO("Física", 7D),
             new SubjectDTO("Química", 6D)
     ));
 
-    private static final StudentDTO studentDTO2 = new StudentDTO(1L, "Juan", Set.of(
-            new SubjectDTO("Matemática", 0D),
-            new SubjectDTO("Física", 0D),
-            new SubjectDTO("Química", 0D))
+    private static final StudentDTO studentDTO2 = new StudentDTO(1L, "Marcos", Set.of(
+            new SubjectDTO("Matemática", 9D),
+            new SubjectDTO("Física", 7D),
+            new SubjectDTO("Química", 6D))
     );
 
     @Test
@@ -112,13 +118,14 @@ public class StudentServiceTest {
 
     @Test
     @DisplayName("Update student NOK")
-    // public boolean exists(Student stu)
-    // public boolean save(Student stu)
     // public boolean update(StudentDTO stu)
     public void updateTestNOK() {
 
-        Mockito.when(studentRepository.save(student1)).thenReturn(false);
-        Assertions.assertThrows(StudentNotFoundException.class, () -> studentService.update(studentDTO1));
+        Mockito.when(studentRepository.save(student2)).thenReturn(false);
+        boolean studentObtenido = studentService.update(studentDTO2);
+        //Assertions.assertFalse(studentRepository.save(student2));
+
+        Assertions.assertEquals(false, studentObtenido);
     }
 
 

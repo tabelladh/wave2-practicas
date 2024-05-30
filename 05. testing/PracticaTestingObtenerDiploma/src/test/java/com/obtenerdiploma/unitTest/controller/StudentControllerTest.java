@@ -17,6 +17,7 @@ import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import javax.validation.Valid;
@@ -81,9 +82,35 @@ public class StudentControllerTest {
 
     }
 
+    @Test
+    @DisplayName("Post Register Student NOK")
+    // public ResponseEntity<?> registerStudent(@RequestBody @Valid StudentDTO stu) {
+    // return this.studentService.create(stu) ? ResponseEntity.noContent().build() : ResponseEntity.badRequest().build();
 
+    public void postRegisterStudentNOK() {
 
+        ResponseEntity<?> responseEsperado = ResponseEntity.badRequest().build();
 
+        Mockito.when(studentservice.create(studentDTO1)).thenReturn(false);
+        ResponseEntity<?> respuestaObtenido = studentcontroller.registerStudent(studentDTO1);
+        // System.out.println(respuestaObtenido.getBody());
 
+        Assertions.assertEquals(responseEsperado.getStatusCode(), respuestaObtenido.getStatusCode());
+        Assertions.assertEquals(responseEsperado.getBody(), respuestaObtenido.getBody());
+
+    }
+    @Test
+    @DisplayName("Put Update OK")
+    //public ResponseEntity<?> modifyStudent(@RequestBody @Valid StudentDTO stu)
+    // return this.studentService.update(stu) ? ResponseEntity.noContent().build() : ResponseEntity.badRequest().build();
+    public void putUpdateOK() {
+        ResponseEntity<?> responseEsperado = ResponseEntity.noContent().build();
+
+        Mockito.when(studentservice.update(studentDTO1)).thenReturn(true);
+        ResponseEntity<?> respuestaObtenido = studentcontroller.modifyStudent(studentDTO1);
+
+        Assertions.assertEquals(responseEsperado.getStatusCode(), respuestaObtenido.getStatusCode());
+        Assertions.assertEquals(responseEsperado.getBody(), respuestaObtenido.getBody());
+    }
 
 }
