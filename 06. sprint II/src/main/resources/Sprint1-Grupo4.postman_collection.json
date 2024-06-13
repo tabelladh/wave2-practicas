@@ -1,0 +1,256 @@
+{
+	"info": {
+		"_postman_id": "06ad776e-4f27-44e4-9f41-2777851120a2",
+		"name": "Sprint1-Grupo4",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "34147215",
+		"_collection_link": "https://crimson-equinox-246932.postman.co/workspace/Sprint-1---Grupo-4~0b5f9d23-3c18-43eb-9b1a-09425777897e/collection/34147215-06ad776e-4f27-44e4-9f41-2777851120a2?action=share&source=collection_link&creator=34147215"
+	},
+	"item": [
+		{
+			"name": "US-0001-lista de hoteles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/api/v1/hotels"
+			},
+			"response": []
+		},
+		{
+			"name": "US-0002-busqueda de hotel",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/hotels?date_from=2025-02-10&date_to=2025-03-23&destination=Puerto Iguazu",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"hotels"
+					],
+					"query": [
+						{
+							"key": "date_from",
+							"value": "2025-02-10"
+						},
+						{
+							"key": "date_to",
+							"value": "2025-03-23"
+						},
+						{
+							"key": "destination",
+							"value": "Puerto Iguazu"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "US-0003-reserva de hotel",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_name\" : \"juanperez@gmail.com\",\r\n    \"booking\" : {\r\n        \"date_from\": \"2025-02-10\",\r\n        \"date_to\": \"2025-03-20\",\r\n        \"destination\" : \"Puerto Iguazu\",\r\n        \"hotel_code\": \"CC-00002\",\r\n        \"people_amount\": 2,\r\n        \"room_type\": \"DOUBLE\",\r\n        \"people\" :[\r\n            {\r\n                \"dni\": \"12345678\",\r\n                \"name\": \"Juan\",\r\n                \"last_name\": \"Perez\",\r\n                \"birth_date\": \"1982-11-10\",\r\n                \"email\": \"juanperez@gmail.com\"\r\n            },\r\n            {\r\n                \"dni\": \"87654321\",\r\n                \"name\": \"Maria\",\r\n                \"last_name\": \"Lopez\",\r\n                \"birth_date\": \"1985-05-01\",\r\n                \"email\": \"marialopez@gmail.com\"\r\n            }\r\n        ],\r\n        \"payment_method\": {\r\n            \"type\": \"CREDIT\",\r\n            \"number_card\": \"1234-1234-1234-1234\",\r\n            \"dues\": 6\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/v1/booking"
+			},
+			"response": []
+		},
+		{
+			"name": "US-0004-lista de vuelos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/api/v1/flight"
+			},
+			"response": []
+		},
+		{
+			"name": "US-0005-busqueda de vuelo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/flight?date_from=10/02/2025&date_to=15/02/2025&origin=Buenos Aires&destination=Puerto Iguazú",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"flight"
+					],
+					"query": [
+						{
+							"key": "date_from",
+							"value": "10/02/2025"
+						},
+						{
+							"key": "date_to",
+							"value": "15/02/2025"
+						},
+						{
+							"key": "origin",
+							"value": "Buenos Aires"
+						},
+						{
+							"key": "destination",
+							"value": "Puerto Iguazú"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "US-0006-reserva de vuelo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_name\" : \"juanperez@gmail.com\",\r\n    \"flight_reservation\" : {\r\n        \"date_from\": \"2025-02-10\",\r\n        \"date_to\": \"2025-02-15\",\r\n        \"origin\" : \"Buenos Aires\",\r\n        \"destination\" : \"Puerto Iguazú\",\r\n        \"flight_number\" : \"BAPI-1235\",\r\n        \"seats\" : 2,\r\n        \"seat_type\": \"Economy\",\r\n        \"people\" :[\r\n            {\r\n                \"dni\": \"12345678\",\r\n                \"name\": \"Juan\",\r\n                \"last_name\": \"Perez\",\r\n                \"birth_date\": \"1982-11-10\",\r\n                \"email\": \"juanperez@gmail.com\"\r\n            },\r\n            {\r\n                \"dni\": \"87654321\",\r\n                \"name\": \"Maria\",\r\n                \"last_name\": \"Lopez\",\r\n                \"birth_date\": \"1985-05-01\",\r\n                \"email\": \"marialopez@gmail.com\"\r\n            }\r\n        ],\r\n        \"payment_method\":  //only cards\r\n        {\r\n            \"type\": \"CREDIT\",\r\n            \"number_card\": \"1234-1234-1234-1234\",\r\n            \"dues\": 6\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/v1/flight-reservation"
+			},
+			"response": []
+		},
+		{
+			"name": "CRUD-Hotel-Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"hotel_code\": \"CH-0002\",\r\n    \"name\": \"Cataratas Hotel\",\r\n    \"destination\": \"Puerto Iguazu\",\r\n    \"room_type\": \"Double\",\r\n    \"price_per_night\": 6200,\r\n    \"date_from\": \"2025-02-10\",\r\n    \"date_to\": \"2025-03-20\",\r\n    \"reserved\": false\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/v1/hotels/CH-0002"
+			},
+			"response": []
+		},
+		{
+			"name": "CRUD-Hotel-FindByCode",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/api/v1/hotel/SH-0002"
+			},
+			"response": []
+		},
+		{
+			"name": "CRUD-Hotel-Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"hotel_code\": \"BH-0002\",\r\n    \"name\": \"Hotel Bristol 2\",\r\n    \"destination\": \"Buenos Aires\",\r\n    \"room_type\": \"Double\",\r\n    \"price_per_night\": 7200,\r\n    \"date_from\": \"2025-02-12\",\r\n    \"date_to\": \"2025-04-17\",\r\n    \"reserved\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/v1/hotel/SH-0002"
+			},
+			"response": []
+		},
+		{
+			"name": "CRUD-Hotel-Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8080/api/v1/hotels/CH-0002"
+			},
+			"response": []
+		},
+		{
+			"name": "CRUD-Fligth-Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"flight_number\": \"BAPI-1235\",\r\n    \"origin\": \"Buenos Aires\",\r\n    \"destination\": \"Puerto Iguazú\",\r\n    \"seat_type\": \"Economy\",\r\n    \"price_per_person\": 7000,\r\n    \"date_from\": \"10/02/2025\",\r\n    \"date_to\": \"15/02/2025\"\r\n  }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/v1/flight"
+			},
+			"response": []
+		},
+		{
+			"name": "CRUD-Fligth-FindByNumber",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/api/v1/flight/BAPI-1235"
+			},
+			"response": []
+		},
+		{
+			"name": "CRUD-Fligth-Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"flight_number\": \"BAPI-1235\",\r\n    \"origin\": \"Buenos Aires\",\r\n    \"destination\": \"Puerto Iguazú\",\r\n    \"seat_type\": \"Economy\",\r\n    \"price_per_person\": 7000,\r\n    \"date_from\": \"10/02/2025\",\r\n    \"date_to\": \"15/02/2025\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/v1/flight/BAPI-123"
+			},
+			"response": []
+		},
+		{
+			"name": "CRUD-Fligth-Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"flight_number\": \"BAPI-1235\",\r\n    \"origin\": \"Buenos Aires\",\r\n    \"destination\": \"Puerto Iguazú\",\r\n    \"seat_type\": \"Economy\",\r\n    \"price_per_person\": 7000,\r\n    \"date_from\": \"10/02/2025\",\r\n    \"date_to\": \"15/02/2025\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/v1/flight/BAPI-123"
+			},
+			"response": []
+		}
+	]
+}
