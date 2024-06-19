@@ -1,0 +1,24 @@
+En la primera forma normal (1FN), aseguramos que cada columna contenga solo valores atómicos (indivisibles) 
+y que cada registro sea único. En este caso, la tabla ya cumple con la 1FN, ya que todos los valores son atómicos.
+En la segunda forma normal (2FN), aseguramos que la tabla esté en 1FN y que todos los atributos no clave sean dependientes 
+funcionalmente de toda la clave primaria. En otras palabras, eliminamos la dependencia parcial de la clave primaria.
+Identificamos las dependencias funcionales y las entidades:
+Entidad Factura:
+Atributos: id_factura, fecha_factura, forma_pago, IVA, importe
+Entidad Cliente:
+Atributos: nombre_cliente, apellido_cliente, direccion_cliente
+Entidad Articulo:
+Atributos: descripcion_articulo, cantidad
+En la tercera forma normal (3FN), aseguramos que la tabla esté en 2FN y que todos los atributos no clave sean independientes 
+entre sí, es decir, que no existan dependencias transitivas. En este caso, nuestras tablas ya cumplen con la 3FN, ya que cada 
+atributo no clave es dependiente solo de la clave primaria de su propia tabla.
+Descripción de cada paso:
+1) Identificación de Entidades:
+Se identificaron las entidades principales: Factura, Cliente y Articulo.
+Se establecieron los atributos correspondientes a cada entidad.
+2) Creación de Tablas:
+Se crearon tablas separadas para cada entidad para eliminar dependencias parciales y redundancias.
+Se creó una tabla intermedia para representar la relación entre Factura y Articulo y otra para la relación entre Factura y Cliente.
+3) Eliminación de Dependencias Transitivas:
+Se verificó que no existan dependencias transitivas en las tablas resultantes, asegurando así que cada atributo no clave 
+depende únicamente de la clave primaria de su tabla.

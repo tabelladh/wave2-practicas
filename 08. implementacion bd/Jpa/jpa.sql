@@ -1,0 +1,4 @@
+CREATE DATABASE prueba_jpa;
+CREATE USER 'admin'@'%' IDENTIFIED BY 'admin';
+GRANT ALL PRIVILEGES ON prueba_jpa.* TO 'admin'@'%' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
