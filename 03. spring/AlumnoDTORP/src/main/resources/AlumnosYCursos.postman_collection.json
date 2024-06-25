@@ -11,7 +11,25 @@
 			"request": {
 				"method": "GET",
 				"header": [],
+				"url": "http://localhost:8080/alumno/dni/12345678"
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Alumno x DNI",
+			"request": {
+				"method": "GET",
+				"header": [],
 				"url": "http://localhost:8080/alumno/listarAlumnos"
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Alumno x Nombre y Ape",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/alumno/nombreyapellido/Juan/Pérez"
 			},
 			"response": []
 		},
@@ -31,7 +49,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n      \"nombre\": \"Joy\",\r\n      \"apellidos\": \"Tabella\",\r\n      \"fecha_nacimiento\": \"1991-10-21\",\r\n      \"dni\": \"12345678\",\r\n      \"direccion\": \"Calle Principal 123\",\r\n      \"cursos_list\": [\r\n            {\r\n                \"codigo\": 101,\r\n                \"nombre\": \"Matemáticas\",\r\n                \"grado\": \"Bachillerato\",\r\n                \"certificado\": true,\r\n                \"duracion\": 180.0\r\n            },\r\n            {\r\n                \"codigo\": 102,\r\n                \"nombre\": \"Historia\",\r\n                \"grado\": \"Bachillerato\",\r\n                \"certificado\": true,\r\n                \"duracion\": 150.0\r\n            }\r\n    ]\r\n}",
+					"raw": "{\r\n      \"nombre\": \"Joy\",\r\n      \"apellidos\": \"Tabella\",\r\n      \"fecha_nacimiento\": \"1991-10-21\",\r\n      \"dni\": 36592946,\r\n      \"direccion\": \"Calle Principal 123\",\r\n      \"cursos_list\": [\r\n            {\r\n                \"codigo\": 101,\r\n                \"nombre\": \"Matemáticas\",\r\n                \"grado\": \"Bachillerato\",\r\n                \"certificado\": true,\r\n                \"duracion\": 180.0\r\n            },\r\n            {\r\n                \"codigo\": 102,\r\n                \"nombre\": \"Historia\",\r\n                \"grado\": \"Bachillerato\",\r\n                \"certificado\": true,\r\n                \"duracion\": 150.0\r\n            }\r\n    ]\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -83,7 +101,16 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "http://localhost:8080/cursos/listarCursos/"
+				"url": "http://localhost:8080/cursos/listarCursos"
+			},
+			"response": []
+		},
+		{
+			"name": "Un curso con Certificado?",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/cursos/listarCursos"
 			},
 			"response": []
 		},
@@ -92,7 +119,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "http://localhost:8080/alumno/existeAlumno/4"
+				"url": "http://localhost:8080/cursos/listarCursos/101"
 			},
 			"response": []
 		},
@@ -101,7 +128,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "http://localhost:8080/alumno/existeAlumno/4"
+				"url": "http://localhost:8080/cursos/masHoras"
 			},
 			"response": []
 		}

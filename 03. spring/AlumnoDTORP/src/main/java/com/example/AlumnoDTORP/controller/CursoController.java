@@ -1,6 +1,7 @@
 package com.example.AlumnoDTORP.controller;
 
 import com.example.AlumnoDTORP.dto.CursoDTO;
+import com.example.AlumnoDTORP.dto.RespuestaDTO;
 import com.example.AlumnoDTORP.dto.response.CursoDuracionDTO;
 import com.example.AlumnoDTORP.service.ICursoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +30,12 @@ public class CursoController {
     @GetMapping("/listarCursos/{id}")
     public ResponseEntity<CursoDTO> buscarPorId(@PathVariable Integer id){
         return new ResponseEntity<>(cursoService.traerPorId(id), HttpStatus.OK);
+    }
+
+
+    @GetMapping("/certificado/{nombre}")
+    public ResponseEntity<RespuestaDTO> traerCertificado(@PathVariable String nombre){
+        return new ResponseEntity<>(cursoService.traerCertificado(nombre), HttpStatus.OK);
     }
 
     @GetMapping("/masHoras")

@@ -40,11 +40,11 @@ public class AlumnoDTO {
 
     @NotEmpty(message = "La direccion no puede ser vacia")
     private String direccion;
-
-    @NotEmpty(message = "La lista de cursos no puede ser vacia")
-    @Size(min = 1, message = "La lista de cursos no puede ser vacia")
-    @JsonProperty("cursos_list")
-    private List<CursoDTO> cursosList;
+//
+//    @NotEmpty(message = "La lista de cursos no puede ser vacia")
+//    @Size(min = 1, message = "La lista de cursos no puede ser vacia")
+//    @JsonProperty("cursos_list")
+//    private List<CursoDTO> cursosList;
 
 
 

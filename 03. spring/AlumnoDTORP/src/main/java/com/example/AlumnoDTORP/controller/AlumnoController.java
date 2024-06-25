@@ -3,11 +3,9 @@ package com.example.AlumnoDTORP.controller;
 import com.example.AlumnoDTORP.dto.AlumnoDTO;
 import com.example.AlumnoDTORP.dto.RespuestaDTO;
 import com.example.AlumnoDTORP.service.IAlumnoService;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.validation.Valid;
-import jakarta.validation.constraints.Max;
-import jakarta.validation.constraints.Min;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Positive;
+import jakarta.validation.constraints.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -47,13 +45,26 @@ public class AlumnoController {
         return new ResponseEntity<>(alumnoService.borrarAlumno(id), HttpStatus.OK);
     }
 
-    @PutMapping("/actualizarAlumno")
-    public ResponseEntity<AlumnoDTO> actualizarAlumno(@RequestBody AlumnoDTO alumnoDTO){
-        return new ResponseEntity<>(alumnoService.actualizarAlumno(alumnoDTO), HttpStatus.OK);
+    @PutMapping("/actualizarAlumno/{id}")
+    public ResponseEntity<AlumnoDTO> actualizarAlumno(@PathVariable Integer id,@RequestBody AlumnoDTO alumnoDTO){
+        return new ResponseEntity<>(alumnoService.actualizarAlumno(id, alumnoDTO), HttpStatus.OK);
     }
 
     @GetMapping("/existeAlumno/{id}")
     public ResponseEntity<Boolean> existeAlumno(@PathVariable Integer id){
         return new ResponseEntity<>(alumnoService.existeAlumno(id), HttpStatus.OK);
     }
+
+    @GetMapping("/dni/{dni}")
+    public ResponseEntity<AlumnoDTO> buscarPorDni(@PathVariable @Positive(message = "El id debe ser positivo y distinto a 0")
+                                                                @NotNull(message = "El id no puede ser nulo") Integer dni){
+        return new ResponseEntity<>(alumnoService.buscarPorDni(dni), HttpStatus.OK);
+    }
+
+    @GetMapping("/nombreyapellido/{nombre}/{apellidos}")
+    public ResponseEntity<List<AlumnoDTO>> listarAlumnosPorNombre(@PathVariable @NotBlank(message = "El nombre no puede estar vacio") String nombre,
+                                                                  @PathVariable @NotBlank(message = "El apellido no puede estar vacio") String apellidos){
+        return new ResponseEntity<>(alumnoService.buscarPorNombreYApellidos(nombre, apellidos), HttpStatus.OK);
+    }
+
 }

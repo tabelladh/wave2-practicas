@@ -1,22 +1,15 @@
 package com.example.AlumnoDTORP.repository;
 
-import com.example.AlumnoDTORP.dto.RespuestaDTO;
 import com.example.AlumnoDTORP.model.Alumno;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
-public interface IAlumnoRepository {
+public interface IAlumnoRepository extends JpaRepository<Alumno, Integer> {
 
-    List<Alumno> findAll();
+    // TODO: findBy + atributo + operador + ...
+    // Operadores logicos : AND - OR - EQUALS - CONTAINS - NOT EQUALS - LESS THAN EQUALS
+    List<Alumno> findByNombreAndApellidos(String nombre, String apellidos);
 
-    Alumno findById(Integer id);
-
-    Alumno save(Alumno alumno);
-
-    boolean delete(Integer id);
-
-    Alumno update(Alumno alumno);
-
-
-    Boolean existsById(Integer id);
+    Alumno findByDni(Integer dni);
 }

@@ -1,7 +1,10 @@
 package com.example.AlumnoDTORP.service;
 
 import com.example.AlumnoDTORP.dto.CursoDTO;
+import com.example.AlumnoDTORP.dto.ExcepcionDTO;
+import com.example.AlumnoDTORP.dto.RespuestaDTO;
 import com.example.AlumnoDTORP.dto.response.CursoDuracionDTO;
+import com.example.AlumnoDTORP.exceptions.registroInexistenteException;
 import com.example.AlumnoDTORP.model.Curso;
 import com.example.AlumnoDTORP.repository.ICursoRepository;
 import org.modelmapper.ModelMapper;
@@ -10,6 +13,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class CursoServiceImpl implements ICursoService {
@@ -30,9 +34,26 @@ public class CursoServiceImpl implements ICursoService {
 
     @Override
     public CursoDTO traerPorId(Integer codigo) {
-        Curso curso = cursoRepository.findById(codigo);
+        Optional<Curso> curso = cursoRepository.findById(codigo);
         return modelMapper.map(curso, CursoDTO.class);
     }
+
+    @Override
+    public RespuestaDTO traerCertificado(String nombre) {
+        Optional<Curso> curso = cursoRepository.findByNombre(nombre);
+
+        if (curso.isEmpty()) {
+           throw new registroInexistenteException();
+        }
+
+        boolean resultado = curso.map(Curso::getCertificado).orElse(false);
+
+        if (!resultado) {
+            return new RespuestaDTO("No tiene certificado");
+        }
+        return new RespuestaDTO("Sí tiene certificado");
+    }
+
 
     @Override
     public CursoDuracionDTO traerMasHoras() {
