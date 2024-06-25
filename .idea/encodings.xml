@@ -1,38 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/02. java/BibliotecaCAeIntfcs/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/02. java/BibliotecaCAeIntfcs/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/02. java/ClasedeColeccListArray/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/02. java/ClasedeColeccListArray/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/02. java/ClasesAbsteInterf/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/02. java/ClasesAbsteInterf/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/02. java/Ejercicio1/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/02. java/Ejercicio1/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/02. java/EjercicioPremioLoteria/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/02. java/EjercicioPremioLoteria/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/02. java/EjercitacionPOOHerenciaPolimorfismo/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/02. java/EjercitacionPOOHerenciaPolimorfismo/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/02. java/EjvectorMatrices/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/02. java/EjvectorMatrices/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/02. java/EstructuraSwitchEj1/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/02. java/EstructuraSwitchEj1/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/02. java/LCGeneric/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/02. java/LCGeneric/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/02. java/OtraFormaTransacciones/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/02. java/OtraFormaTransacciones/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/02. java/PracticaExcepciones/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/02. java/PracticaExcepciones/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/02. java/estructurasIfWhileCyR/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/02. java/estructurasIfWhileCyR/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/02. java/liveCodEstructuraClase/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/02. java/liveCodEstructuraClase/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/02. java/untitled1/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/02. java/untitled1/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/02. java/wave2/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/03. spring/AlumnoDTORP/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/03. spring/CalcuCal/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/03. spring/calcuEdad/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/03. spring/wave2/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/05. testing/demoUnitTest/src/main/java" charset="UTF-8" />
   </component>
 </project>
