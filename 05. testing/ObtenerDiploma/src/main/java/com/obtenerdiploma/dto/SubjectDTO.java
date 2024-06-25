@@ -1,5 +1,7 @@
 package com.obtenerdiploma.dto;
 
+import jakarta.validation.constraints.*;
+
 import javax.validation.constraints.*;
 
 public record SubjectDTO(

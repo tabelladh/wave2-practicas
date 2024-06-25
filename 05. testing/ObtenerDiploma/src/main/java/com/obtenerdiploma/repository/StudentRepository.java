@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.obtenerdiploma.entity.Student;
 import com.obtenerdiploma.exception.StudentNotFoundException;
+import org.springframework.aop.framework.adapter.GlobalAdvisorAdapterRegistry;
 import org.springframework.stereotype.Repository;
 import org.springframework.util.ResourceUtils;
 
@@ -81,5 +82,6 @@ public class StudentRepository implements IStudentRepository {
 
         this.students = loadedData;
     }
+
 
 }

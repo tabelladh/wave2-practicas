@@ -18,6 +18,11 @@ public class StudentDTO {
     String studentName;
     String message;
     Double averageScore;
+    @NotEmpty(message = "El email no puede estar vacio")
+    @Email
+    String email;
+    @Pattern(regexp = "^(https?|ftp|file)://[-a-zA-Z0-9+&@#/%?=~_|!:,.;]*[-a-zA-Z0-9+&@#/%=~_|]")
+    String url;
     @NotEmpty(message = "La lista no puede ser vacía")
 
     List< @Valid SubjectDTO >  subjects;
