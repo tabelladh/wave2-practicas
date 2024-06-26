@@ -42,7 +42,7 @@ public class JoyaServiceImpl implements IJoyaService {
       Joya joya = joyaRepository
             .findById(id)
             .orElseThrow(() -> new JoyaNoEncontradaException(id));
-      joya.setNroIdentificatorio(id);
+      joya.setIdJoyas(id);
       joya.setNombre(joyaActualizada.getNombre());
       joya.setMaterial(joyaActualizada.getMaterial());
       joya.setPeso(joyaActualizada.getPeso());
