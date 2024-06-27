@@ -1,0 +1,46 @@
+{
+	"info": {
+		"_postman_id": "d88fc64e-72aa-4eb4-9e7d-9373a2b5dcc4",
+		"name": "Sorteo JPA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "23553873"
+	},
+	"item": [
+		{
+			"name": "Add topic",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \"topic_name\" : \"MySql como base de datos relacional\",\r\n    \"complexity\": \"Media\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/topic/new"
+			},
+			"response": []
+		},
+		{
+			"name": "Add student",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \"name\" : \"Zlatan\",\r\n\t\"sur_name\": \"Ibrahimovic\",\r\n\t\"dni\" : \"12345678\",\r\n\t\"course\" : \"Introducción a BDs No Relacionales\",\r\n\t\"topic\" : {\r\n        \"topics_id\": 1\r\n\t}\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/student/new"
+			},
+			"response": []
+		}
+	]
+}
