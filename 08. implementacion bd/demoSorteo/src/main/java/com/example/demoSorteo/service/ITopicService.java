@@ -1,12 +1,15 @@
 package com.example.demoSorteo.service;
 
-import com.example.demoSorteo.dto.request.StudentDtoRequest;
-import com.example.demoSorteo.dto.request.TopicDtoRequest;
-import com.example.demoSorteo.dto.response.StudentDtoResponse;
-import com.example.demoSorteo.dto.response.TopicDtoResponse;
+import com.example.demoSorteo.dto.TopicDto;
+
+import java.util.List;
 
 public interface ITopicService {
 
-    TopicDtoResponse saveTopic(TopicDtoRequest topicDtoRequest);
+    TopicDto saveTopic(TopicDto topicDto);
+
+    TopicDto findTopic(Long id);
+
+    List<TopicDto> topicsList();
 
 }

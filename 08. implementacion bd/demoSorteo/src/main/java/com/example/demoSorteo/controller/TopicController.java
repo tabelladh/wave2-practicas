@@ -1,7 +1,6 @@
 package com.example.demoSorteo.controller;
 
-import com.example.demoSorteo.dto.request.TopicDtoRequest;
-import com.example.demoSorteo.dto.response.TopicDtoResponse;
+import com.example.demoSorteo.dto.TopicDto;
 import com.example.demoSorteo.service.ITopicService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -19,7 +18,7 @@ public class TopicController {
     private ITopicService topicService;
 
     @PostMapping("/new")
-    public ResponseEntity<TopicDtoResponse> saveTopic(@RequestBody TopicDtoRequest topicDtoRequest) {
-        return new ResponseEntity<>(topicService.saveTopic(topicDtoRequest), HttpStatus.CREATED);
+    public ResponseEntity<TopicDto> saveTopic(@RequestBody TopicDto topicDto) {
+        return new ResponseEntity<>(topicService.saveTopic(topicDto), HttpStatus.CREATED);
     }
 }

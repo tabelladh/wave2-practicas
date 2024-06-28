@@ -16,12 +16,18 @@ public class Topic {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name = "topic_name")
+    @Column(name = "topic_name", unique = true)
     private String topicName;
     @Column(name = "complexity")
     private String complexity;
 
-    @OneToOne(mappedBy = "topic")
-    private Student student;
+    //Realmente quiero bidireccionalidad? Topic necesita conocer al student?
+    //@OneToOne(mappedBy = "topic")
+    //private Student student;
+
+
+    public Topic(Long id) {
+        this.id = id;
+    }
 
 }

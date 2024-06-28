@@ -1,15 +1,14 @@
 package com.example.demoSorteo.controller;
 
-import com.example.demoSorteo.dto.request.StudentDtoRequest;
-import com.example.demoSorteo.dto.response.StudentDtoResponse;
+import com.example.demoSorteo.dto.StudentDto;
+import com.example.demoSorteo.dto.request.StudentDtoRq;
 import com.example.demoSorteo.service.IStudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/student")
@@ -18,9 +17,22 @@ public class StudentController {
     @Autowired
     private IStudentService studentService;
 
+    //Se crea un Student y un Topic en la misma request. No hace falta que Topic exista.
     @PostMapping("/new")
-    public ResponseEntity<StudentDtoResponse> saveStudent(@RequestBody StudentDtoRequest studentDtoRequest) {
-        return new ResponseEntity<>(studentService.saveStudent(studentDtoRequest), HttpStatus.CREATED);
+    public ResponseEntity<StudentDto> saveStudent(@RequestBody StudentDto studentDto) {
+        return new ResponseEntity<>(studentService.saveStudent(studentDto), HttpStatus.CREATED);
     }
+
+    //Se crea un Student con un Topic existente en la bd (primero crear el Topic)
+    @PostMapping("/newWithTopic")
+    public ResponseEntity<StudentDtoRq> saveStudentWithTopic(@RequestBody StudentDtoRq studentDtorq) {
+        return new ResponseEntity<>(studentService.saveStudentWithTopic(studentDtorq), HttpStatus.CREATED);
+    }
+
+    @GetMapping("/students/draw")
+    public ResponseEntity<List<StudentDto>> drawStudents() {
+        return new ResponseEntity<>(studentService.drawStudents(), HttpStatus.OK);
+    }
+
 
 }

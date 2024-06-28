@@ -1,13 +1,16 @@
 package com.example.demoSorteo.service;
 
-import com.example.demoSorteo.dto.request.StudentDtoRequest;
-import com.example.demoSorteo.dto.response.StudentDtoResponse;
-import org.springframework.http.HttpStatusCode;
+import com.example.demoSorteo.dto.StudentDto;
+import com.example.demoSorteo.dto.request.StudentDtoRq;
 
 import java.util.List;
 
 public interface IStudentService {
-    StudentDtoResponse saveStudent(StudentDtoRequest studentDtoRequest);
+    StudentDto saveStudent(StudentDto studentDto);
 
-    List<StudentDtoResponse> studentsList();
+    List<StudentDto> studentsList();
+
+    StudentDtoRq saveStudentWithTopic(StudentDtoRq studentDtorq);
+
+    List<StudentDto> drawStudents();
 }
