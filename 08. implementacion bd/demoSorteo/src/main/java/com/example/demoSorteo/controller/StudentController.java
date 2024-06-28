@@ -34,5 +34,10 @@ public class StudentController {
         return new ResponseEntity<>(studentService.drawStudents(), HttpStatus.OK);
     }
 
+    @GetMapping("/students")
+    public ResponseEntity<List<StudentDtoRq>> studentsList() {
+        return new ResponseEntity<>(studentService.studentsList(), HttpStatus.OK);
+    }
+
 
 }

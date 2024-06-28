@@ -71,14 +71,27 @@ public class StudentServiceImpl implements IStudentService {
 
     @Override
     public List<StudentDto> drawStudents() {
-
         return null;
     }
 
     @Override
-    public List<StudentDto> studentsList() {
-        return null;
+    public List<StudentDtoRq> studentsList() {
+        List<Student> studentList = studentRepository.findAll();
+
+        List<StudentDtoRq> studentDtoRq = studentList.stream()
+                .map(student -> new StudentDtoRq(
+                        student.getId(),
+                        student.getName(),
+                        student.getSurName(),
+                        student.getDni(),
+                        student.getCourse(),
+                        new TopicDto(student.getTopic().getId(),
+                                student.getTopic().getTopicName(),
+                                student.getTopic().getComplexity()
+                        )
+                ))
+                .toList();
+
+        return studentDtoRq;
     }
-
-
 }

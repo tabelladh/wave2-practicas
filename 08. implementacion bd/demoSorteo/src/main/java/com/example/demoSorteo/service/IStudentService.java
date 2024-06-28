@@ -8,7 +8,7 @@ import java.util.List;
 public interface IStudentService {
     StudentDto saveStudent(StudentDto studentDto);
 
-    List<StudentDto> studentsList();
+    List<StudentDtoRq> studentsList();
 
     StudentDtoRq saveStudentWithTopic(StudentDtoRq studentDtorq);
 
