@@ -1,9 +1,10 @@
 {
 	"info": {
-		"_postman_id": "d88fc64e-72aa-4eb4-9e7d-9373a2b5dcc4",
+		"_postman_id": "ff34b3b1-4268-4f74-ac66-176ade89aefd",
 		"name": "Sorteo JPA",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
-		"_exporter_id": "23553873"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34147457",
+		"_collection_link": "https://agencia-de-turismo.postman.co/workspace/New-Team-Workspace~d659e045-3cda-4ac6-b75e-d07e9e98ef40/collection/34147457-ff34b3b1-4268-4f74-ac66-176ade89aefd?action=share&source=collection_link&creator=34147457"
 	},
 	"item": [
 		{
@@ -20,7 +21,18 @@
 						}
 					}
 				},
-				"url": "http://localhost:8080/topic/new"
+				"url": {
+					"raw": "http://localhost:8080/topic/new",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"topic",
+						"new"
+					]
+				}
 			},
 			"response": []
 		},
@@ -31,14 +43,273 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{   \"name\" : \"Zlatan\",\r\n\t\"sur_name\": \"Ibrahimovic\",\r\n\t\"dni\" : \"12345678\",\r\n\t\"course\" : \"Introducción a BDs No Relacionales\",\r\n\t\"topic\" : {\r\n        \"topics_id\": 1\r\n\t}\r\n}\r\n",
+					"raw": "\r\n    {   \"name\" : \"Macarena\",\r\n\t\"sur_name\": \"Ruffa\",\r\n\t\"dni\" : \"123456789\",\r\n\t\"course\" : \"Introducción a BDs No Relacionales\",\r\n\t\"topic\" : {\r\n        \"complexity\": \"media\",\r\n        \"topic_name\": \"SQL\"\r\n\t}\r\n    }\r\n\r\n\r\n\r\n\r\n    \r\n",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": "http://localhost:8080/student/new"
+				"url": {
+					"raw": "http://localhost:8080/student/new",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add student 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \"name\" : \"Zlatan\",\r\n\t\"sur_name\": \"Ibrahimovic\",\r\n\t\"dni\" : \"12345678\",\r\n\t\"course\" : \"Introducción a BDs No Relacionales\",\r\n\t\"topic\" : {\r\n        \"complexity\": \"media\",\r\n        \"topic_name\": \"java\"\r\n\t}\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/student/new",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add student 3",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \"name\" : \"Agustina\",\r\n\t\"sur_name\": \"Ibrahimovic\",\r\n\t\"dni\" : \"12345698\",\r\n\t\"course\" : \"Introducción a BDs No Relacionales\",\r\n\t\"topic\" : {\r\n        \"complexity\": \"alta\",\r\n        \"topic_name\": \"HQL\"\r\n\t}\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/student/new",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add student 4",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \"name\" : \"Joaquin\",\r\n\t\"sur_name\": \"Ibrahimovic\",\r\n\t\"dni\" : \"12345641\",\r\n\t\"course\" : \"Introducción a BDs No Relacionales\",\r\n\t\"topic\" : {\r\n        \"complexity\": \"alta\",\r\n        \"topic_name\": \"JPA\"\r\n\t}\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/student/new",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add student 5",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \"name\" : \"Martin\",\r\n\t\"sur_name\": \"Ibrahimovic\",\r\n\t\"dni\" : \"12310678\",\r\n\t\"course\" : \"Introducción a BDs No Relacionales\",\r\n\t\"topic\" : {\r\n        \"complexity\": \"baja\",\r\n        \"topic_name\": \"HTML\"\r\n\t}\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/student/new",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add student 6",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \"name\" : \"Agustin\",\r\n\t\"sur_name\": \"Ibrahimovic\",\r\n\t\"dni\" : \"11045678\",\r\n\t\"course\" : \"Introducción a BDs No Relacionales\",\r\n\t\"topic\" : {\r\n        \"complexity\": \"media\",\r\n        \"topic_name\": \"CSS\"\r\n\t}\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/student/new",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add student 7",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \"name\" : \"Martina\",\r\n\t\"sur_name\": \"Ibrahimovic\",\r\n\t\"dni\" : \"12345688\",\r\n\t\"course\" : \"Introducción a BDs No Relacionales\",\r\n\t\"topic\" : {\r\n        \"complexity\": \"baja\",\r\n        \"topic_name\": \"node\"\r\n\t}\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/student/new",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add student 8",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \"name\" : \"Lara\",\r\n\t\"sur_name\": \"Ibrahimovic\",\r\n\t\"dni\" : \"12345678\",\r\n\t\"course\" : \"Introducción a BDs No Relacionales\",\r\n\t\"topic\" : {\r\n        \"complexity\": \"baja\",\r\n        \"topic_name\": \"fetch\"\r\n\t}\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/student/new",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add student 9",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \"name\" : \"maria\",\r\n\t\"sur_name\": \"Ibrahimovic\",\r\n\t\"dni\" : \"42345678\",\r\n\t\"course\" : \"Introducción a BDs No Relacionales\",\r\n\t\"topic\" : {\r\n        \"complexity\": \"alta\",\r\n        \"topic_name\": \"Implementacion\"\r\n\t}\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/student/new",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listar",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "sorteo",
+			"request": {
+				"method": "GET",
+				"header": []
 			},
 			"response": []
 		}
