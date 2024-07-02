@@ -1,0 +1,136 @@
+{
+	"info": {
+		"_postman_id": "d2c59387-53fe-451f-b5da-dc21dd03ae08",
+		"name": "AlumnosYCursos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "23553873"
+	},
+	"item": [
+		{
+			"name": "Listar Alumnos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/alumno/dni/12345678"
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Alumno x DNI",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/alumno/listarAlumnos"
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Alumno x Nombre y Ape",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/alumno/nombreyapellido/Juan/Pérez"
+			},
+			"response": []
+		},
+		{
+			"name": "Traer Alumno x ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/alumno/listarAlumno/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar Alumno",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n      \"nombre\": \"Joy\",\r\n      \"apellidos\": \"Tabella\",\r\n      \"fecha_nacimiento\": \"1991-10-21\",\r\n      \"dni\": 36592946,\r\n      \"direccion\": \"Calle Principal 123\",\r\n      \"cursos_list\": [\r\n            {\r\n                \"codigo\": 101,\r\n                \"nombre\": \"Matemáticas\",\r\n                \"grado\": \"Bachillerato\",\r\n                \"certificado\": true,\r\n                \"duracion\": 180.0\r\n            },\r\n            {\r\n                \"codigo\": 102,\r\n                \"nombre\": \"Historia\",\r\n                \"grado\": \"Bachillerato\",\r\n                \"certificado\": true,\r\n                \"duracion\": 150.0\r\n            }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/alumno/agregarAlumno"
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar Alumno",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8080/alumno/borrarAlumno/5"
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar Alumno",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n      \"id\": 4,\r\n      \"nombre\": \"Joy\",\r\n      \"apellidos\": \"Tabella\",\r\n      \"fecha_nacimiento\": \"1991-10-21\",\r\n      \"dni\": \"12345678\",\r\n      \"direccion\": \"Calle Avenida Siempre Viva 123\",\r\n      \"cursos_list\": [\r\n            {\r\n                \"codigo\": 102,\r\n                \"nombre\": \"Historia\",\r\n                \"grado\": \"Bachillerato\",\r\n                \"certificado\": true,\r\n                \"duracion\": 150.0\r\n            }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/alumno/actualizarAlumno"
+			},
+			"response": []
+		},
+		{
+			"name": "Existe Alumno x ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/alumno/existeAlumno/4"
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Cursos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/cursos/listarCursos"
+			},
+			"response": []
+		},
+		{
+			"name": "Un curso con Certificado?",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/cursos/listarCursos"
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Curso x ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/cursos/listarCursos/101"
+			},
+			"response": []
+		},
+		{
+			"name": "Curso con Mas Horas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/cursos/masHoras"
+			},
+			"response": []
+		}
+	]
+}
