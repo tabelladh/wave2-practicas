@@ -27,4 +27,9 @@ select distinct a.first_name, a.last_name
 from actors a
 join actor_movie am on a.id = am.actor_id
 join movies m on am.movie_id = m.id
-where m.title like "%guerra de las galaxias%";
+where m.title like "%toy%";
+
+
+
+
+
