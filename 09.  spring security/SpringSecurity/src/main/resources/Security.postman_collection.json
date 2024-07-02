@@ -1,0 +1,230 @@
+{
+	"info": {
+		"_postman_id": "a78a5d51-4548-4584-bea3-c402d9a208aa",
+		"name": "Security",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14105648",
+		"_collection_link": "https://adpsancorsalud.postman.co/workspace/Capacitacion~4e21afef-b554-4a50-a068-600549a9a6cd/collection/14105648-a78a5d51-4548-4584-bea3-c402d9a208aa?action=share&source=collection_link&creator=14105648"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n      \"username\" : \"flazzaroni\",\r\n      \"password\": \"masluz\",\r\n      \"firstName\": \"Franco\",\r\n      \"lastName\":\"Lazzaroni\",\r\n      \"country\": \"USA\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n      \"username\" : \"flazzaroni\",\r\n      \"password\": \"masluz\",\r\n      \"firstName\": \"Franco\",\r\n      \"lastName\":\"Lazzaroni\",\r\n      \"country\": \"USA\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/registerAdmin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"registerAdmin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmbGF6emFyb25pIiwiaWF0IjoxNzE5OTQ3MDA3LCJleHAiOjE3MTk5NDg4MDd9.CnS5aHJRjFqe1labg71cnIMQ3rmgRDRhvSCle0C5GnI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"flazzaroni\"    ,\r\n    \"password\": \"masluz\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "helloUser",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmbGF6emFyb25pIiwiaWF0IjoxNzE5OTQ4MDQ2LCJleHAiOjE3MTk5NDk4NDZ9.-56yqh3_0w3rpCv8EQmfKWOmd3HiXbVx7ik6v5IvzKs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/helloUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"helloUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "helloUser Copy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/helloWorld",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"helloWorld"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "helloAdmin",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmbGF6emFyb25pQURNSU4iLCJpYXQiOjE3MTk5NDg2MDksImV4cCI6MTcxOTk1MDQwOX0.O1wow8xuI7om0RJT89HlDkjGGD-77XwqNeZco48uTjc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/helloAdmin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"helloAdmin"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
