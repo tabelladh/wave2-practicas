@@ -1,0 +1,116 @@
+{
+	"info": {
+		"_postman_id": "8875d957-2b9d-4785-af1d-e9ba4306ebc0",
+		"name": "DemoSecurity",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34147457",
+		"_collection_link": "https://agencia-de-turismo.postman.co/workspace/New-Team-Workspace~d659e045-3cda-4ac6-b75e-d07e9e98ef40/collection/34147457-8875d957-2b9d-4785-af1d-e9ba4306ebc0?action=share&source=collection_link&creator=34147457"
+	},
+	"item": [
+		{
+			"name": "REGISTER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"agperalta\",\r\n    \"password\": \"1234\",\r\n    \"firstName\": \"Agustina\",\r\n    \"lastName\": \"Peralta\",\r\n    \"country\": \"Argentina\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOGIN",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZ3BlcmFsdGEiLCJpYXQiOjE3MjAwMTMyNjYsImV4cCI6MTcyMDAxNTA2Nn0.yTBFI_kkC-9pGnRqw4xKQSLqAdmDFupy7Kp5SGdNeTY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"agperalta\",\r\n    \"password\": 1234\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HelloWorld",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/helloWorld",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"helloWorld"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HelloUser",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "HelloAdmin",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
