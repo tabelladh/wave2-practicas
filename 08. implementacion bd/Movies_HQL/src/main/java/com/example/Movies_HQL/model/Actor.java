@@ -22,8 +22,10 @@ public class Actor {
     @Column(name = "last_name")
     private String lastName;
     private Double rating;
-    @Column(name = "favorite_movie_id")
-    private Integer movieFavorite;
+
+    @OneToOne
+    @JoinColumn(name = "favorite_movie_id")
+    private Movie movieFavorite;
 
     @ManyToMany
     @JoinTable(name = "actor_movie",

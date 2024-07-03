@@ -5,24 +5,20 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Set;
-
 @Entity
-@Table(name = "genres")
+@Table(name = "seasons")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Genre {
+public class Season {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
+    private String title;
+    private Integer number;
 
-    private String name;
-    private Integer ranking;
-    private Boolean active;
-
-    @OneToMany(mappedBy = "genre")
-    private Set<Movie> movies;
-
-
+    @ManyToOne
+    @JoinColumn(name = "serie_id")
+    private Serie serie;
 }

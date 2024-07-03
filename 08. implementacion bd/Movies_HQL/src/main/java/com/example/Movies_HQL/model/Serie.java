@@ -9,28 +9,21 @@ import java.time.LocalDate;
 import java.util.Set;
 
 @Entity
-@Table(name = "movies")
+@Table(name = "series")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Movie {
+public class Serie {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-
     private String title;
-    private Double rating;
-    private Integer awards;
+    @Column(name = "release_date")
     private LocalDate releaseDate;
-    private Integer length;
+    @Column(name = "end_date")
+    private LocalDate endDate;
 
-    @ManyToOne
-    @JoinColumn(name = "genre_id")
-    private Genre genre;
-
-    @ManyToMany(mappedBy = "movies")
-    private Set<Actor> actors;
-
-
+    @OneToMany(mappedBy = "serie")
+    private Set<Season> seasons;
 }
