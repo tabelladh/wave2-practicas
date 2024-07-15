@@ -1,0 +1,32 @@
+[
+  {
+    "hotel_code": "CH-0002",
+    "hotel_name": "Cataratas Hotel",
+    "destination": "Puerto Iguazú",
+    "room_type": "Doble",
+    "price_for_night": 6300,
+    "date_from": "10-02-2025",
+    "date_to": "20-03-2025",
+    "reserved": false
+  },
+  {
+    "hotel_code": "CH-0003",
+    "hotel_name": "Cataratas Hotel 2",
+    "destination": "Puerto Iguazú",
+    "room_type": "Triple",
+    "price_for_night": 8200,
+    "date_from": "10-02-2025",
+    "date_to": "23-03-2025",
+    "reserved": false
+  },
+  {
+    "hotel_code": "HB-0001",
+    "hotel_name": "Hotel Bristol",
+    "destination": "Buenos Aires",
+    "room_type": "Single",
+    "price_for_night": 5435,
+    "date_from": "10-02-2025",
+    "date_to": "19-03-2025",
+    "reserved": false
+  }
+]

@@ -1,0 +1,1265 @@
+{
+	"info": {
+		"_postman_id": "b08a1375-5432-4fd9-a409-200b64c67345",
+		"name": "AgenciaTurismo JPA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32121350"
+	},
+	"item": [
+		{
+			"name": "Hoteles",
+			"item": [
+				{
+					"name": "lista de Hoteles JPA",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/hotels",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"hotels"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Hotel JPA",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"hotel_code\": \"RF-SF\",\r\n    \"hotel_name\": \"La Perla\",\r\n    \"destination\": \"Rafaela\",\r\n    \"room_type\": \"Triple\",\r\n    \"price_for_night\": 8200,\r\n    \"disponibility_date_from\": \"20-05-2025\",\r\n    \"disponibility_date_to\": \"29-05-2025\",\r\n    \"is_booking\": false\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/hotels/hotels/new",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"hotels",
+								"hotels",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Hotel JPA",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"hotel_name\": \"Hotel \",\r\n    \"destination\": \"Rafaela\",\r\n    \"room_type\": \"Single\",\r\n    \"price_for_night\": 5435,\r\n    \"disponibility_date_from\": \"20-05-2025\",\r\n    \"disponibility_date_to\": \"29-05-2025\",\r\n    \"is_booking\": false\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/hotels/hotels/edit/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"hotels",
+								"hotels",
+								"edit",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "hotel disponible JPA",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/hotels/hotels-available?dateFrom=10-02-2025&dateTo=19-03-2025&destination=Buenos Aires&hotelCode=HB-0001",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"hotels",
+								"hotels-available"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "10-02-2025"
+								},
+								{
+									"key": "dateTo",
+									"value": "19-03-2025"
+								},
+								{
+									"key": "destination",
+									"value": "Buenos Aires"
+								},
+								{
+									"key": "hotelCode",
+									"value": "HB-0001"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar Hotel JPA",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/hotels/hotels/delete/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"hotels",
+								"hotels",
+								"delete",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Reservas Hotel JPA",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n    \"user_name\" : \"german@gmail.com\",\r\n    \"booking\" : {\r\n         \"date_from\": \"10-02-2025\",\r\n        \"date_to\": \"19-03-2025\",\r\n        \"destination\" : \"Buenos Aires\",\r\n        \"hotel_code\": \"CC-00002\",\r\n        \"people_amount\": 2,\r\n        \"room_type\": \"DOUBLE\",\r\n        \"people\" :[\r\n            {\r\n                \"dni\": \"12345678\",\r\n                \"name\": \"Juan\",\r\n                \"last_name\": \"Perez\",\r\n                \"birth_date\": \"10-11-1982\",\r\n                \"email\": \"juanperez@gmail.com\"\r\n            },\r\n            {\r\n                \"dni\": \"87654321\",\r\n                \"name\": \"Maria\",\r\n                \"last_name\": \"Lopez\",\r\n                \"birth_date\": \"01-05-1985\",\r\n                \"email\": \"marialopez@gmail.com\"\r\n            }\r\n        ],\r\n        \"payment_method\":  //only cards\r\n        {\r\n            \"type\": \"CREDIT\",\r\n            \"number_card\": \"1234-1234-1234-1234\",\r\n            \"dues\": 6\r\n        }\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/hotel-booking",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"hotel-booking"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reservar Hotel JPA",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n    \"user_name\" : \"gerpoupeau\",\r\n    \"booking\" : {\r\n        \"date_from\": \"10-02-2025\",\r\n        \"date_to\": \"20-03-2025\",\r\n        \"destination\" : \"Puerto Iguazú\",\r\n        \"hotel_code\": \"CH-0002\",\r\n        \"people_amount\": 2,\r\n        \"room_type\": \"Doble\",\r\n        \"people\" :[\r\n            {\r\n                \"dni\": \"12345678\",\r\n                \"name\": \"Juan\",\r\n                \"last_name\": \"Perez\",\r\n                \"birth_date\": \"10-11-1982\",\r\n                \"email\": \"juanperez@gmail.com\"\r\n            },\r\n            {\r\n                \"dni\": \"87654321\",\r\n                \"name\": \"Maria\",\r\n                \"last_name\": \"Lopez\",\r\n                \"birth_date\": \"01-05-1985\",\r\n                \"email\": \"marialopez@gmail.com\"\r\n            }\r\n        ],\r\n        \"payment_method\":  //only cards\r\n        {\r\n            \"type\": \"CREDIT\",\r\n            \"number_card\": \"1234-1234-1234-1234\",\r\n            \"dues\": 6\r\n        }\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/hotel-booking/new",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"hotel-booking",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reservar Hotel 2 JPA",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n    \"user_name\" : \"gerpoupeau\",\r\n    \"booking\" : {\r\n        \"date_from\": \"10-02-2025\",\r\n        \"date_to\": \"19-03-2025\",\r\n        \"destination\" : \"Buenos Aires\",\r\n        \"hotel_code\": \"HB-0001\",\r\n        \"people_amount\": 1,\r\n        \"room_type\": \"Single\",\r\n        \"people\" :[\r\n            {\r\n                \"dni\": \"12345678\",\r\n                \"name\": \"Joako\",\r\n                \"last_name\": \"Perez\",\r\n                \"birth_date\": \"10-11-1982\",\r\n                \"email\": \"juanperez@gmail.com\"\r\n            }\r\n        ],\r\n        \"payment_method\":  //only cards\r\n        {\r\n            \"type\": \"DEBIT\",\r\n            \"number_card\": \"1111-1234-1111-1234\",\r\n            \"dues\": 1\r\n        }\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/hotel-booking/new",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"hotel-booking",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reservar Hotel 4 JPA",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n    \"user_name\" : \"aguperalta\",\r\n    \"booking\" : {\r\n        \"date_from\": \"23-01-2025\",\r\n        \"date_to\": \"23-11-2025\",\r\n        \"destination\" : \"Bogotá\",\r\n        \"hotel_code\": \"SE-0001\",\r\n        \"people_amount\": 1,\r\n        \"room_type\": \"Single\",\r\n        \"people\" :[\r\n            {\r\n                \"dni\": \"12345678\",\r\n                \"name\": \"Agus\",\r\n                \"last_name\": \"Peralta\",\r\n                \"birth_date\": \"22-08-2001\",\r\n                \"email\": \"agusPeralta@gmail.com\"\r\n            }\r\n        ],\r\n        \"payment_method\":  //only cards\r\n        {\r\n            \"type\": \"CREDIT\",\r\n            \"number_card\": \"3311-1433-3311-1434\",\r\n            \"dues\": 12\r\n        }\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/hotel-booking/new",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"hotel-booking",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reservar Hotel 3 JPA",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n    \"user_name\" : \"joacassina\",\r\n    \"booking\" : {\r\n        \"date_from\": \"17-04-2025\",\r\n        \"date_to\": \"12-06-2025\",\r\n        \"destination\" : \"Cartagena\",\r\n        \"hotel_code\": \"BG-0004\",\r\n        \"people_amount\": 4,\r\n        \"room_type\": \"Múltiple\",\r\n        \"people\" :[\r\n            {\r\n                \"dni\": \"12345678\",\r\n                \"name\": \"Joako\",\r\n                \"last_name\": \"Cassina\",\r\n                \"birth_date\": \"10-11-2000\",\r\n                \"email\": \"joakoCass@gmail.com\"\r\n            },\r\n            {\r\n                \"dni\": \"12366678\",\r\n                \"name\": \"German\",\r\n                \"last_name\": \"Poupeau\",\r\n                \"birth_date\": \"10-12-1988\",\r\n                \"email\": \"gerPoupeau@gmail.com\"\r\n            },\r\n            {\r\n                \"dni\": \"12345688\",\r\n                \"name\": \"Juanma\",\r\n                \"last_name\": \"Francs\",\r\n                \"birth_date\": \"10-01-1998\",\r\n                \"email\": \"juanfrancs@gmail.com\"\r\n            },\r\n            {\r\n                \"dni\": \"12225678\",\r\n                \"name\": \"Andre\",\r\n                \"last_name\": \"Toledo\",\r\n                \"birth_date\": \"15-07-1995\",\r\n                \"email\": \"andreTole@gmail.com\"\r\n            }\r\n        ],\r\n        \"payment_method\":  //only cards\r\n        {\r\n            \"type\": \"DEBIT\",\r\n            \"number_card\": \"1221-1211-1221-1211\",\r\n            \"dues\": 1\r\n        }\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/hotel-booking/new",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"hotel-booking",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Reserva JPA",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n    \"user_name\" : \"juanjo@gmail.com\",\r\n    \"booking\" : {\r\n        \"date_from\": \"10-02-2025\",\r\n        \"date_to\": \"20-03-2025\",\r\n        \"destination\" : \"Puerto Iguazú\",\r\n        \"hotel_code\": \"CH-0002\",\r\n        \"people_amount\": 2,\r\n        \"room_type\": \"Doble\",\r\n        \"people\" :[\r\n            {\r\n                \"dni\": \"12345678\",\r\n                \"name\": \"Juan\",\r\n                \"last_name\": \"Perez\",\r\n                \"birth_date\": \"10-11-1982\",\r\n                \"email\": \"juanperez@gmail.com\"\r\n            },\r\n            {\r\n                \"dni\": \"87654321\",\r\n                \"name\": \"Martin\",\r\n                \"last_name\": \"Lopez\",\r\n                \"birth_date\": \"01-05-1985\",\r\n                \"email\": \"martinlopez@gmail.com\"\r\n            }\r\n        ],\r\n        \"payment_method\":  //only cards\r\n        {\r\n            \"type\": \"DEBIT\",\r\n            \"number_card\": \"9222-1234-2229-1234\",\r\n            \"dues\": 1\r\n        }\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/hotel-booking/edit/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"hotel-booking",
+								"edit",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar Reserva",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/hotel-booking/delete/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"hotel-booking",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Error Fechas Hotel Disponible JPA",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/hotels/hotels-available?dateFrom=10-02-2026&dateTo=19-03-2025&destination=Buenos Aires",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"hotels",
+								"hotels-available"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "10-02-2026"
+								},
+								{
+									"key": "dateTo",
+									"value": "19-03-2025"
+								},
+								{
+									"key": "destination",
+									"value": "Buenos Aires"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Error Destino Invalido Hotel JPA",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/hotels/hotels-available?dateFrom=10-02-2025&dateTo=19-03-2025&destination=Rafaela",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"hotels",
+								"hotels-available"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "10-02-2025"
+								},
+								{
+									"key": "dateTo",
+									"value": "19-03-2025"
+								},
+								{
+									"key": "destination",
+									"value": "Rafaela"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validaciones Reserva de Hotel JPA",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n    \"user_name\" : \"german@gmail.com\",\r\n    \"booking\" : {\r\n         \"date_from\": \"10-02-2023\",\r\n        \"date_to\": \"19-03-2023\",\r\n        \"destination\" : \"Buenos Aires\",\r\n        \"hotel_code\": \"CC-00002\",\r\n        \"people_amount\": -2,\r\n        \"room_type\": \"DOBLE\",\r\n        \"people\" :[\r\n            {\r\n                \"dni\": \"12345678\",\r\n                \"name\": \"Juan\",\r\n                \"last_name\": \"Perez\",\r\n                \"birth_date\": \"10-11-1982\",\r\n                \"email\": \"juanperez\"\r\n            },\r\n            {\r\n                \"dni\": \"87654321\",\r\n                \"name\": \"Maria\",\r\n                \"last_name\": \"Lopez\",\r\n                \"birth_date\": \"01-05-1985\",\r\n                \"email\": \"marialopez@gmail.com\"\r\n            }\r\n        ],\r\n        \"payment_method\":  //only cards\r\n        {\r\n            \"type\": \"CREDIT\",\r\n            \"number_card\": \"1234-1234-1234-1234\",\r\n            \"dues\": 6\r\n        }\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/hotel-booking/new",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"hotel-booking",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Error tipo de habitacion de Hotel JPA",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n    \"user_name\" : \"gerpoupeau\",\r\n    \"booking\" : {\r\n        \"date_from\": \"10-02-2025\",\r\n        \"date_to\": \"20-03-2025\",\r\n        \"destination\" : \"Puerto Iguazú\",\r\n        \"hotel_code\": \"CH-0002\",\r\n        \"people_amount\": 2,\r\n        \"room_type\": \"Single\",\r\n        \"people\" :[\r\n            {\r\n                \"dni\": \"12345678\",\r\n                \"name\": \"Juan\",\r\n                \"last_name\": \"Perez\",\r\n                \"birth_date\": \"10-11-1982\",\r\n                \"email\": \"juanperez@gmail.com\"\r\n            },\r\n            {\r\n                \"dni\": \"87654321\",\r\n                \"name\": \"Maria\",\r\n                \"last_name\": \"Lopez\",\r\n                \"birth_date\": \"01-05-1985\",\r\n                \"email\": \"marialopez@gmail.com\"\r\n            }\r\n        ],\r\n        \"payment_method\":  //only cards\r\n        {\r\n            \"type\": \"CREDIT\",\r\n            \"number_card\": \"1234-1234-1234-1234\",\r\n            \"dues\": 6\r\n        }\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/hotel-booking/new",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"hotel-booking",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Error Cuotas con Debito JPA",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n    \"user_name\" : \"gerpoupeau\",\r\n    \"booking\" : {\r\n        \"date_from\": \"10-02-2025\",\r\n        \"date_to\": \"20-03-2025\",\r\n        \"destination\" : \"Puerto Iguazú\",\r\n        \"hotel_code\": \"CH-0002\",\r\n        \"people_amount\": 2,\r\n        \"room_type\": \"Doble\",\r\n        \"people\" :[\r\n            {\r\n                \"dni\": \"12345678\",\r\n                \"name\": \"Juan\",\r\n                \"last_name\": \"Perez\",\r\n                \"birth_date\": \"10-11-1982\",\r\n                \"email\": \"juanperez@gmail.com\"\r\n            },\r\n            {\r\n                \"dni\": \"87654321\",\r\n                \"name\": \"Maria\",\r\n                \"last_name\": \"Lopez\",\r\n                \"birth_date\": \"01-05-1985\",\r\n                \"email\": \"marialopez@gmail.com\"\r\n            }\r\n        ],\r\n        \"payment_method\":  //only cards\r\n        {\r\n            \"type\": \"DEBIT\",\r\n            \"number_card\": \"1234-1234-1234-1234\",\r\n            \"dues\": 6\r\n        }\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/hotel-booking/new",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"hotel-booking",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Error Inicio sesión JPA",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n    \"user_name\" : \"gerpoupeau123\",\r\n    \"booking\" : {\r\n        \"date_from\": \"10-02-2025\",\r\n        \"date_to\": \"20-03-2025\",\r\n        \"destination\" : \"Puerto Iguazú\",\r\n        \"hotel_code\": \"CH-0002\",\r\n        \"people_amount\": 2,\r\n        \"room_type\": \"Doble\",\r\n        \"people\" :[\r\n            {\r\n                \"dni\": \"12345678\",\r\n                \"name\": \"Juan\",\r\n                \"last_name\": \"Perez\",\r\n                \"birth_date\": \"10-11-1982\",\r\n                \"email\": \"juanperez@gmail.com\"\r\n            },\r\n            {\r\n                \"dni\": \"87654321\",\r\n                \"name\": \"Maria\",\r\n                \"last_name\": \"Lopez\",\r\n                \"birth_date\": \"01-05-1985\",\r\n                \"email\": \"marialopez@gmail.com\"\r\n            }\r\n        ],\r\n        \"payment_method\":  //only cards\r\n        {\r\n            \"type\": \"DEBIT\",\r\n            \"number_card\": \"1234-1234-1234-1234\",\r\n            \"dues\": 6\r\n        }\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/hotel-booking/new",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"hotel-booking",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Error  cantidad de Cuotas JPA",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n    \"user_name\" : \"gerpoupeau\",\r\n    \"booking\" : {\r\n        \"date_from\": \"10-02-2025\",\r\n        \"date_to\": \"20-03-2025\",\r\n        \"destination\" : \"Puerto Iguazú\",\r\n        \"hotel_code\": \"CH-0002\",\r\n        \"people_amount\": 2,\r\n        \"room_type\": \"Doble\",\r\n        \"people\" :[\r\n            {\r\n                \"dni\": \"12345678\",\r\n                \"name\": \"Juan\",\r\n                \"last_name\": \"Perez\",\r\n                \"birth_date\": \"10-11-1982\",\r\n                \"email\": \"juanperez@gmail.com\"\r\n            },\r\n            {\r\n                \"dni\": \"87654321\",\r\n                \"name\": \"Maria\",\r\n                \"last_name\": \"Lopez\",\r\n                \"birth_date\": \"01-05-1985\",\r\n                \"email\": \"marialopez@gmail.com\"\r\n            }\r\n        ],\r\n        \"payment_method\":  //only cards\r\n        {\r\n            \"type\": \"CREDIT\",\r\n            \"number_card\": \"1234-1234-1234-1234\",\r\n            \"dues\": 14\r\n        }\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/hotel-booking/new",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"hotel-booking",
+								"new"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Vuelos",
+			"item": [
+				{
+					"name": "listar vuelos JPA",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"flight_code\": \"PIBA-DE20\",\r\n    \"origin\": \"Mar del Plata\",\r\n    \"destination\": \"Buenos Aires\",\r\n    \"seat_type\": \"Business\",\r\n    \"price\": 67200,\r\n    \"date_from\": \"11-02-2025\",\r\n    \"date_to\": \"26-02-2025\"\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/flights",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"flights"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Vuelo JPA",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"flight_code\": \"YAKI\",\r\n    \"origin\": \"Miami\",\r\n    \"destination\": \"Rafaela\",\r\n    \"seat_type\": \"Economy\",\r\n    \"price\": 5400,\r\n    \"going_date\": \"21-03-2025\",\r\n    \"return_date\": \"20-06-2025\",\r\n    \"reserved\" : false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/flights/new",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"flights",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Vuelo JPA",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"origin\": \"Tucumán\",\r\n    \"destination\": \"Rafaela\",\r\n    \"seat_type\": \"Economy\",\r\n    \"price\": 17000,\r\n    \"going_date\": \"02-01-2025\",\r\n    \"return_date\": \"16-01-2025\",\r\n    \"reserved\" : false\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/flights/edit/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"flights",
+								"edit",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar Vuelo JPA",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/flights/delete/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"flights",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "vuelo disponible JPA",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/flights/flights?dateFrom=10-02-2025&dateTo=15-02-2025&origin=Buenos Aires&destination=Puerto Iguazú",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"flights",
+								"flights"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "10-02-2025"
+								},
+								{
+									"key": "dateTo",
+									"value": "15-02-2025"
+								},
+								{
+									"key": "origin",
+									"value": "Buenos Aires"
+								},
+								{
+									"key": "destination",
+									"value": "Puerto Iguazú"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reservar Vuelo JPA",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_name\" : \"gerpoupeau\",\r\n    \"flight_reservation\" : {\r\n        \"going_date\": \"10-02-2025\",\r\n        \"return_date\": \"24-02-2025\",\r\n        \"origin\" : \"Bogotá\",\r\n        \"destination\" : \"Medellín\",\r\n        \"flight_code\" : \"BOME-4442\",\r\n        \"seats\" : 2,\r\n        \"seat_type\": \"ECONOMY\",\r\n        \"people\" :[\r\n            {\r\n                \"dni\": \"12345678\",\r\n                \"name\": \"Juan\",\r\n                \"last_name\": \"Perez\",\r\n                \"birth_date\": \"10-11-1982\",\r\n                \"email\": \"juanperez@gmail.com\"\r\n            },\r\n            {\r\n                \"dni\": \"87654321\",\r\n                \"name\": \"Maria\",\r\n                \"last_name\": \"Lopez\",\r\n                \"birth_date\": \"01-05-1985\",\r\n                \"email\": \"marialopez@gmail.com\"\r\n            }\r\n        ],\r\n        \"payment_method\":\r\n        {\r\n            \"type\": \"CREDIT\",\r\n            \"number_card\": \"1234-1234-1234-1234\",\r\n            \"dues\": 6\r\n        }\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/flight-booking/new",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"flight-booking",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reservar Vuelo 2 JPA",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"user_name\" : \"gerpoupeau\",\r\n    \"flight_reservation\" : {\r\n        \"going_date\": \"23-01-2025\",\r\n        \"return_date\": \"31-01-2025\",\r\n        \"origin\" : \"Cartagena\",\r\n        \"destination\" : \"Medellín\",\r\n        \"flight_code\" : \"CAME-0321\",\r\n        \"seats\" : 2,\r\n        \"seat_type\": \"ECONOMY\",\r\n        \"people\" :[\r\n            {\r\n                \"dni\": \"12311178\",\r\n                \"name\": \"Mati\",\r\n                \"last_name\": \"Paz\",\r\n                \"birth_date\": \"11-11-1988\",\r\n                \"email\": \"martipaz@gmail.com\"\r\n            },\r\n            {\r\n                \"dni\": \"876222321\",\r\n                \"name\": \"Mari\",\r\n                \"last_name\": \"Lez\",\r\n                \"birth_date\": \"11-11-1985\",\r\n                \"email\": \"marilez@gmail.com\"\r\n            }\r\n        ],\r\n        \"payment_method\":\r\n        {\r\n            \"type\": \"CREDIT\",\r\n            \"number_card\": \"1234-1234-1234-1234\",\r\n            \"dues\": 6\r\n        }\r\n    }\r\n    \r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/flight-booking/new",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"flight-booking",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reservar Vuelo 3 JPA",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_name\" : \"andretoledo\",\r\n    \"flight_reservation\" : {\r\n        \"going_date\": \"23-01-2025\",\r\n        \"return_date\": \"05-02-2025\",\r\n        \"origin\": \"Bogotá\",\r\n        \"destination\": \"Cartagena\",\r\n        \"flight_code\" :\"BOCA-4213\",\r\n        \"seats\" : 2,\r\n        \"seat_type\": \"ECONOMY\",\r\n        \"people\" :[\r\n            {\r\n                \"dni\": \"12345699\",\r\n                \"name\": \"Andre\",\r\n                \"last_name\": \"Toledo\",\r\n                \"birth_date\": \"10-11-1995\",\r\n                \"email\": \"andreToledo@gmail.com\"\r\n            },\r\n            {\r\n                \"dni\": \"87654322\",\r\n                \"name\": \"Martin\",\r\n                \"last_name\": \"Vacca\",\r\n                \"birth_date\": \"01-05-1990\",\r\n                \"email\": \"martiVacca@gmail.com\"\r\n            }\r\n        ],\r\n        \"payment_method\":\r\n        {\r\n            \"type\": \"DEBIT\",\r\n            \"number_card\": \"1555-5534-5534-1555\",\r\n            \"dues\": 1\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/flight-booking/new",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"flight-booking",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Reserva JPA",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_name\" : \"juanperez@gmail.com\",\r\n    \"flight_reservation\" : {\r\n        \"going_date\": \"10-02-2025\",\r\n        \"return_date\": \"24-02-2025\",\r\n        \"origin\" : \"Bogotá\",\r\n        \"destination\" : \"Medellín\",\r\n        \"flight_code\" : \"BOME-4442\",\r\n        \"seats\" : 2,\r\n        \"seat_type\": \"ECONOMY\",\r\n        \"people\" :[\r\n            {\r\n                \"dni\": \"12345678\",\r\n                \"name\": \"Juan\",\r\n                \"last_name\": \"Perez\",\r\n                \"birth_date\": \"10-11-1982\",\r\n                \"email\": \"juanperez@gmail.com\"\r\n            },\r\n            {\r\n                \"dni\": \"87654321\",\r\n                \"name\": \"Maria\",\r\n                \"last_name\": \"Lopez\",\r\n                \"birth_date\": \"01-05-1985\",\r\n                \"email\": \"marialopez@gmail.com\"\r\n            }\r\n        ],\r\n        \"payment_method\":\r\n        {\r\n            \"type\": \"DEBIT\",\r\n            \"number_card\": \"1111-1234-1234-1111\",\r\n            \"dues\": 1\r\n        }\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/flight-booking/edit/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"flight-booking",
+								"edit",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Reserva JPA",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/flight-booking/delete/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"flight-booking",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Error Origen Vuelos JPA",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/flights/flights?dateFrom=10-02-2025&dateTo=15-02-2025&origin=Rafaela&destination=Puerto Iguazú",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"flights",
+								"flights"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "10-02-2025"
+								},
+								{
+									"key": "dateTo",
+									"value": "15-02-2025"
+								},
+								{
+									"key": "origin",
+									"value": "Rafaela"
+								},
+								{
+									"key": "destination",
+									"value": "Puerto Iguazú"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Error Destino Vuelos JPA",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/flights/flights?dateFrom=10-02-2025&dateTo=15-02-2025&origin=Buenos Aires&destination=Rafaela",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"flights",
+								"flights"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "10-02-2025"
+								},
+								{
+									"key": "dateTo",
+									"value": "15-02-2025"
+								},
+								{
+									"key": "origin",
+									"value": "Buenos Aires"
+								},
+								{
+									"key": "destination",
+									"value": "Rafaela"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Error Origen y Destino Vuelos JPA",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/flights/flights?dateFrom=10-02-2025&dateTo=15-02-2025&origin=Rafaela&destination=Tucuman",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"flights",
+								"flights"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "10-02-2025"
+								},
+								{
+									"key": "dateTo",
+									"value": "15-02-2025"
+								},
+								{
+									"key": "origin",
+									"value": "Rafaela"
+								},
+								{
+									"key": "destination",
+									"value": "Tucuman"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validacion reserva Vuelo JPA",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_name\" : \"gerpoupeau\",\r\n    \"flight_reservation\" : {\r\n        \"date_from\": \"10-02-2023\",\r\n        \"date_to\": \"24-02-2023\",\r\n        \"origin\" : \"Bogotá\",\r\n        \"destination\" : \"Medellín\",\r\n        \"flight_number\" : \"FFFF-0002\",\r\n        \"seats\" : -2,\r\n        \"seat_type\": \"ECONOMY\",\r\n        \"people\" :[\r\n            {\r\n                \"dni\": \"12345678\",\r\n                \"name\": \"Juan\",\r\n                \"last_name\": \"Perez\",\r\n                \"birth_date\": \"10-11-1982\",\r\n                \"email\": \"juanpere\"\r\n            },\r\n            {\r\n                \"dni\": \"87654321\",\r\n                \"name\": \"Maria\",\r\n                \"last_name\": \"Lopez\",\r\n                \"birth_date\": \"01-05-1985\",\r\n                \"email\": \"marialopez@gmail.com\"\r\n            }\r\n        ],\r\n        \"payment_method\":\r\n        {\r\n            \"type\": \"CREDIT\",\r\n            \"number_card\": \"1234-1234-1234-1234\",\r\n            \"dues\": 6\r\n        }\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/flight-booking/new",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"flight-booking",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Error cantidad de asientos JPA",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_name\" : \"gerpoupeau\",\r\n    \"flight_reservation\" : {\r\n        \"going_date\": \"10-02-2025\",\r\n        \"return_date\": \"24-02-2025\",\r\n        \"origin\" : \"Bogotá\",\r\n        \"destination\" : \"Medellín\",\r\n        \"flight_code\" : \"BOME-4442\",\r\n        \"seats\" : 4,\r\n        \"seat_type\": \"ECONOMY\",\r\n        \"people\" :[\r\n            {\r\n                \"dni\": \"12345678\",\r\n                \"name\": \"Juan\",\r\n                \"last_name\": \"Perez\",\r\n                \"birth_date\": \"10-11-1982\",\r\n                \"email\": \"juanperez@gmail.com\"\r\n            },\r\n            {\r\n                \"dni\": \"87654321\",\r\n                \"name\": \"Maria\",\r\n                \"last_name\": \"Lopez\",\r\n                \"birth_date\": \"01-05-1985\",\r\n                \"email\": \"marialopez@gmail.com\"\r\n            }\r\n        ],\r\n        \"payment_method\":\r\n        {\r\n            \"type\": \"CREDIT\",\r\n            \"number_card\": \"1234-1234-1234-1234\",\r\n            \"dues\": 6\r\n        }\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/flight-booking/new",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"flight-booking",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Error Cuotas no valido JPA",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_name\" : \"gerpoupeau\",\r\n    \"flight_reservation\" : {\r\n        \"going_date\": \"17-04-2025\",\r\n        \"return_date\": \"02-05-2025\",\r\n        \"origin\" : \"Medellín\",\r\n        \"destination\" : \"Puerto Iguazú\",\r\n        \"flight_code\" : \"MEPI-9986\",\r\n        \"seats\" : 2,\r\n        \"seat_type\": \"BUSINESS\",\r\n        \"people\" :[\r\n            {\r\n                \"dni\": \"12345678\",\r\n                \"name\": \"Juan\",\r\n                \"last_name\": \"Perez\",\r\n                \"birth_date\": \"10-11-1982\",\r\n                \"email\": \"juanperez@gmail.com\"\r\n            },\r\n            {\r\n                \"dni\": \"87654321\",\r\n                \"name\": \"Maria\",\r\n                \"last_name\": \"Lopez\",\r\n                \"birth_date\": \"01-05-1985\",\r\n                \"email\": \"marialopez@gmail.com\"\r\n            }\r\n        ],\r\n        \"payment_method\":\r\n        {\r\n            \"type\": \"CREDIT\",\r\n            \"number_card\": \"1234-1234-1234-1234\",\r\n            \"dues\": 14\r\n        }\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/flight-booking/new",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"flight-booking",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Error Debito con cuotas JPA",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_name\" : \"gerpoupeau\",\r\n    \"flight_reservation\" : {\r\n        \"going_date\": \"17-04-2025\",\r\n        \"return_date\": \"02-05-2025\",\r\n        \"origin\" : \"Medellín\",\r\n        \"destination\" : \"Puerto Iguazú\",\r\n        \"flight_code\" : \"MEPI-9986\",\r\n        \"seats\" : 2,\r\n        \"seat_type\": \"BUSINESS\",\r\n        \"people\" :[\r\n            {\r\n                \"dni\": \"12345678\",\r\n                \"name\": \"Juan\",\r\n                \"last_name\": \"Perez\",\r\n                \"birth_date\": \"10-11-1982\",\r\n                \"email\": \"juanperez@gmail.com\"\r\n            },\r\n            {\r\n                \"dni\": \"87654321\",\r\n                \"name\": \"Maria\",\r\n                \"last_name\": \"Lopez\",\r\n                \"birth_date\": \"01-05-1985\",\r\n                \"email\": \"marialopez@gmail.com\"\r\n            }\r\n        ],\r\n        \"payment_method\":\r\n        {\r\n            \"type\": \"DEBIT\",\r\n            \"number_card\": \"1234-1234-1234-1234\",\r\n            \"dues\": 14\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/flight-booking/new",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"flight-booking",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "lista de vuelos reservados",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/flight-booking",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"flight-booking"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "listar",
+			"item": [
+				{
+					"name": "TraerTop3",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/clients/top3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"clients",
+								"top3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Todas las Reservas por Mes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/listReserved/mes?mes=12",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"listReserved",
+								"mes"
+							],
+							"query": [
+								{
+									"key": "mes",
+									"value": "12"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Todas las reservas Por Dia JPA",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/listReserved/dia?dia=2024-11-10",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"listReserved",
+								"dia"
+							],
+							"query": [
+								{
+									"key": "dia",
+									"value": "2024-11-10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Todas las Reservas",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n    \"user_name\" : \"german@gmail.com\",\r\n    \"booking\" : {\r\n         \"date_from\": \"10-02-2025\",\r\n        \"date_to\": \"19-03-2025\",\r\n        \"destination\" : \"Buenos Aires\",\r\n        \"hotel_code\": \"CC-00002\",\r\n        \"people_amount\": 2,\r\n        \"room_type\": \"DOUBLE\",\r\n        \"people\" :[\r\n            {\r\n                \"dni\": \"12345678\",\r\n                \"name\": \"Juan\",\r\n                \"last_name\": \"Perez\",\r\n                \"birth_date\": \"10-11-1982\",\r\n                \"email\": \"juanperez@gmail.com\"\r\n            },\r\n            {\r\n                \"dni\": \"87654321\",\r\n                \"name\": \"Maria\",\r\n                \"last_name\": \"Lopez\",\r\n                \"birth_date\": \"01-05-1985\",\r\n                \"email\": \"marialopez@gmail.com\"\r\n            }\r\n        ],\r\n        \"payment_method\":  //only cards\r\n        {\r\n            \"type\": \"CREDIT\",\r\n            \"number_card\": \"1234-1234-1234-1234\",\r\n            \"dues\": 6\r\n        }\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/listReserved",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"listReserved"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
