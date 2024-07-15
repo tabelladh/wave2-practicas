@@ -1,0 +1,739 @@
+{
+	"info": {
+		"_postman_id": "8a2167de-a1e8-40f5-9903-458713cac579",
+		"name": "Sprint_1_Grupo_4",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34147198",
+		"_collection_link": "https://equipo4-8541.postman.co/workspace/Equipo4-Workspace~71a29081-e770-4d6f-9add-66c7fe2cf976/collection/34147198-8a2167de-a1e8-40f5-9903-458713cac579?action=share&source=collection_link&creator=34147198"
+	},
+	"item": [
+		{
+			"name": "Listar Hoteles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/hotels",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"hotels"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alta Hotel",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"hotel_code\": \"CH-0022\",\r\n    \"name\": \"Cataratas Hotel spa\",\r\n    \"destination\": \"Puerto Iguazu\",\r\n    \"room_type\": \"Double\",\r\n    \"price_per_night\": 6200,\r\n    \"date_from\": \"2025-02-10\",\r\n    \"date_to\": \"2025-03-20\",\r\n    \"reserved\": false\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/hotels/new",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"hotels",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar Hotel",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"hotel_code\": \"CH-0022\",\r\n    \"name\": \"Cataratas Hotel spa\",\r\n    \"destination\": \"Puerto Iguazu\",\r\n    \"room_type\": \"Double\",\r\n    \"price_per_night\": 620,\r\n    \"date_from\": \"2025-02-10\",\r\n    \"date_to\": \"2025-03-20\",\r\n    \"reserved\": false\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/hotels/edit?hotelCode=CH-0022",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"hotels",
+						"edit"
+					],
+					"query": [
+						{
+							"key": "hotelCode",
+							"value": "CH-0022"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrar Hotel",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/hotels/delete?hotelCode=CH-0022",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"hotels",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "hotelCode",
+							"value": "CH-0022"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Vuelos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/flights",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"flights"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alta Vuelo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"flight_code\": \"BAPI-1611\",\r\n    \"origin\": \"Buenos Aires\",\r\n    \"destination\": \"Puerto Iguazu\",\r\n    \"seat_type\": \"First class\",\r\n    \"price_per_person\": 70000,\r\n    \"date_from\": \"2025-02-10\",\r\n    \"date_to\": \"2025-02-15\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/flights/new",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"flights",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar Vuelo",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"flight_code\": \"BAPI-1611\",\r\n    \"origin\": \"Buenos Aires\",\r\n    \"destination\": \"Puerto Iguazu\",\r\n    \"seat_type\": \"First class\",\r\n    \"price_per_person\": 70001,\r\n    \"date_from\": \"2025-02-10\",\r\n    \"date_to\": \"2025-02-15\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/flights/edit?flightCode=BAPI-1611",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"flights",
+						"edit"
+					],
+					"query": [
+						{
+							"key": "flightCode",
+							"value": "BAPI-1611"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar Vuelo",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/flights/delete?flightCode=BAPI-1611",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"flights",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "flightCode",
+							"value": "BAPI-1611"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alta Reserva Hotel",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_name\": \"juanperez@gmail.com\",\r\n    \"booking\": {\r\n        \"date_from\": \"2025-02-10\",\r\n        \"date_to\": \"2025-03-20\",\r\n        \"destination\": \"Puerto Iguazu\",\r\n        \"hotel_code\": \"CH-0002\",\r\n        \"people_amount\": 2,\r\n        \"room_type\": \"DOUBLE\",\r\n        \"people\": [\r\n            {\r\n                \"dni\": \"12345678\",\r\n                \"name\": \"Juan\",\r\n                \"last_name\": \"Perez\",\r\n                \"birth_date\": \"10-11-1982\",\r\n                \"mail\": \"juanperez@gmail.com\"\r\n            },\r\n            {\r\n                \"dni\": \"87654321\",\r\n                \"name\": \"Maria\",\r\n                \"last_name\": \"Lopez\",\r\n                \"birth_date\": \"01-05-1985\",\r\n                \"mail\": \"marialopez@gmail.com\"\r\n            }\r\n        ],\r\n        \"payment_method\": {\r\n            \"type\": \"CREDIT\",\r\n            \"number\": \"1234-1234-1234-1234\",\r\n            \"dues\": 6\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/booking",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"booking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alta Reserva Vuelo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_name\": \"juanperez@gmail.com\",\r\n    \"flight_reservation\": {\r\n        \"date_from\": \"2025-02-10\",\r\n        \"date_to\": \"2025-02-15\",\r\n        \"origin\" : \"Buenos Aires\",\r\n        \"destination\": \"Puerto Iguazu\",\r\n        \"flight_number\" :\"BAPI-1235\",\r\n         \"seats\" : 2,\r\n         \"seat_type\": \"Economy\",\r\n         \"people\" :[{\"dni\": \"12345678\",\r\n                     \"name\": \"Juan\",\r\n                     \"last_name\": \"Perez\",\r\n                     \"birth_date\": \"1982-11-10\",\r\n                     \"email\": \"juanperez@gmail.com\"},\r\n                     {\"dni\": \"87654321\",\r\n                     \"name\": \"Maria\",\r\n                     \"last_name\": \"Lopez\",\r\n                     \"birth_date\": \"1985-05-01\",\r\n                     \"email\": \"marialopez@gmail.com\"}],\r\n         \"payment_method\": {\"type\": \"CREDIT\",\r\n                            \"number_card\": \"1234-1234-1234-1234\",\r\n                            \"dues\": 6\r\n                             }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/flight-reservation",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"flight-reservation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar reserva de hotel",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_name\": \"juanperez@gmail.com\",\r\n    \"booking\": {\r\n        \"date_from\": \"2025-02-10\",\r\n        \"date_to\": \"2025-03-21\",\r\n        \"destination\": \"Puerto Iguazu\",\r\n        \"hotel_code\": \"CH-0002\",\r\n        \"people_amount\": 1,\r\n        \"room_type\": \"SINGLE\",\r\n        \"people\": [\r\n            {\r\n                \"dni\": \"12345678\",\r\n                \"name\": \"Juan\",\r\n                \"last_name\": \"Perez\",\r\n                \"birth_date\": \"10-11-1982\",\r\n                \"mail\": \"juanperez@gmail.com\"\r\n            }\r\n        ],\r\n        \"payment_method\": {\r\n            \"type\": \"CREDIT\",\r\n            \"number\": \"1234-1234-1234-1234\",\r\n            \"dues\": 6\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/hotel-booking/edit?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"hotel-booking",
+						"edit"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar reserva Vuelo",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n    \"user_name\": \"juanperez@gmail.com\",\r\n    \"flight_reservation\": {\r\n        \"date_from\": \"2025-02-10\",\r\n        \"date_to\": \"2025-02-20\",\r\n        \"origin\" : \"Buenos Aires\",\r\n        \"destination\": \"Puerto Iguazu\",\r\n        \"flight_number\" :\"BAPI-1235\",\r\n         \"seats\" : 2,\r\n         \"seat_type\": \"Economy\",\r\n         \"people\" :[{\"dni\": \"12345678\",\r\n                     \"name\": \"Juan\",\r\n                     \"last_name\": \"Perez\",\r\n                     \"birth_date\": \"1982-11-10\",\r\n                     \"email\": \"juanperez@gmail.com\"},\r\n                     {\"dni\": \"87654321\",\r\n                     \"name\": \"Maria\",\r\n                     \"last_name\": \"Lopez\",\r\n                     \"birth_date\": \"1985-05-01\",\r\n                     \"email\": \"marialopez@gmail.com\"}],\r\n         \"payment_method\": {\"type\": \"CREDIT\",\r\n                            \"number_card\": \"1234-1234-1234-1234\",\r\n                            \"dues\": 6\r\n                             }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/flight-reservation/edit?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"flight-reservation",
+						"edit"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar reserva de vuelvo",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/flight-reservation/delete?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"flight-reservation",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar reserva de hotel",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/hotel-booking/delete?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"hotel-booking",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Income Bookings Month",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/income?month=07&year=2024",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"income"
+					],
+					"query": [
+						{
+							"key": "month",
+							"value": "07"
+						},
+						{
+							"key": "year",
+							"value": "2024"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Income Bookings Day",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/income-day?date=10-07-2024",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"income-day"
+					],
+					"query": [
+						{
+							"key": "date",
+							"value": "10-07-2024"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET income reservation day",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/income-flight-day?date=11-07-2024",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"income-flight-day"
+					],
+					"query": [
+						{
+							"key": "date",
+							"value": "11-07-2024"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET INCOME RESERVATION MONTH",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/income-flight-month?month=07&year=2024",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"income-flight-month"
+					],
+					"query": [
+						{
+							"key": "month",
+							"value": "07"
+						},
+						{
+							"key": "year",
+							"value": "2024"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listar reservas de vuelo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/flight-reservations",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"flight-reservations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar reservas de hoteles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/hotel-bookings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"hotel-bookings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar paquetes turisticos ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/touristicpackage/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"touristicpackage",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dar de alta un paquete turistico",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"package_number\": 2,\r\n   \"name\": \"Salta\",\r\n   \"creation_date\": \"2024-07-10\",\r\n   \"client_id\": 2,\r\n   \"bookings_or_reservations\": [1,1]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/touristicpackage/new",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"touristicpackage",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar un paquete turistico",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"package_number\": 2,\r\n   \"name\": \"Salta\",\r\n   \"creation_date\": \"2024-07-10\",\r\n   \"client_id\": 2,\r\n   \"bookings_or_reservations\": [1,1]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/touristicpackage/edit?packageNumber=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"touristicpackage",
+						"edit"
+					],
+					"query": [
+						{
+							"key": "packageNumber",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar un paquete turistico",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/touristicpackage/delete?packageNumber=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"touristicpackage",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "packageNumber",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sacar los 3 mejores clientes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/clients/top-3?year=2024",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"clients",
+						"top-3"
+					],
+					"query": [
+						{
+							"key": "year",
+							"value": "2024"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
